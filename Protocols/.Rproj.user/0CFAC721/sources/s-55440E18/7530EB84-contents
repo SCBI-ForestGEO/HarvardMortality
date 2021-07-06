@@ -1,0 +1,931 @@
+---
+title: ''
+output: 
+    #pdf_document: 
+    bookdown::word_document2: 
+      reference_docx: word-styles-reference.docx #make sure this line is indented! see this guide for formatting: https://rmarkdown.rstudio.com/articles_docx.html
+  #officedown::rdocx_document
+bibliography: references.bib
+csl: global-change-biology.csl
+
+
+
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+\raggedright
+
+**Title:** Joint effects of climate, tree size, and year on annual tree growth derived using tree-ring records from ten globally distributed forests
+
+
+**Authors:** 
+
+[Kristina J. Anderson-Teixeira](0000-0001-8461-9713)^1,2^*,
+Valentine Herrmann^1^,
+Christy Rollinson^3^,
+Bianca Gonzalez^1^,
+Erika B. Gonzalez-Akre^1^,
+Neil Pederson^4^,
+[M. Ross Alexander](0000-0003-1106-1100)^5^**,
+Craig D. Allen^6^,
+Raquel Alfaro-Sánchez^7^,
+Tala Awada^8^,
+Jennifer L. Baltzer^7^,
+Patrick J. Baker^9^,
+[Joseph D. Birch](0000-0001-8644-7345)^10^,
+Sarayudh Bunyavejchewin^11^,
+Paolo Cherubini^12,13^,
+Stuart J. Davies^2^,
+Cameron Dow^1,14^,
+Ryan Helcoski^1^,
+[Jakub Kašpar](0000-0003-1780-6310)^15^,
+[James Lutz]( 0000-0002-2560-0710)^16^,
+Ellis Q. Margolis^17^,
+Justin Maxwell^18^,
+Sean McMahon^2,19^,
+Camille Piponiot^1,2,20^,
+Sabrina E. Russo^21,22^,
+[Pavel Šamonil](0000-0002-7722-8797)^15^,
+Anastasia E. Sniderhan^7^,
+[Alan J. Tepley](0000-0002-5701-9613)^1,23^,
+[Ivana Vašíčková](0000-0002-6070-5956)^15^, 
+Mart Vlam^24^,
+Pieter A. Zuidema^24^
+
+
+**Author Affiliations:**
+
+1. Conservation Ecology Center; Smithsonian Conservation Biology Institute; Front Royal, Virginia 22630, USA
+
+2. Forest Global Earth Observatory; Smithsonian Tropical Research Institute; Panama, Republic of Panama
+
+3. The Morton Arboretum, Center for Tree Science, Lisle, Illinois 60532 USA
+
+4. Harvard University, Petersham, Massachusetts 01366 USA
+
+5. Midwest Dendro LLC, Naperville, Illinois 60565 USA; 
+** Current address: Decision and Infrastructure Sciences, Argonne National Laboratory; Lamont, IL.
+
+6. Department of Geography & Environmental Studies, University of New Mexico; Albuquerque, NM  87131  USA
+
+7. Biology Department, Wilfrid Laurier University, 75 University Ave W, Waterloo, ON, N2L 3C5
+
+8. School of Natural Resources, University of Nebraska-Lincoln, Lincoln, NE 68588-0118, USA
+
+9. School of Ecosystem and Forest Sciences, University of Melbourne, Richmond VIC 3121, Australia
+
+10. University of Alberta; Edmonton, Alberta, Canada
+
+11. National Parks Wildlife and Plant Conservation Department, Chatuchak, Bangkok 10900, Thailand
+
+12. Swiss Federal Institute for Forest, Snow and Landscape Research, CH-8903 Birmensdorf, Switzerland
+
+13. Faculty of Forestry, University of British Columbia, Vancouver BC, Canada
+
+14. Department of Forestry, Purdue University, West Lafayette, IN 47907, USA
+
+15. Department of Forest Ecology, The Silva Tarouca Research Institute for Landscape and Ornamental Gardening, Lidická 25/27, 602 00 Brno, Czech Republic
+
+16. S. J. & Jessie E. Quinney College of Natural Resources and the Ecology Center, Utah State University, Logan, UT 84322, USA
+
+17. U.S. Geological Survey, Fort Collins Science Center, New Mexico Landscapes Field Station, Los Alamos, NM 87544, USA
+
+18. Department of Geography, Indiana University, Bloomington, Indiana, USA
+
+19. Smithsonian Environmental Research Center, Edgewater, MD, USA
+
+20. CIRAD, Montpellier, France
+
+21. School of Biological Sciences, University of Nebraska-Lincoln, USA 68588
+
+22. Center for Plant Science Innovation, University of Nebraska – Lincoln, USA 68588
+
+23. Canadian Forest Service, Northern Forestry Centre, Edmonton, Alberta, Canada
+
+24. Forest Ecology and Forest Management Group, Wageningen; Wageningen, The Netherlands
+
+
+
+*corresponding author: teixeirak@si.edu; +1 540 635 6546
+
+**Running headline:** [45 chars]
+
+*This draft manuscript is distributed solely for purposes of scientific peer review. Its content is deliberative and pre-decisional, so it must not be disclosed or released by reviewers. Because the manuscript has not yet been approved for publication by the USGS, it does not represent any official USGS finding or policy.*
+
+```{r eval=FALSE, echo=FALSE}
+## potential reviewers: Peters**, Klesse, van der Pol, Jane Foster, M. Evans, DEN team, J Matthias, Flurin Babst 
+
+## Target journal: Global Change Biology
+## Instructions for authors: https://onlinelibrary-wiley-com.smithsonian.idm.oclc.org/page/journal/13652486/homepage/forauthors.html
+## Primary Research Articles present the results of a completed research project and are up to 8000 words in length. Word limits apply to the main body of the text (Introduction, Materials and Methods, Results, Discussion, and Acknowledgements).
+## I don't think GCB has an official limit on display items (a recently accepted article has 10 figures and 4 tables).
+
+```
+
+```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
+#Tables
+hypotheses=1
+sites = 2
+
+#Figures
+schematic=1
+SCBI_example=2
+clim_sens=3
+interactions_fig = 4 #DBH/climate interactions
+size=5
+year_fig = 6
+
+# SUPPLEMENTARY INFO (this chunk must be repeated in MEE_manuscript_SI.Rmd)
+#Appendices
+site_details_appendix <- "S1"
+DBH_reconstruction <- "S2"
+climate_correction <- "S3"
+traditional_comparison <- "S4"
+changing_climate <- "S5"
+
+site_details_appendix_title<- "Appendix S1. Site Details"
+DBH_reconstruction_title <- "Appendix S2. Methods for reconstruction of DBH"
+climate_correction_title <- "Appendix S3. Methods for climate data evaluation and correction"
+traditional_comparison_title <- "Appendix S4. Methods for comparing our approach with traditional methods"
+changing_climate_title <- "Appendix S5. Dealing with rapidly changing climate and tree growth"
+
+#SI table numbers
+site_details = "S1"
+species_table = "S2"
+sampling_details_table = "S3"
+bark_allometries = "S4"
+qualitative_results_comparison = "S5"
+
+#SI table captions
+site_details_legend <- "Table S1. Site Details."
+species_table_legend <-"Table S2. Species analyzed, their characteristics, and bark allometries applied."
+sampling_details_legend <- "Table S3. Sampling details for species by site."
+bark_allometries_legend <- "Table S4. Allometric equations for bark thickness."
+qualitative_results_comparison_legend <- "Table S5. Qualtiative comparison of results from this study with previous studies employing conventional methods."
+
+#SI figure numbers
+all_recruitment_plots="S1-S10"
+
+all_traditional_comparisons = "S11-S14"
+SCBI_traditional_comparison = "S11"
+Zofin_traditional_comparison = "S12"
+CB_traditional_comparison = "S13"
+SC_traditional_comparison = "S14"
+
+all_climwin = "S15-S34"
+climwin_BCNM_W = "S15"
+climwin_BCNM_T = "S16"
+climwin_HKK_W = "S17"
+climwin_HKK_T = "S18"
+climwin_SCBI_W = "S19"
+climwin_SCBI_T = "S20"
+climwin_HF_W = "S23"
+climwin_HF_T = "S24"
+
+
+all_GLS = "S35-S54"
+GLS_BCNM = "S35"
+GLS_BCNM_year = "S36"
+GLS_HKK = "S37"
+GLS_HKK_year = "S38"
+GLS_SCBI = "S39"
+GLS_SCBI_year = "S40"
+GLS_LDW = "S41"
+GLS_LDW_year = "S42"
+GLS_HF = "S43"
+GLS_HF_year = "S44"
+GLS_ZOF = "S45"
+GLS_ZOF_year = "S46"
+GLS_NIO = "S47"
+GLS_NIO_year = "S48"
+GLS_LT = "S49"
+GLS_LT_year = "S50"
+GLS_CB = "S51"
+GLS_CB_year = "S52"
+GLS_SC = "S53"
+GLS_SC_year = "S54"
+
+SC_1970break = "S55"
+
+RW_interactions_all= "S56"
+BAI_interactions_all= "S57"
+
+decadal_analysis_figs_all = "S58-S67"
+decadal_plot_BCNM = "S58"
+decadal_plot_HKK = "S59"
+decadal_plot_SCBI = "S60"
+decadal_plot_LDW = "S61"
+decadal_plot_HF = "S62"
+decadal_plot_ZOF = "S63"
+decadal_plot_NIO = "S64"
+decadal_plot_LT = "S65"
+decadal_plot_CB = "S66"
+decadal_plot_SC = "S67"
+
+#SI figure captions
+recruitment_plot_BCNM_legend = "Figure S1. Density plot of core record start years by species for BCNM."
+recruitment_plot_HKK_legend = "Figure S2. Density plot of core record start years by species for HKK."
+recruitment_plot_SCBI_legend = "Figure S3. Density plot of core record start years by species for SCBI."
+recruitment_plot_LDW_legend = "Figure S4. Density plot of core record start years by species for LDW."
+recruitment_plot_HF_legend = "Figure S5. Density plot of core record start years by species for HF."
+recruitment_plot_ZOF_legend = "Figure S6. Density plot of core record start years by species for ZOF."
+recruitment_plot_NIO_legend = "Figure S7. Density plot of core record start years by species for NIO."
+recruitment_plot_LT_legend = "Figure S8. Density plot of core record start years by species for LT."
+recruitment_plot_CB_legend = "Figure S9. Density plot of core record start years by species for CB."
+recruitment_plot_SC_legend = "Figure S10. Density plot of core record start years by species for SC."
+
+SCBI_traditional_comparison_legend <- "Figure S11. Comparison of our approach with traditional methods of identifying climate signals: *Liriodendron tulipifera* at SCBI."
+Zofin_traditional_comparison_legend <- "Figure S12. Comparison of our approach with traditional methods of identifying climate signals: *Abies alba* at Zofin."
+CB_traditional_comparison_legend <- "Figure S13. Comparison of our approach with traditional methods of identifying climate signals: *Pseudotsuga menziesii* at Cedar Breaks."
+SC_traditional_comparison_legend <- "Figure S14. Comparison of our approach with traditional methods of identifying climate signals: *Picea mariana* at Scotty Creek."
+
+climwin_BCNM_W_legend = "Figure S15. Climwin output for water variable group at BCNM."
+climwin_BCNM_T_legend = "Figure S16. Climwin output for temperature variable group at BCNM."
+climwin_HKK_W_legend =  "Figure S17. Climwin output for water variable group at HKK."
+climwin_HKK_T_legend = "Figure S18. Climwin output for temperature variable group at HKK."
+climwin_SCBI_W_legend  = "Figure S19. Climwin output for water variable group at SCBI."
+climwin_SCBI_T_legend = "Figure S20. Climwin output for temperature variable group at SCBI."
+climwin_LDW_W_legend = "Figure S21. Climwin output for water variable group at LDW."
+climwin_LDW_T_legend = "Figure S22. Climwin output for temperature variable group at LDW."
+climwin_HF_W_legend =  "Figure S23. Climwin output for water variable group at HF."
+climwin_HF_T_legend = "Figure S23. Climwin output for temperature variable group at HF."
+climwin_ZOF_W_legend  = "Figure S25. Climwin output for water variable group at ZOF."
+climwin_ZOF_T_legend = "Figure S26. Climwin output for temperature variable group at ZOF."
+climwin_NIO_W_legend = "Figure S27. Climwin output for water variable group at NIO."
+climwin_NIO_T_legend = "Figure S28. Climwin output for temperature variable group at NIO."
+climwin_LT_W_legend =  "Figure S29. Climwin output for water variable group at LT."
+climwin_LT_T_legend = "Figure S30. Climwin output for temperature variable group at LT."
+climwin_CB_W_legend  = "Figure S31. Climwin output for water variable group at CB."
+climwin_CB_T_legend = "Figure S32. Climwin output for temperature variable group at CB."
+climwin_SC_W_legend  = "Figure S33. Climwin output for water variable group at SC."
+climwin_SC_T_legend = "Figure S34. Climwin output for temperature variable group at SC."
+
+GLS_BCNM_legend = "Figure S35. Best GLS models including climate and DBH for BCNM"
+GLS_BCNM_year_legend = "Figure S36. Best GLS models including climate, DBH, and year for BCNM"
+GLS_HKK_legend = "Figure S37. Best GLS models including climate and DBH for HKK"
+GLS_HKK_year_legend = "Figure S38. Best GLS models including climate, DBH, and year for HKK"
+GLS_SCBI_legend = "Figure S39. Best GLS models including climate and DBH for SCBI"
+GLS_SCBI_year_legend = "Figure S40. Best GLS models including climate, DBH, and year for SCBI"
+GLS_LDW_legend = "Figure S41. Best GLS models including climate and DBH for LDW"
+GLS_LDW_year_legend = "Figure S42. Best GLS models including climate, DBH, and year for LDW"
+GLS_HF_legend = "Figure S43. Best GLS models including climate and DBH for HF"
+GLS_HF_year_legend = "Figure S44. Best GLS models including climate, DBH, and year for HF "
+GLS_ZOF_legend = "Figure S45. Best GLS models including climate and DBH for ZOF"
+GLS_ZOF_year_legend = "Figure S46. Best GLS models including climate, DBH, and year for ZOF"
+GLS_NIO_legend = "Figure S47. Best GLS models including climate and DBH for NIO"
+GLS_NIO_year_legend = "Figure S48. Best GLS models including climate, DBH, and year for NIO"
+GLS_LT_legend = "Figure S49. Best GLS models including climate and DBH for LT"
+GLS_LT_year_legend = "Figure S50. Best GLS models including climate, DBH, and year for LT"
+GLS_CB_legend = "Figure S51. Best GLS models including climate and DBH for CB"
+GLS_CB_year_legend = "Figure S52. Best GLS models including climate, DBH, and year for CB"
+GLS_SC_legend = "Figure S53. Best GLS models including climate and DBH for SC"
+GLS_SC_year_legend = "Figure S54. Best GLS models including climate, DBH, and year for SC"
+
+SC_1970break_legend = "Figure S55. Climate responses at SC before and after 1970."
+
+RW_interactions_all_legend = "Figure S56. All signficant climate - DBH interactions with RW as the response metric."
+BAI_interactions_all_legend ="Figure S57. All signficant climate - DBH interactions with RW as the response metric."
+
+decadal_plot_BCNM_legend = "Figure S58. Relationships between DBH and BAI by decade for BCNM."
+decadal_plot_HKK_legend = "Figure S59. Relationships between DBH and BAI by decade for HKK."
+decadal_plot_SCBI_legend = "Figure S60. Relationships between DBH and BAI by decade for SCBI."
+decadal_plot_LDW_legend = "Figure S61. Relationships between DBH and BAI by decade for LDW."
+decadal_plot_HF_legend = "Figure S62. Relationships between DBH and BAI by decade for HF."
+decadal_plot_ZOF_legend = "Figure S63. Relationships between DBH and BAI by decade for ZOF."
+decadal_plot_NIO_legend = "Figure S64. Relationships between DBH and BAI by decade for NIO."
+decadal_plot_LT_legend = "Figure S65. Relationships between DBH and BAI by decade for LT."
+decadal_plot_CB_legend = "Figure S66. Relationships between DBH and BAI by decade for CB."
+decadal_plot_SC_legend = "Figure S67. Relationships between DBH and BAI by decade for SC."
+
+```
+
+```{r eval = TRUE, echo=FALSE, warning=FALSE, results='hide'}
+#READING IN TABLES TO GET STATS FOR TEXT
+path_to_repo <- (dirname(dirname(getwd()))) # this gets path so that anybody to knit
+
+#species
+species <- read.csv(paste0(path_to_repo, "/doc/manuscript/tables_figures/species.csv"), stringsAsFactors = FALSE, check.names = FALSE)
+  n_species <- nrow(species) 
+  
+sampling_details <- read.csv(paste0(path_to_repo, "/doc/manuscript/tables_figures/sampling_details.csv"), stringsAsFactors = FALSE, check.names = FALSE)
+  n_trees_all <- sum(na.omit(sampling_details[, "n trees all"]))  #see issue #111
+  n_trees_dbh <- sum(na.omit(sampling_details[, "n trees dbh"]))
+  n_cores_all <- sum(na.omit(sampling_details[, "n cores all"]))  #see issue #111
+  n_cores_dbh <- sum(na.omit(sampling_details[, "n cores dbh"]))
+```
+\newpage
+
+# Abstract  {-#Abstract} 
+
+```{r eval=FALSE, echo=FALSE}
+## Abstract: Limited to 300 words. 
+```
+
+Tree rings provide a uniquely valuable long-term record for understanding how climate and other environmental drivers shape individual tree growth and forest productivity.
+However, conventional tree-ring analysis methods are not designed to simultaneously account for the effects of climate, tree size, and other environmental drivers on individual tree growth, which has limited the potential to use tree rings to understand forest productivity, its climate sensitivity, and its global change responses.
+Here, we develop and apply a new method to simultaneously model non-linear effects of primary climate drivers, reconstructed tree diameter (DBH), and year in generalized least squares models that account for the temporal autocorrelation inherent to each individual tree's growth.
+We analyze tree-ring data from `r n_trees_all` trees representing `r n_species` species at 10 globally distributed sites, showing that water, temperature, DBH, and time have additively, and often interactively, influenced annual growth over the past 120 years.
+Growth responses were predominantly positive to precipitation and negative to temperature, with both included in 78% of top models, and with non-linear responses prevalent (*##%* of relationships).
+Interactions between DBH and climate were common (44% of cases tested). 
+Growth rates -- expressed as ring widths, basal area increments, or biomass increments -- varied non-linearly with DBH.
+Accounting for DBH, growth rate declined over time for 90% of species-site combinations.
+These trends were largely attributable to stand dynamics as cohorts and stands age, which remain challenging to disentangle from global change drivers.
+By providing a parsimonious approach for characterizing multiple interacting drivers of tree growth, our method reveals a more complete picture of the factors influencing tree growth than has previously been possible. 
+*As global change pressures intensify and the need to understand changing forest dynamics becomes increasingly urgent, we expect that this approach will prove valuable to understanding drivers of tree growth and forest change.*
+
+```{r eval=FALSE, echo=FALSE}
+## Italic text is currently exact match to concluding paragraph.
+```
+
+
+**Keywords**:  climate sensitivity;  tree diameter; environmental change; Forest Global Earth Observatory (ForestGEO); generalized least squares (GLS); nonlinear; tree rings
+
+\newpage
+
+# Introduction {-#Introduction} 
+
+Tree rings provide a long-term record of annual growth increments that is invaluable for understanding forests in an era of global change [@amoroso_dendroecology_2017; @fritts_dendroecology_1989; @zuidema_tropical_2013]. 
+Spanning time scales of decades to centuries or even millennia, they provide by far the most robust method for characterizing the interannual climate sensitivity of tree growth [@fritts_tree_1976; @braker_measuring_2002].
+Combined with forest censuses, they can be used to estimate forest woody productivity [@graumlich_longterm_1989; @dye_comparing_2016] and its climate sensitivity [@klesse_sampling_2018; @teets_quantifying_2018; @helcoski_growing_2019]. 
+Tree rings also provide the long-term perspective necessary for understanding how slowly changing environmental drivers including rising atmospheric carbon dioxide (CO~2~) concentrations, changing climate, and other anthropogenic and natural changes are influencing tree growth and forest productivity [e.g., @levesque_water_2017; @mathias_disentangling_2018; @walker_integrating_2020].
+This information is critical to predicting forest responses to anthropogenic changes -- particularly climate change -- and thereby reducing the enormous uncertainty surrounding future contributions of Earth's forests to the global carbon cycle [@arora_carbon_2020].
+Yet, collection and analysis of dendrochronological records has traditionally been optimized to detect climate signals rather than to understand variation among trees, including size-related variation in climate sensitivity [e.g., @bennett_larger_2015; @mcgregor_tree_2020; @rollinson_climate_2021], and predict forest productivity, its climate sensitivity, and how it may be changing [@cherubini_potential_1998; @nehrbass-ahles_influence_2014; @klesse_sampling_2018; @babst_when_2018; @wilmking_global_2020].
+As a result, prevailing approaches hold a number of limitations for using tree rings to address pressing questions concerning forest carbon sequestration in the current era of rapid environmental change.
+
+To realistically estimate forest woody productivity, it is necessary to measure or model the growth rate of the individual trees within the stand based on the primary biotic and environmental drivers.
+Needed is an analysis framework that can capture the additive and interactive effects of climate, tree size (most commonly diameter breast height, DBH), and other environmental drivers, all of which may be best described by nonlinear functions [@muller-landau_testing_2006; @rollinson_climate_2021].
+While multifactorial and sometimes non-linear individual-based analysis frameworks have been applied in tree ring analysis [e.g., @evans_fusing_2017; @klesse_amplifying_2020; @zuidema_recent_2020; @rollinson_climate_2021], their use has been relatively limited, and none simultaneously account for climate, DBH, and calendar year (a proxy for slowly changing environmental drivers).
+In the following paragraphs, we outline major unresolved questions regarding the influence of these factors on tree growth that can best be address using a multifactorial, non-linear approach to tree ring analysis (Table `r hypotheses`).
+
+Understanding the climate sensitivity of tree growth is critical to predicting forest dynamics and productivity as the climate changes. 
+The classic dendrochronological approach to characterizing the climate sensitivity of tree growth describes linear relationships between the primary growth-limiting climate factor (moisture or temperature) and population-level growth responses captured in ring-width index chronologies [@fritts_tree_1976; @speer_fundamentals_2010].
+While invaluable for applications such as reconstructing past climates [e.g., @buntgen_2500_2011], accurately characterizing the climate sensitivity of forest productivity requires more in-depth characterization of climate sensitivity across a representative sample of trees in a forest stand [@babst_when_2018].
+For instance, the additive or interactive effects of precipitation and temperature are not commonly considered [but see e.g., @foster_predicting_2016; @meko_seascorr_2011;  @sanchez-salguero_disentangling_2015; @vlam_temperature_2014; @zuidema_recent_2020], and we hypothesize that both influence the growth of most species, often over different seasonal windows (Table `r hypotheses`).
+In addition, we hypothesize that nonlinear climate responses, already known to be widespread within forest settings [@woodhouse_artificial_1999; @wilmking_global_2020; @rollinson_climate_2021], are in fact the predominant form of response in forests around the world (Table `r hypotheses`). 
+Finally, while the influence of DBH is typically removed through detrending [@cook_calculating_1997], thereby eliminating the potential to directly model its influence on climate sensitivity, we hypothesize that interactive effects of DBH and climate are, in fact, quite common in forest settings [Table 1, @bennett_larger_2015; @trouillier_size_2019; @mcgregor_tree_2020; @rollinson_climate_2021].
+
+Tree diameter, DBH, scales predictably with numerous traits affecting tree growth (e.g., height, crown size and position, root mass, hydraulic architecture) and therefore is itself linked to growth [e.g., @anderson-teixeira_sizerelated_2015].
+Yet, there remain inconsistencies across disciplines (dendrochronology, forest ecology) as to what is considered a typical growth pattern. 
+Dendrochronological records from trees that established in high-light environments commonly show a pattern in which radial stem growth increments (ring width, RW) are initially large and decline with DBH [@fritts_tree_1976], whereas censuses of globally distributed forests indicate that diameter increments most commonly increases with DBH [@muller-landau_testing_2006; @anderson-teixeira_sizerelated_2015].
+We hypothesize that this discrepancy is primarily a distinction between trees that established in the open (disproportionately sampled for tree-ring analysis), as opposed to in the understory (captured by contemporary monitoring; Table `r hypotheses`).
+Building upon observed ontogenetic patterns in RW, dendrochonology studies often observe or assume that basal area increment (BAI) is constant with DBH after a juvenile growth phase [@fritts_tree_1976; @biondi_theorydriven_2008] -- a pattern that we would not expect to hold in understory-established trees (Table `r hypotheses`).
+Finally, there is debate as to whether biomass increment ($\Delta$AGB) increases continuously with DBH [@stephenson_rate_2014; @meakem_role_2018; @foster_predicting_2016] or peaks and declines as trees divert carbon to other functions [e.g., reproduction, @thomas_agerelated_2011]. 
+Following the finding that the latter pattern is common for individual trees whereas the former emerges in "cross-sectional" analyses of forest stands [@forrester_does_2021], we hypothesize that $\Delta$AGB -- and also BAI -- peaks and declines as DBH increases (Table `r hypotheses`).
+Solid understanding of these ontogenetic growth trends is essential not only for predicting the growth rate of any given tree, but also for standardizing for DBH to deduce the influence of slowly changing environmental drivers [see next paragraph, @peters_detecting_2015], with the reliability of such analyses contingent upon accurate assumptions of ontogenetic growth patterns.
+
+Beyond the direct effects of climate, rising atmospheric CO~2~ concentrations, changes in atmospheric deposition of sulfur dioxide (SO~2~) and nitrogen oxides (NO~x~), and indirect effects of climate change are all potentially influencing tree growth [@levesque_water_2017; @mathias_disentangling_2018; @maxwell_higher_2019; @walker_integrating_2020; @takahashi_air_2020; @belmecheri_precipitation_2021], and understanding these effects is central to predicting the future of the terrestrial carbon sink [@walker_integrating_2020].
+Yet, characterizing how tree growth and forest productivity are responding to slowly changing environmental drivers is challenging and uncertain.
+Ontogenetic patterns in tree growth must be accounted for, yet two of the most commonly used methods of standardizing for tree size, conservative detrending and basal area correction [@peters_detecting_2015], assume certain growth patterns unlikely to be universal in forest settings, as discussed above. 
+Approaches that combine cross-sectional with temporal analyses to correct for growth ontogeny, such as regional curve standardization, perform better at growth trend detection [@peters_detecting_2015].
+Yet, even after correcting for ontogenetic growth trends, growth trend detection remains subject to various potential sampling and analysis biases [@cherubini_potential_1998; @brienen_detecting_2012; @nehrbass-ahles_influence_2014; @sullivan_effect_2016; @bowman_detecting_2013; @brienen_tree_2017; @hember_tree_2019], fundamentally driven by the limitation that it is not possible to use a contemporary set of tree cores to obtain a representative sample of a species's population at all points throughout the history of a dynamically changing stand.
+Stand dynamics strongly influence growth: tree growth rates are sensitive to competition, the intensity of which tends to increase as forests mature, affecting ecosystem level patterns of C allocation. 
+Ecosystem-level carbon allocation to woody growth -- as opposed to leaf or fine root production, reproduction, defenses, etc. -- is known to decline as forest stands age [@goulden_patterns_2011; @pregitzer_carbon_2004; @delucia_forest_2007; @collalti_forest_2020]. 
+Thus, we hypothesize that size-corrected growth rates of tree populations sampled from within secondary or severely disturbed stands (i.e., those with large recruitment pulses within the past century) will generally decline, whereas populations sampled from older, relatively undisturbed stands will display mixed growth trends that are more dependent on external environmental drivers (Table `r hypotheses`).
+
+Here, we develop and apply a new method that allows simultaneous consideration of the effects of primary climate drivers (i.e., the most influential climate variables and the seasonal window over which they operate), tree size, and calendar year on annual tree growth.
+This approach allows us to address hypotheses concerning the primary drivers of individual tree growth (Table `r hypotheses`) across ten forested sites spanning 52 degrees latitude.
+
+
+\newpage
+**Table 1 | Summary of hypotheses and specific predictions tested here, along with the frenquency at which they were supported**.  
+```{r eval = TRUE, echo=FALSE, warning=FALSE}
+library(flextable)
+set_flextable_defaults(font.family = "Arial", font.size = 9)
+hypotheses_table <- read.csv("tables_figures/hypothesis_table.csv", stringsAsFactors = FALSE, check.names = FALSE)
+hypotheses_table <- hypotheses_table[which(hypotheses_table$include==1),c(2:7)]
+question_rows<- which(!is.na(hypotheses_table$Q) )
+hypothesis_rows<-which(!is.na(hypotheses_table$H) )
+
+hypotheses_table <- subset(hypotheses_table, select = -c(Q, H, category,notes) )#remove columns that shouldn't be included
+ft <- flextable(hypotheses_table)
+ft <- italic(ft, i=hypothesis_rows, j=1)
+ft <- bold(ft, i=c(question_rows))
+ft <- line_spacing(ft, space = 1, part = "all")
+ft <- padding(ft, padding.top = 2)
+ft <- padding(ft, padding.bottom = 2)
+ft <- padding(ft, j = 1, padding.left = 20)
+ft <- padding(ft, i = hypothesis_rows, j = 1, padding.left = 10)
+ft <- padding(ft, i = question_rows, j = 1, padding.left = 0)
+ft <- autofit(ft)
+ft <- footnote( ft, i = 1, j = 2,
+                value = as_paragraph(c("SSC= species-site combinations")),
+                ref_symbols = c("*"),
+                part = "header",inline=T)
+ft <- footnote( ft, i = 1, j = 1,
+                value = as_paragraph(c("Results summarized here are for climate-only models with RW as response variable.")),
+                ref_symbols = c("**"),
+                part = "body",inline=T)
+ft <- footnote( ft, i = c(10,11), j = 2,
+                value = as_paragraph(c("Refers to SSC with significant (p<0.05) main effect of climate on RW.")),
+                ref_symbols = c("#"),
+                part = "body",inline=T)
+ft <- footnote( ft, i = 19, j = 1,
+                value = as_paragraph(c("Results summarized here are for models with BAI as response variable.")),
+                ref_symbols = c("##"),
+                part = "body",inline=T)
+ft  
+
+```
+
+# Materials and Methods {-#Materials} 
+
+## Data sources and preparation {-#Data}
+
+We analyzed tree-ring data, most most of which was collected for earlier studies (see references in Table `r sites`), from 10 sites ranging from 9.15$^\circ$ to 61.30$^\circ$ N latitude and representing a wide range of forest and tree types: tropical broadleaf deciduous and evergreen, temperate broadleaf deciduous and conifer, and boreal conifer (Tables `r sites`, `r site_details`, `r species_table`).
+Nine of these sites (exception: LT) were co-located with large forest dynamics plots of the Forest Global Earth Observatory [ForestGEO, @anderson-teixeira_ctfsforestgeo_2015; @davies_forestgeo_2021].
+Trees were cored within the ForestGEO plots (n=5 sites) and/or nearby within similar forest types (n=5 sites), following a variety of sampling protocols designed to meet the varied objectives of the original studies (Tables `r site_details`, `r sampling_details_table`). 
+There was wide variation in the distribution of record start years, which approximate the age distribution of sampled trees (Figs. `r all_recruitment_plots`).
+In using this diversity of data sources, we ensured that our approach could handle challenges presented by varying methodologies and forest types.
+
+\newpage
+**Table 2 | Sites included in this analysis**. Here and throughout, sites are ordered by descending mean annual temperature. Additional site information is provided in Appendix `r site_details_appendix` and Table `r site_details`, and tree species and sampling details are detailed in Tables `r species_table`-`r sampling_details_table`. 
+```{r eval = TRUE, echo=FALSE, warning=FALSE}
+library(flextable)
+set_flextable_defaults(font.family = "Arial", font.size = 8)
+sites_table<- read.csv("tables_figures/sites.csv", stringsAsFactors = FALSE, check.names = FALSE)
+sites_table <- subset(sites_table, select = -c(MAT, JulyTsd, JanTsd, MAPsd)) #drop MAT column, plus columns with sd
+ft <- flextable(sites_table)
+ft <- autofit(ft)
+ft <- width(ft, 1, width = .5)
+ft <- width(ft, 2:3, width = 1)
+ft <- width(ft, 4:6, width = .45)
+ft <- width(ft, 7, width = .66)
+ft <- width(ft, 8, width = .52)
+ft <- width(ft, 9, width = .5)
+ft <- width(ft, 10, width = 1.5)
+ft <- footnote( ft, i = 1, j = 4:6,
+                value = as_paragraph(c("Refers to 1950-2019 mean climate.")),
+                ref_symbols = c("*"),
+                part = "header",inline=T)
+ft <- footnote( ft, i = c(6,8,9), j = 2,
+                value = as_paragraph(c("Older forest, with majority of sampled trees established before 1900.")),
+                ref_symbols = c("**"),
+                part = "body",inline=T)
+ft  
+
+```
+
+
+```{r eval=FALSE, echo=FALSE}
+# refs in this table need to go in the nocite field below
+```
+---
+nocite: | 
+  @vlam_temperature_2014; @maxwell_declining_2016; @sniderhan_growth_2016; @alfaro-sanchez_growth_2017;@bourg_initial_2013; @helcoski_growing_2019 @gonzalez-akre_scbi-forestgeoscbi-forestgeo-data_2020-1; @bumann_assessing_2019; @samonil_individual-based_2013; @kaspar_speciesspecific_2021; @alexander_potential_2019; @finzi_carbon_2020; @birch_birch_2020; @birch_birch_2020b; @birch_birch_2020c; @birch_birch_2020d
+---
+
+All tree cores **(n = XXXX)** were cross-dated and measured by the original researchers using standard dendrochronological practices [@stokes_introduction_1968]. 
+From among the full set of original RW measurements, we excluded cores for which we detected technical errors (e.g., labeling inconsistencies, obvious dating errors) that could not be resolved before finalizing the analysis. 
+We also excluded records with small sample size or highly anomalous growth patterns, including
+(1) species with < 7 cores,
+(2) cores with < 30 years of record,
+(3) contiguous portions of cores containing large outliers (RW > mean plus 5 x SD of RW for the entire core),
+and (4) the final 20 years prior to death for trees cored dead. 
+The final criterion was implemented to avoid periods of growth decline and potentially altered climate sensitivity prior to death [@cailleret_synthesis_2017; @desoto_low_2020].
+From analyses including DBH (see below), we further excluded
+(1) trees for which we lacked data required to reconstruct DBH,
+(2) trees for which there was a significant inconsistency between measured DBH and the sum of RW's across the core (Appendix `r DBH_reconstruction`),
+and (3) poorly represented tails of the DBH distribution, starting where reconstructed DBH (see below) included < 3 conspecific trees.
+In total, this resulted in inclusion of `r n_cores_all` cores from `r n_trees_all` trees, `r n_cores_dbh` of which (from `r n_trees_dbh` trees) could be included in analyses with DBH (Table `r sampling_details_table`).
+
+For each year in the tree-ring records, we reconstructed DBH, as detailed in Appendix `r DBH_reconstruction`. 
+We applied allometric equations for bark thickness to account for changes in bark thickness as the tree grew (Appendix `r DBH_reconstruction`; Tables `r species_table`, `r bark_allometries`).
+Once DBH had been reconstructed, we estimated basal area ($BA=\pi r^2$, where $r$ is radius) and aboveground biomass (AGB). 
+Biomass allometries for temperate and tropical species were calculated using the R packages *allodb* (Gonzalez-Akre et al. in revision) and *BIOMASS* [@rejou-mechain_biomass_2017], respectively.
+We then calculated basal area increment ($BAI= BA_{y+1}-BA_y$, where $y$ is year) and aboveground biomass growth increments ($\Delta AGB=AGB_{y+1}-AGB_y$).
+
+Monthly climate data for 1901-2019 were obtained from CRU v.4.04 [@harris_updated_2014; @harris_version_2020], and in a few cases corrected based on higher-resolution or local records (Appendix `r climate_correction`). 
+Variables considered here included average daily minimum, maximum, and mean temperatures ($T_{min}$, $T_{max}$, $T_{mean}$, respectively); precipitation (PPT); and, when deemed reliable (Appendix `r climate_correction`), potential evapotranspiration (PET) and precipitation day frequency (PDF).
+For the one riparian site, NIO, we tested for an effect of stream flow (SF), for which we obtained data for the Sparks, Nebraska station (station code: 06461500; 42°54'14"N, 100°26'13"W) from the U.S. Geological Survey (USGS) National Water Information System (https://waterdata.usgs.gov/nwis/uv/?site_no=06461500&agency_cd=USGS&referred_module=sw). 
+All ForestGEO climate records used here are archived in the ForestGEO Climate Data Portal, v1.0 [@anderson-teixeira_forestgeo_2020].
+
+## Data Analysis {-#Data}
+
+Data analysis consisted of two main steps: (1) identifying the primary climate drivers (i.e., variables and seasonal windows over which they are most influential on tree growth), and (2) combining these climate drivers, DBH, and year into a multivariate model (Fig. `r schematic`). 
+The analysis was run separately for each site (step 1), site-species combination (step 2), and each response variable estimating different measures of tree growth (RW, BAI, or $\Delta$AGB). 
+We note that the decision to identify primary climate drivers at the level of site, as opposed to species, was motivated by the expectation that differences in the most influential climate drivers across species in one site would be minimal compared to cross-site differences (Fig. `r SCBI_example`); however, analyses focused on interspecific differences could optimize species-specific climate sensitivity estimates by fitting *climwin* individually by species.
+
+![**Figure 1 | Schematic illustration of the analysis process.** In step 1, the R package *climwin* [@vandepol_identifying_2016] is used to identify the primary climate drivers in water and temperature variable groups for each site, defined as the variable-seasonal window combination that are most strongly correlated to the residual variation around splines fit to trends in growth (here, ring width, RW) for all cores sampled at the site. In step 2, a GLS model is used to produce a combined model with the previously identified drivers, reconstructed DBH, and year.](tables_figures/schematic_figure.png)
+
+### Step 1: Identifying primary climate drivers {-#Climate}
+
+We used the *climwin* package in R [@vandepol_identifying_2016] to identify the most important climate variable and the seasonal window over which its effect was strongest for each of two categories of variables: a temperature group ($T_{min}$, $T_{max}$, $T_{mean}$, and PET) and a precipitation group (PPT, PDF).
+To remove low-frequency variation that most likely represents responses to non-climatic drivers (*e.g.*, growth and aging of the tree, change in competitive dynamics, atmospheric pollution), we detrended the response variables by fitting penalized thin-plate regression splines in generalized additive models [GAM, functions *gam* and *s* in the R package *mgcv*, @wood_fast_2011] to individual growth records (RW, BAI, or $\Delta$AGB) from each core, and extracted the residual variation for each observation. 
+The smoothing parameters were automatically selected by the *gam* function with generalized cross-validation (GCV).
+We then used *climwin* to identify the climate variables that most strongly correlated with the individual tree-level residuals of the growth variables, RW, BAI, or $\Delta$AGB, specifying quadratic fits to allow for potential nonlinearities in the climate response.
+Within *climwin*, we specified a mixed-effects model in which the fixed effects were the climate variables and the random intercepts were species (when n $\ge$ 3) and core identity (noting that these effects should be minimal given that residuals are centered around zero).
+For each climate variable, we ran permutations for all possible combinations of consecutive months within a 15-month period ending near the time of cessation of formation of each annual ring (Table `r site_details`). 
+*Climwin* runs all potential models to select the best fit (lowest AIC), and does k-fold cross-validation in its computation of AIC to guard against over-fitting [@vandepol_identifying_2016]. 
+For each group of candidate climate variables (water and temperature; Fig. `r schematic`), we selected the variable - seasonal window combination identified by *climwin* as having the lowest AIC as a candidate climate variable for the multivariate models. 
+
+We tested whether this process identified similar climate variable-month combinations to what would be identified using traditional methods for four species (detailed in Appendix `r traditional_comparison`). 
+Furthermore, we explored alternate methods of climate variable selection for the two sites that have undergone the most rapid changes in climate and tree growth: LT, where increasingly warm drought has dramatically reduced growth [@touchan_millennial_2011; @williams_temperature_2013], and SC, where rapidly rising temperatures are causing permafrost thaw, which limits access to soil moisture during summer months and drives growth declines [@sniderhan_growth_2016]. 
+We ultimately determined that the method described above captured these sources of variation (Appendix `r changing_climate`).
+
+### Step 2: Combining drivers in GLS model {-#Combining}
+
+Having identified the primary climate drivers in temperature and precipitation variable groups, we next combined climate variables (included in all models) and DBH (included in models with DBH and its climate interactions) into linear mixed-effects models [function *lme* in the R package *nlme*, @pinheiro_nlme_2021], with core identity as a random intercept and yeaar as a continuous time covariate for the within-group correlation structure (function *corCAR1*). We will refer to this model as a generalized least squares (GLS) model (Fig. `r schematic`).
+
+Prior to running the models, we checked for collinearity among the candidate variables using the *vifstep* function [@naimi_where_2014] and removed any variable with a variance inflation factor > 3 (none required removal).
+Within the GLS models, our response variables were log[RW], log[BAI], or log[$\Delta$ AGB]. 
+
+For each species independently, we ran every combination of the candidate climate variables and DBH, including both first- and second-order terms for each.
+For climate response, we allowed concave-down fits, but ignored any concave-up fits on the basis that these are not expected biologically.
+
+As an example, a full model for log[RW] would look like this in *R*: 
+
+*lme(log[RW] ~ PET + I(PET^2) + $T_{min}$ + I($T_{min}$^2) + DBH + I(DBH^2)",  random = ~1|coreID, correlation = corCAR1(form=~yeaar|coreID), data = x, na.action = "na.fail", method = "ML")* 
+
+where *x* is a complete data set (with no missing values) for one species at one site. The method is set to maximum likelihood (*ML*) during the fixed effect model selection phase, but to restricted maximizing likelihood (*REML*) for parameter estimation with the best model.
+
+For models including interactive effects of climate and DBH, we tested for interactions between first-order linear terms for climate variables and DBH.
+
+To test for year effects, we limited the analysis to species with reasonable coverage of the DBH x `year` matrix.
+Specifically, we required that the species be represented by cores from  $\ge$ 3 trees and that the core record spanned $\ge$ 40% the total DBH range for $\ge$ 2/3 of the total time range analyzed. 
+To avoid severe big-tree selection bias [@brienen_detecting_2012], we also required that the minimum DBH sampled be $\le$ 25 cm (exception: *Abies alba* at ZOF, where mature trees < 50 cm DBH are extremely rare).
+Species that failed to meet these criteria (n= 8; Table `r sampling_details_table`) were excluded from the analysis of temporal trends, but were included in analyses of climate and DBH and their interactions.
+We then ran models as described above, including a  first-order linear effect of year.
+We note that the random effect of tree should, in theory, avoid analytical biases arising from persistent growth differences among individuals that are not accounted for by DBH or year [@brienen_detecting_2012; @brienen_tree_2017]. 
+To verify that GLS model trends for year were not an artifact of inherent covariation between DBH and year within each core, we compared GLS results to an analysis of DBH-growth relationships by decade (Figs. `r decadal_analysis_figs_all`). 
+
+Within each of three categories of models run (climate only, climate + DBH, climate $\times$ DBH, climate + DBH + year), we selected as the top model that with the lowest AIC.  
+
+
+# Results {-#Results}
+
+## Validation of the method {-#Validation}
+
+Our process identified similar primary climate drivers to those identified via established dendrochronological analysis methods for identifying climate signals (Figs. `r SCBI_example`, `r all_traditional_comparisons`; Table `r qualitative_results_comparison`; Appendix `r traditional_comparison`).
+While one-to-one correspondence of estimated slope coefficients describing the response of tree growth to interannual climatic variation was neither expected nor observed, estimates were correlated and rarely differed significantly (Appendix `r traditional_comparison`; `r all_traditional_comparisons`).
+
+
+![**Figure 2 | Example comparison of climate sensitivity derived via traditional methods (**a**) and our approach (**b-f**).** Example is for the sensitivity of 14 species at SCBI (codes given in Table `r species_table`) to potential evapotranspiration (PET). Panel (**a**) shows a matrix of Pearson correlations between ring-width index and monthly climate variables [produced using the bootRes package in R, @zang_dendroclimatic_2013]. Black rectangle represents the period selected by *climwin* as the most influential window. Panels (**b-d**) give statistics for seasonal windows tested in *climwin*, where window open and close indicate months prior to current August, and cells across the lower diagonal indicate single-month tests (akin to panel **a**). Panels (**b**) and (**c**) give values of linear and quadratic terms for each seasonal window, and (**d**) gives the $\Delta$AIC for each. The seasonal window with the minimum $\Delta$AIC (1-3 months prior to August, or May-July; black circles), was identified as the most influential window. Panel (**e**) shows the correlation of individual-level residuals to PET, with the function fit in *climwin*. Finally, panel (**f**) shows the GLS model output, where PET was a candidate driver variable (along with PPT; DBH not included in this model). Plotted are responses of species for which PET was included in the top model, with best-fit polynomials plotted with solid lines when both first- and second-order terms are significant, dashed lines when only one term is significant, and dotted lines when neither is significant. Transparent ribbons indicate 95% confidence intervals. Species names corresponding to the codes are given in Table `r species_table`.](tables_figures/quilt_comparison.png)
+
+
+*Trends with year, when assessed, were consistent with those observed in a separate analysis of DBH-growth relationships by year (Figs. `r decadal_analysis_figs_all`).*
+
+## Climate sensitivity {-#Climate}
+
+### Most influencial climate drivers {-#Most}
+```{r , eval=FALSE, echo=FALSE}
+## Tallies for the following paragraph (Feb 11)
+#sameV_sameW: LDWp, NMt,NMp, NIOt, NIOp, SCBIp,  ZOFp,ZOFt,  (8)
+#sameV_diffW:      (10)
+  # overlapping: BCNMp, BCNMt, HKKp, SCBIt, LDWt, CBp,CBt , SCp, SCt, (9)
+  # non-overlapping: HFt, (1)
+#diffV_diffW: HFp (non-overlapping), HKKt (overlapping)
+```
+At each site, the three metrics of growth (RW, BAI, and $\Delta$AGB) exhibited similar patterns in the direction of response and relative strength of correlation to climate variables across the range of potential seasonal windows. 
+However, the seasonal window exhibiting the strongest climatic effect on growth and even the most influential climate variable sometimes differed among the growth metrics (Figs. `r all_climwin`).
+For eight of 20 site-variable group (i.e., water and temperature) combinations, both the most influential climate variable and seasonal window were identical across growth metrics (e.g., Fig. `r climwin_SCBI_W`). 
+For nine site-variable group combinations, *climwin* identified the same climate variable and overlapping seasonal windows  (e.g., Fig. `r climwin_SCBI_T`), 
+and in one case (at HKK) different variables ($T_{max}$ and $T_{mean}$) were selected with overlapping seasonal windows (Fig. `r climwin_HKK_T`). 
+For just two site-variable group combinations (both variable groups at HF, where climate had only weak effects and mixed responses among species in the final models), *climwin* identified completely different seasonal windows and, for precipitation, different variables (PPT and PDF; Figs. `r climwin_HF_W`- `r climwin_HF_T`).
+Henceforth, unless otherwise noted, we focus on the climate sensitivities identified using RW as the growth metric and for the full set of cores (i.e., including those for which DBH could not be reconstructed).
+
+```{r , eval=TRUE, echo=FALSE}
+## Tallies for the  paragraph below (Feb 11)
+
+###Variables selected: 
+#PPT over PDF: 9 sites with both. PDF selected in HKK, HF, ZOF
+#T group:Tmax at 6, PET at 3, Tmin at 1
+
+###Windows selected: 
+# BCNM: precip dry season (12mo), T dry season (2 mo)   W>T
+#HKK: PDF dry season + edges (9mo), T wet season (8 mo)  W>T
+#SCBI: precip p June - cAug (15 mo), PET current gs (3 mo) W>T
+#LDW: precip c June (1 mo), PET current June (1mo) W=T
+#HF: PDF pMay (1mo), PET cMar (1mo) W=T
+#ZOF: pre pJune-pJul (2mo), TMX Jan-Mar (3mo) W<T
+#NIO: ppt pOct-pDec (3mo), TMP pJune (1mo) W>T
+#LT: P pNov-cJul (9mo), TMX cMay-Jul (3mo) W>T
+#CB: P pJune-cJul(14mo), TMXpAug-pAug(1mo) W>T
+#SC: P pJun-pAug(3mo), TMXcJul (1mo) W>T
+```
+Precipitation amount (PPT) was selected over precipitation frequency (PDF) as the top variable in five of the eight sites for which both variables were available (but had no significant main effect at one site, NIO), and was the only option at two sites (LT and CB).
+The most influential seasonal windows were most commonly long ($\ge$3 months at 7 of the 9 sites with significant main effects) and coincided at least partially with months of active growth in the current year (Fig. `r clim_sens`; Table `r site_details`):  year-round in the tropics (BCNM and HKK) or late spring/ summer outside of the tropics (n= 5 of 7 sites with significant main effects).
+In the tropics, the long time-windows over which precipitation was influential (12 mo at BCNM, 9 mo at HKK) also included the majority (BCNM) or all (HKK) of the dry season months (< 100 mm rainfall / month).
+Outside of the tropics, the most influential windows at three sites included the current growing season and extended back to the previous fall (LT, CB) or summer (SCBI), whereas they were limited to the current spring and early summer at LDW.
+At three sites (HF, ZOF, and SC), precipitation of the previous growing season was the most influential variable. 
+
+Within the temperature group (Fig. `r schematic`), the most commonly selected variables were $T_{max}$ and PET, which were identified by *climwin* as the top temperature-related driver at six and three of the 10 sites, respectively, noting that PET was not available for two sites. 
+$T_{min}$ was identified as the top driver at BCNM, where it's effects were only marginally significant for one species (Fig. `r clim_sens`), and $T_{mean}$ was never selected as the top driver.
+The most influential seasonal windows for temperature tended to be shorter than those of precipitation ($\le$3 months at 9 of 10 sites).
+They most commonly occurred during the current growing season (n= 5 of 10 sites), but there were cases where the most influential windows occurred during the preceding dry season (BCNM), late winter/early spring (HF, ZOF), or the previous growing season (NIO, CB).
+Temperature and precipitation variables were rarely influential over the same seasonal window (exception: LDW).
+
+```{r , eval=FALSE, echo=FALSE}
+## Tallies for the paragraph below (Feb 11)
+#BCNM: 1 species with both, 2 with just P
+#HKK: 3 species with both, 1 with just T (CHTA)
+#SCBI: 11 species with both, 3 with just P (FRNI, FAGR, PIST)
+#LDW:  4 species with both,  2  with just P (ACSA, CAOV)
+#HF:  4 species with both
+#ZOF:  3 species with both
+#NIO:  1 species just T 
+#LT:  2 species with both
+#CB:  8 species with both
+#SC:  1 species with both
+```
+### Climate responses {-#Climate}
+Analyses of species-specific responses at each site used the GLS model to test for first- and negative second- order linear effects of both a precipitation and a temperature variable. 
+Both a precipitation and a temperature variable were included in the top model for 78% (n=36 of 46) of site-species combinations (Fig. `r clim_sens`). 
+There were seven site-species combinations for which only a precipitation term was significant (two at BCNM, three at SCBI, and two at LDW), two for which only a temperature term was significant (*Chukrasia tabularis* at HKK and *Betula papyrifera* at NIO), and none with no significant climatic effects on RW. 
+Below, we summarize the precipitation and temperature variables included in these models and their direction of response. 
+
+![**Figure 3 | Species-level responses of RW to climwin-selected variables in precipitation and temperature variable groups.** Primary climate drivers are coded on the x-axes as the climate variable abbreviation followed by the range of months (p=previous year, c=current year) over which it is most influential. For each species (color-coded as in Fig. 4), relationships are plotted if included in top model. For each relationship shown, other terms in the model are held constant at their median. Best-fit polynomials are plotted with solid lines when both first- and second-order terms are significant (t-test’s p-value <0.05), dashed lines when only one term is significant, and dotted lines when neither is significant. Transparent ribbons indicate 95% confidence intervals. Vertical grey lines indicate the long-term mean for the climate variable, shading indicates 1 SD.](tables_figures/pre_temp_groups.png)
+
+
+```{r , eval=TRUE, echo=FALSE}
+###other:
+n_ssc= 45 #number species-site combinations
+n_pos_first_order_P_term=42 #(exception: TSCA)
+n_pos_1st_P_term_and_neg_2nd = 32
+percent_temperature_responses_1st_order_negative=round(13/38*100)
+percent_temperature_responses_1st_order_pos_2nd_order_neg=18/38*100
+```
+Responses to precipitation amount (PPT) and frequency (PDF) were included in the best model for all but two species-site combinations, and were predominantly positive (Table `r hypotheses`, Fig. `r clim_sens`).
+Specifically, there were positive first-order linear terms for precipitation all but one species-site combination (*Tsuga canadensis* at HF; Fig. `r clim_sens`).
+Negative second-order terms were commonly included in the best model (`r n_pos_1st_P_term_and_neg_2nd` of `r n_pos_first_order_P_term` with positive first-order terms), generally resulting in a deceleration or decline at the highest levels of precipitation, but occasionally producing a unimodal (e.g., several species at SCBI) or predominantly negative response (e.g., *Betula alleghaniensis* at HF; Fig. `r clim_sens`). 
+
+A temperature variable was included in the best model for all but eight site-species combinations, with predominantly negative responses, particularly at the higher end of the temperature range (`r round(percent_temperature_responses_1st_order_negative + percent_temperature_responses_1st_order_pos_2nd_order_neg)`%; `r round(percent_temperature_responses_1st_order_negative)`% with negative first-order term, `r round(percent_temperature_responses_1st_order_pos_2nd_order_neg)`% with positive first-order term but negative second-order term; Fig. `r clim_sens`).
+Within the tropics, there was minimal effect of temperature at BCNM and a negative effect of wet season $T_{max}$ for three of four species at HKK.
+For temperate sites with the most influential seasonal windows covering the current and/or past growing season, responses were universally negative (i.e., negative first-order linear or unimodal, peaking at temperatures lower than the long-term mean). 
+In contrast, there were positive effects of Jan-March $T_{max}$ for all three species at ZOF and of March PET for *Tsuga canadensis* at HF, the latter contrasting with a negative response of the three deciduous species analyzed at HF (Fig. `r clim_sens`).
+At the highest-latitude site (SC), which has undergone rapid warming and permafrost melt, *Picea mariana* responded positively (but with wide 95% CI on the slope) to temperature over the full analysis period (1903-2013); however, responses were predominately positive prior to 1970 and predominantly negative afterwards (Fig. `r SC_1970break`). 
+
+
+### Variation in climate sensitivity with DBH {-#Variation}
+
+```{r , eval=TRUE, echo=FALSE}
+## Tallies for the  paragraph below (Feb11)
+n_DBHx_analyzed=203 #n rows in climate_interactions_coefficients, excluding Hansley
+n_DBHx_analyzed_sig=90  #NIO water is included here
+#precip:
+n_DBHxP_RW_analyzed= 36
+n_DBHxP_RW_sig=16
+n_DBHxP_RW_sig_pos=n_DBHxP_RW_sig-4 #(exceptions: BEAL, TSCA, ACRU at HF, AFXY at HKK*) *pos response to precip in current growing season
+
+n_DBHxP_BAI_analyzed= n_DBHxP_RW_analyzed
+n_DBHxP_BAI_sig=17
+n_DBHxP_BAI_sig_pos=n_DBHxP_BAI_sig-6 #(exceptions: QURU & ACRU at HF, QUVE & JUNI & CACO at SCBI*,  AFXY at HKK*) *pos response to precip in current growing season
+#T:
+n_DBHxT_RW_analyzed= 32
+n_DBHxT_RW_sig=12
+n_DBHxT_RW_sig_neg=5 #notable that it's minority for RW, contrasting with slight majority neg for BAI 
+
+n_DBHxT_BAI_analyzed= n_DBHxT_RW_analyzed
+n_DBHxT_BAI_sig=16
+n_DBHxT_BAI_sig_neg=10 #mostly drought signal, including 4 species at CB
+```
+
+Interactive effects of climate and DBH were found for `r n_DBHx_analyzed_sig` of the `r n_DBHx_analyzed` (`r round(n_DBHx_analyzed_sig/ n_DBHx_analyzed*100)`%) species-variable combinations for which they were tested. 
+For precipitation variables, interactions were significant for `r n_DBHxP_RW_sig` of the `r n_DBHxP_RW_analyzed` (`r round(n_DBHxP_RW_sig/ n_DBHxP_RW_analyzed*100)`%) interactions with RW as the growth metric (Fig. `r RW_interactions_all`) and for `r n_DBHxP_BAI_sig` of the `r n_DBHxP_BAI_analyzed` (`r round(n_DBHxP_BAI_sig/ n_DBHxP_BAI_analyzed*100)`%) with BAI as the growth metric (Fig. `r BAI_interactions_all`).
+The majority of these interactions were positive (`r round(n_DBHxP_RW_sig_pos/n_DBHxP_RW_sig*100)`% for RW; `r round(n_DBHxP_BAI_sig_pos/n_DBHxP_BAI_sig*100)`% for BAI), indicating that larger trees generally respond more positively to precipitation or its frequency (Fig.  `r interactions_fig`).
+Among the exceptions to this pattern (n=`r n_DBHxP_RW_sig-n_DBHxP_RW_sig_pos` for RW, `r n_DBHxP_BAI_sig-n_DBHxP_BAI_sig_pos` for BAI), only a minority (n=1 for RW, 4 for BAI) occurred in species responding positively to precipitation in the current growing season. 
+
+Temperature variable $\times DBH$ interactions were significant for `r round(n_DBHxT_RW_sig/ n_DBHxT_RW_analyzed*100)`% of cases with RW as the growth metric (Fig. `r RW_interactions_all`) and for `r round(n_DBHxT_BAI_sig/ n_DBHxT_BAI_analyzed*100)`% with BAI as the growth metric (Fig. `r BAI_interactions_all`).
+Directions of these interactions were mixed, with `r n_DBHxT_RW_sig_neg` of `r n_DBHxT_RW_sig` significant interactions negative with RW as the growth metric and `r n_DBHxT_BAI_sig_neg` of `r n_DBHxT_BAI_sig` significant interactions negative when BAI was the growth metric.
+For both RW and BAI, the majority of significant negative interactions (i.e., more negative/ less positive response of larger trees to higher temperatures) occurred in cases where the main effect temperature was negative (e.g., HKK, LT, CB; Fig.  `r interactions_fig`), whereas positive interactions were more common when the main effect of temperature was positive (e.g., HF, ZOF).
+
+![**Figure 4 | Examples of climate - DBH interactions for three species at three sites.** Shown are modeled response functions at the minimum and maximum and maximum tails of the DBH distribution. Other terms in the model are held constant at their median. Transparent ribbons indicate 95% confidence intervals. Vertical grey lines indicate the long-term mean for the climate variable, shading indicates 1 SD.](tables_figures/pre_temp_groups_dbh_interactions.png)
+
+
+## Variation with DBH {-#Variation}
+
+When a precipitation variable, a temperature variable, and DBH were all included as candidate variables in the GLS models, typically all three were included in the top model, regardless of the growth metric used.
+Climate responses were generally similar to those described above for models without a DBH term, although some of the weaker climate responses were not consistently included in top models (e.g., $T_{min}$ responses at BCNM; Figs. `r clim_sens`, `r all_GLS`).
+In general, DBH explained more variation in growth rates than did climate, but its relative importance varied across growth metrics and sites (Figs. `r all_GLS`).
+The relative importance of DBH tended to be least for RW, intermediate for BAI, and highest for $\Delta$AGB (e.g., at SCBI; Fig. `r GLS_SCBI`), but exceptions occurred when RW decreased steeply with DBH (e.g., at LT, Fig. `r GLS_LT`).
+
+```{r , eval=TRUE, echo=FALSE}
+## Tallies for the  paragraph below (Feb 11)
+n_spst_DBH_analyzed= 43 # n species with DBH analyzed: 43 (45 - 2: 2 Hansley)
+n_spst_RW_DBH_bm=35 #  species with first-order linear DBH term in best model
+n_spst_RW_DBH_2nd_order=26
+n_spst_RW_DBH_2nd_order_neg=21
+n_spst_BAI_DBH_best_model=42 #exception: ACRU at HF  
+n_spst_BAI_DBH_best_model_pos=40 #exceptions: PIPO at LT (reconstructed DBH down to only 15cm) and PILO at CB (short DBH range on old trees), both neg but not significant
+n_spst_BAI_DBH_best_model_2nd=41
+n_spst_BAI_DBH_best_model_2nd_neg=40 # exception: PILO at CB
+n_spst_dAGB_DBH_best_model=42 # exception: PILO at CB
+```
+
+Growth rate -- whether measured as RW, BAI, or $\Delta$AGB -- varied with DBH for most species at all sites (Fig. `r size`).
+These relationships were nonlinear for the majority of site-species combinations (`r round(n_spst_RW_DBH_bm/ n_spst_DBH_analyzed*100)` - `r round(n_spst_dAGB_DBH_best_model/ n_spst_DBH_analyzed*100)`% depending on growth metric; Fig. `r size`). 
+
+For RW, DBH was included in the best model for `r round(n_spst_RW_DBH_bm/ n_spst_DBH_analyzed*100)`% of species-site combinations (n= `r n_spst_RW_DBH_bm` of `r n_spst_DBH_analyzed`), and the majority of best models also included a significant second-order linear DBH term (n= `r n_spst_RW_DBH_2nd_order`, `r n_spst_RW_DBH_2nd_order_neg` of which were negative). 
+There was substantial variation in these trends, with patterns mixed across both forests and species within a single stand (Fig. `r size`).
+On one end of the spectrum, some species exhibited maximum RW at low DBH, followed by fairly rapid declines in RW with increasing DBH. 
+This pattern was common among light-demanding species (6 of 13 site-species combinations; Tables `r hypotheses`, `r species_table`; e.g., *Melia azedarach* at HKK, *Populous tremuloides* at CB) and in relatively open stands (e.g., both species at LT, *Picea mariana* at SC; Fig. `r size`).
+At the other end of the spectrum, some species had low RW at small DBH, increased to peak RW at intermediate DBH, and subsequently declined.
+This pattern was common among shade-tolerant species (8 of 11 site-species combinations; Table `r hypotheses`; e.g., *Trichilia tuberculata* and *Tetragastris panamensis* at BCNM; *Fagus* spp. at SCBI and ZOF, *Picea* spp. at ZOF and CB; Table `r species_table`).  
+
+Trends in both BAI and $\Delta$AGB were far more consistent across sites and species, typically increasing to a peak at intermediate DBH and then declining (Table `r hypotheses`, `Fig. `r size`).
+Best models for BAI included DBH and $DBH^2$ for `r n_spst_BAI_DBH_best_model` of `r n_spst_DBH_analyzed` species (exception: *Acer rubrum* at HF), with a positive coefficient for DBH in `r n_spst_BAI_DBH_best_model_pos` (exceptions: non-significant negative coefficients for *Pinus ponderosa* at LT and *Pinus longaeva* at CB, whose reconstructed DBHs did not extend down to 0 cm within the time frame analyzed) and near-universally negative coefficients for $DBH^2$ (exception: *Pinus longaeva* at CB).
+For $\Delta$AGB, models were even more consistent, with the best models for `r round(n_spst_dAGB_DBH_best_model/ n_spst_DBH_analyzed*100)`% of species containing a positive coefficient for DBH and a negative coefficient for $DBH^2$ (exception: *Pinus longaeva* at CB).
+
+
+![**Figure 5 | Growth sensitivity to DBH: (a) RW, (b) BAI, (c) $\Delta$AGB.** Relationships for species are plotted when included in the top model. Other terms in the model are held constant at their median. Best-fit polynomials are plotted with solid lines when both first- and second-order terms are significant (t-test’s p-value <0.05), dashed lines when only one term is significant, and dotted lines when neither is significant.  Transparent ribbons indicate 95% confidence intervals.](tables_figures/DBH_responses.png)
+
+
+
+## Effects of year {-#Effects}
+
+```{r , eval=TRUE, echo=FALSE}
+## Tallies for the  paragraph below (Feb11)
+n_tested=37 #same for all metrics
+
+n_best_model_RW=31
+n_best_model_BAI=32
+n_best_model_AGB=30
+n_best_model_neg_RW=n_best_model_RW-3 #(exceptions:  FASY at ZOF, PIPU and PIFL at CB)  90%
+n_best_model_neg_BAI=n_best_model_BAI-3 #(exceptions:  FASY at ZOF, PIPU and PIFL at CB) 90.6%
+n_best_model_neg_AGB=n_best_model_AGB-3 #(exceptions:  FASY at ZOF, PIPU and PIFL at CB) 90%
+percent_neg_of_sig_trends="90-91%"
+percent_sig_neg_trend_of_analyzed = "73-78%" 
+#species consistently independent of year: PIEN and PILO at CB, CHTA at HKK, PIST3 at NM, 
+
+# breaking up by forest age (counting CB, ZOF, and LT as old)
+n_tested_old_forest=12
+n_tested_young_forest=n_tested-n_tested_old_forest
+n_best_model_BAI_old=9
+n_best_model_BAI_young= n_best_model_BAI - n_best_model_BAI_old #23
+n_neg_BAI_old= 6
+n_pos_BAI_old= 3
+n_neg_BAI_young= n_best_model_neg_BAI - n_neg_BAI_old #23
+n_pos_BAI_young= 0
+
+```
+
+There was a significant effect of `year` in the GLS models for `r n_best_model_RW` - `r n_best_model_BAI` (depending on growth metric) of the `r n_tested` species-site combinations tested (Figs. `r year_fig`, `r all_GLS`).
+In `r percent_neg_of_sig_trends` of cases (depending on growth metric), the growth trend over time was negative.
+Declines were particularly prevalent in secondary or disturbed forests, occurring in `r round(n_best_model_BAI_young/n_tested_young_forest*100)`% of species-site combinations (`r round(n_neg_BAI_young/n_best_model_BAI_young*100)`% of all species with significant year effects) at the seven disturbed sites (Table `r hypotheses`, Fig. `r year_fig`).
+In older forests (ZOF, LT, CB), growth trends were mixed (Table `r hypotheses`, Fig. `r year_fig`).
+Significant positive growth trends were observed for only three species (consistently across all three growth metrics), *Fagus sylvatica* at ZOF, *Picea pungens* and *Pinus flexilis* at CB, and all were modest compared to the steep negative trends observed for some species.
+Growth rate was consistently independent of `year` for only four species: *Chukrasia tabularis* at HKK, *Pinus strobiformis* at LT, and *Picea engelmannii* and *Pinus longaeva* at CB.
+
+Effects of year and DBH interacted such that inclusion of year in models altered the shape of DBH responses, typically resulting in less pronounced growth declines with increasing DBH (Figs. `r all_GLS`).
+
+![**Figure 6 | Effect of year, when included in the best model, on BAI.** For each species (all listed), relationships are plotted if the year effect could be analyzed and was included in top model. Other terms in the model are held constant at their median. Best-fit polynomials are plotted with solid lines when both first- and second-order terms are significant (t-test’s p-value <0.05), dashed lines when only one term is significant, and dotted lines when neither is significant.  Transparent ribbons indicate 95% confidence intervals. ](tables_figures/Year_responses_BAI_only.png)
+
+# Discussion {-#Discussion}
+
+The long-term growth records contained in tree rings provide an exceptional tool for understanding past drivers of growth and anticipating future forest changes, yet traditional analysis methods were not designed to address questions that are critical to understanding whole-forest productivity (Table `r hypotheses`).
+Our novel method provides a powerful approach to elucidate how tree growth is simultaneously shaped by climate, tree size, slowly changing environmental conditions, and their interactions (Fig. `r schematic`).
+For each of these drivers individually, the method yields results that are consistent with those that would be obtained using established methods (Figs. `r SCBI_example`, `r all_traditional_comparisons`, `r decadal_analysis_figs_all`;  Table `r qualitative_results_comparison`; see also Appendix `r traditional_comparison`). 
+By allowing these factors to be considered simultaneously, our approach opens the door to robust analyses of the joint and interactive effects of climate, tree size, and other drivers. 
+Applied across multiple forest types and species distributed globally across 10 sites, this method yields a more complete understanding of the drivers of variability and directional changes in tree growth over the past century (Tables `r hypotheses`-`r sites`). 
+
+## Climate sensitivity {-#Climate}
+
+Across diverse climates and forest types (Tables `r sites`, `r species_table`), growth rates of `r n_species` tree species usually responded positively to water availability (PPT or PDF) -- at least up until the long-term mean -- 
+and negatively to temperature (usually $T_{max}$ or PET), with the exception of several positive responses at times and in places where temperature was limiting (Table `r hypotheses`, Fig. `r clim_sens`).
+These findings are generally consistent with current understanding of global-scale patterns in climate sensitivity [@rozendaal_dendroecology_2011; @babst_twentieth_2019]: outside of the wet tropics (where there are few tree-ring records), the majority of forests are moisture limited and respond negatively to temperature, with a shrinking area of temperature-limited forests in cold, humid regions (with SC falling near the transition zone). 
+Within warmer regions, forests in humid climates can sometimes benefit from warm winter or spring temperatures [@babst_twentieth_2019; @tumajer_increasing_2017], as we show for all three species at ZOF and one species at HF (Fig. `r clim_sens`).
+However, the predominantly negative temperature responses (Fig. `r clim_sens`) imply that warmer temperatures are likely to reduce growth across the wide range of forest types and climates represented here.
+The primary mechanism underlying growth decreases at high temperatures is presumably increased atmospheric dryness (PET or VPD) and ensuant exacerbation of observed water limitations [@novick_increasing_2016; @humphrey_soil_2021; @lopez_systemic_2021].
+This effect occurs in addition to the effects of precipitation (Fig. `r clim_sens`), highlighting the fact that temperature and associated VPD increases limit growth even under conditions of high soil moisture [@novick_increasing_2016], and occurs over shorter time-frames (usually $\le$ 3 mo) than the effects of precipitation (usually $\ge$ 3 mo.; Table `r hypotheses`, Fig. `r clim_sens`).
+This suggests that relatively short periods of anomalously high temperatures and atmospheric dryness, themselves caused in large part by soil dryness [@humphrey_soil_2021], add to effects of prolonged periods of reduced precipitation to shape forest drought responses.
+
+Our analysis differed fundamentally from most conventional approaches in testing for non-linear responses of growth to climate, finding that the majority of climate responses were nonlinear (Table `r hypotheses`, Fig. `r clim_sens`). 
+This result, which is consistent with physiological expectations [e.g., @kumarathunge_acclimation_2019, @wilmking_global_2020], indicates that the majority of tree-ring records examined here cover climate variation beyond the range over which the response is linear. 
+The nonlinear form of most climate growth responses implies that as the climate changes such that high temperatures and strong precipitation anomalies become more common [@ipcc_climate_2014], non-stationary climate responses, already common [@wilmking_global_2020], could become more prevalent [@germain_climate_2020]. 
+
+We found that interactions between climate variables and DBH were common (`r round(n_DBHx_analyzed_sig/ n_DBHx_analyzed*100)`% of total cases analyzed;  Table `r hypotheses`, Figs. `r interactions_fig`, `r RW_interactions_all`, `r BAI_interactions_all`).
+The most coherent pattern observed in this analysis was a tendency for larger trees to be more sensitive to precipitation and high temperatures (Fig. `r interactions_fig`), consistent with widespread observations that larger trees are more sensitive to drought [e.g., @bennett_larger_2015; @hacket-pain_consistent_2016; @pretzsch_drought_2018; @gillerot_tree_2020; @mcgregor_tree_2020].
+An analytical structure such as ours that can account for this pattern and other DBH-climate interactions [e.g., @rollinson_climate_2021; @rossi_agedependent_2007] will be critical to using tree-ring records to understand and forecast the effects of climate on tree growth and forest productivity.
+
+
+## Variation with DBH  {-#Variation}
+
+There was substantial variation across species-site combinations in the relationship between DBH and growth rate. (Fig. `r size`).
+Variation was most pronounced when RW was considered as the growth metric, as would be expected based on basic geometric principles given that RW patterns are most variable at small DBH. 
+This variation was driven by two primary, interrelated factors: species ecology and stand history.
+As hypothesized, RW declined with DBH for a substantive portion of light-demanding species, but most commonly increased with DBH for shade-tolerant species (Table `r hypotheses`). 
+However, species shade tolerance alone did not explain variation in RW-DBH relationships; rather, we observed instances where RW declined with DBH for a shade-tolerant growing in a relatively open stand (*Picea mariana* at SC) or initially increased with DBH for shade-intolerant species growing at sites where competition for light was likely more intense (e.g., *Afzelia xylocarpa* at HKK, *Liriodendron tulipifera* at LDW).
+These results imply that while trees growing in high-light conditions typically display dendrochronology's "textbook" pattern of declining RW with DBH -- in part attributable to the geometric constraint that new growth is spread around an ever-growing circumference [@fritts_tree_1976; @biondi_theorydriven_2008] -- the majority of species within forest settings exhibit patternns of initially low, but increasing, RW.
+This latter pattern is consistent with the observation that when contemporary growth rates are compared across individuals within a closed-canopy stand (i.e., a "cross-sectional" analysis), RW increases continuously with DBH [e.g., @anderson-teixeira_sizerelated_2015; @muller-landau_testing_2006; @helcoski_growing_2019], or increases and subsequently decreases [@schelhaas_speciesspecific_2018]. 
+
+Our finding that BAI and $\Delta$AGB generally saturate or decline with increasing DBH (Table `r hypotheses`, Fig. `r size`), contrasts with findings of cross-sectional analyses of forest census data showing that $\Delta$AGB increases continuously with DBH [@stephenson_rate_2014; @meakem_role_2018].
+In large part, this discrepancy can be explained by differences between cross-sectional analyses and "longitudinal" patterns of individual trees through time [@sheil_does_2017; @forrester_does_2021].
+Declines in BAI and $\Delta$AGB at larger DBH are probably in part attributable to increasing allocation to reproduction [@thomas_agerelated_2011], and are also linked to slowly changing environmental conditions (e.g., successional changes in stand structure, climate change).
+Notably, inclusion of year in the GLS models tended to reduce the magnitude of BAI and $\Delta$AGB declines at larger DBH (Figs. `r all_GLS`), suggesting that some of the declines (Fig. `r size`) are more properly attributed to the effect of year than DBH.
+
+## Changing growth rates {-#Changing}
+
+Our analytical framework reconstructs growth changes in a sampled tree population over time while accounting for climate, DBH, and persistent growth differences among individuals (Fig. `r schematic`), thereby addressing some important challenges to obtaining unbiased estimates of growth trends.
+First, changes in climate can drive dramatic growth trends (e.g., declines at LT) and therefore must be factored out in order to capture the influence of other environmental drivers.
+Second, correcting for any relationship between tree growth rate and age or DBH (Fig. `r size`) is essential for unbiased reconstruction of growth trends, yet the reliability of existing analytical approaches remains mixed [**REFS**; @peters_detecting_2015].
+A comparative analysis of several methods revealed low reliability of two of the most commonly used approaches, conservative detrending and basal area correction [@peters_detecting_2015], both of which assume a constancy of growth in mature trees that is violated by the DBH growth trends observed here (Fig. `r size`).
+Our method is conceptually parallel to regional curve standardization, which performed better at growth trend detection in the analysis of @peters_detecting_2015, but differs in that we standardize relative to DBH rather than age, correct for any trends in the most influential climate drivers, and include random effects of tree to account for persistent growth differences among individuals (see next paragraph).
+It is important to bear in mind, however, that growth trends in relation to DBH and year are linked, such that poor model representation of the ontogenetic effects of growth could bias estimated trends over time. 
+While consistency in the direction of estimated temporal trends across growth metrics and relative to an alternative analysis method (Figs. `r decadal_analysis_figs_all`) rules out the potential for severe bias, the close linkage between DBH and calendar year implies that it is difficult, if not impossible, to fully disentangle the two statistically. 
+
+A third third important challenge is that persistent growth differences among individuals can bias estimated growth trends in positive or negative directions [@brienen_detecting_2012;@nehrbass-ahles_influence_2014; @groenendijk_no_2015; @brienen_tree_2017; @vandersleen_trends_2017].
+For instance, older trees, which provide the only records available for the earliest decades, are competitive winners that probably had above-average growth rates [@aubry-kientz_joint_2015], which would upwardly bias average growth rate estimates for early decades [@groenendijk_no_2015].
+While including a random effect of tree should help to avoid the the most severe potential biases associated with persistent growth differences across individuals, it is not possible to obtain fully representative samples of tree populations at all points throughout the history of a stand, as would be required to ensure unbiased representation through time [@brienen_detecting_2012; @brienen_tree_2017; @bowman_detecting_2013].
+Thus, observed trends should be interpreted as representative of only the sampled population of trees, as opposed to all individuals of the species that existed throughout the time frame analyzed.
+Within this context, signals of changing growth rate over time are attributable to some combination of stand dynamics (e.g., recruitment and succession, changing stand structure) and environmental drivers (e.g., indirect effects of climate change, rising atmospheric CO~2~, deposition of SO~2~ and NO~x~).
+
+Our analysis revealed that growth rates changed directionally for the majority (`r percent_sig_neg_trend_of_analyzed`, depending on growth metric) of site-species combinations selected for analysis based on the sampling representation of DBH by year (Fig. `r year_fig`).
+The majority of negative growth trends detected here (Fig. `r year_fig`) are probably attributable to stand dynamics as cohorts and stands develop oer time, and are pretty typical of mixed-species stands that experience vertical stratification [@oliver_forest_1990]. 
+For species exhibiting a pulse of recruitment in the past followed by little subsequent recruitment (e.g., *Acer rubrum* and *Betula alleghaniensis* at HF; Figs. `r all_recruitment_plots`), persistent differences in growth rates among individuals could produce a trend of declining growth, as faster-growing individuals reach various size thresholds earlier [@brienen_tree_2017; see also @vandersleen_trends_2017].
+Such a trend is not indicative of a directional response to changing environmental conditions that would be generalizable across stands (e.g., rising atmospheric CO~2~), but it does indicate declining growth of the species within the stand. 
+This can occur, for example, when a species undergoes a dramatic decline in recruitment within a stand (e.g., *Quercus* spp. at SCBI; *Abies alba* at ZOF), such that fast-growing individuals disappear from progressively larger DBH classes as time proceeds. 
+In secondary stands, particularly those where many of the sampled species recruited in pulses that were followed by low recruitment (e.g., SCBI, HF; Appendix `r site_details_appendix`, Figs. `r all_recruitment_plots`), growth declines are consistent with the tendency for faster tree growth during early stand development [@lorimer_estimating_1988; @lorimer_methodology_1989; @oliver_forest_1990], and with increasing competition and declining woody productivity as young stands mature [e.g., @goulden_patterns_2011; @pregitzer_carbon_2004].
+Even within older forests, light-demanding species that establish in gaps (e.g., *Jacaranda copaia* at BCNM, *Populus tremuloides* at CB; Table `r species_table`) would tend to experience an increasingly competitive environment through time.
+For more shade-tolerant species in stands with no known major disturbance within the past 150 years (ZOF, CB),  mixed growth trends probably reflect some combination of successional changes and shifting competitive advantages, perhaps in part driven by changing environmental conditions [@furniss_reconciling_2017; @vrska_european_2009] or the lack of intermediate disturbances giving rise to increasing crowding [e.g., @lutz_twentiethcentury_2009].
+
+In a few instances, directional changes in growth are likely attributable to abiotic drivers.
+At Zofin, size-corrected growth rates were lowest in the 1970s and 1980s (Fig. `r decadal_plot_ZOF`), consistent with other studies from central Europe showing dramatic growth reductions due to acid deposition during this period [@elling_dendroecological_2009; @samonil_longterm_2008]. 
+Non-linear trends such as this would be more accurately described by a non-linear response function to year, or incorporation of data on pollution, but that is beyond the scope of the current analysis.
+In New Mexico (LT), where growth rates of *Pinus ponderosa* declined, it is possible that the primary climate drivers identified here do not capture all aspects of a strong regional warming and drying trend [@touchan_millennial_2011; @williams_temperature_2013].
+At Scotty Creek, in northern Canada, rapid warming is thawing permafrost and altering hydrologic conditions [@baltzer_forests_2014], resulting in high mortality, growth declines, and low recruitment of *Picea mariana* [@sniderhan_growth_2016; @dearborn_permafrost_2020]; we attribute pronounced negative growth trends to a combination of successional declines and indirect climatic stress.
+
+There is a notable lack of evidence that growth rates of any species benefited substantially from increasing CO~2~, corroborating previous analyses from HKK [@nock_long_2011; @vandersleen_no_2015; @groenendijk_no_2015; @vandersleen_trends_2017]. 
+With a few exceptions (*Fagus sylvatica* at ZOF, *Picea pungens* and *Pinus flexilis* at CB; Fig. `r year_fig`), any growth benefit from elevated CO~2~ was outweighed by some combination of demographic or successional changes and chronic environmental shifts.
+This aligns with the preponderance of studies using tree rings to infer growth responses to rising CO~2~ [e.g., @girardin_no_2016; @groenendijk_no_2015; @hararuk_tree_2019; @walker_integrating_2020], albeit contrasting with some [e.g., @hember_tree_2019; @voelker_historical_2006].
+A growth benefit of increasing atmospheric CO~2~ concentration is expected, based on physiological mechanisms, under water-limited conditions and has been observed in young forests in experimental settings [@walker_integrating_2020]. 
+However, significant woody growth stimulation by elevated CO~2~ has not been observed in experimentally manipulated mature forests [@walker_integrating_2020], and increasing CO~2~ does not appear to be a dominant growth driver for the trees in natural forest settings analyzed here.
+
+## Conclusions {-#Conclusions}
+
+In this study, we present a novel robust approach that allows integrative analysis of factors that jointly influence tree growth (Table `r hypotheses`). 
+Specifically, it allows us to demonstrate that 
+(1) growth is generally simultaneously influenced by temperature and precipitation over different seasonal windows, 
+(2) nonlinear climate responses and interactive effects of climate with DBH are common (Figs. `r clim_sens` and `r interactions_fig`, respectively),
+(3) growth -- expressed in any metric -- almost universally varies with DBH (Fig. `r size`), 
+and (4) current or recently living trees commonly show growth declines in response to some combination of stand dynamics and environmental change (Fig. `r year_fig`).
+While traditional dendrochronology methods, particularly those focused on climate reconstruction, generally sample and analyze data to minimize many of these effects, they are critical for understanding forest productivity in an era of global change.
+As global change pressures intensify and the need to understand changing forest dynamics becomes increasingly urgent [@thom_impact_2017; @mcdowell_pervasive_2020], we expect that this approach will prove valuable to understanding drivers of tree growth and forest change.
+
+
+# Acknowledgements {-#Acknowledgements}
+Thanks to Helene Muller-Landau and Pete Kerby-Miller for bark thickness data.
+Helpful feedback was provided by Helene Muller-Landau, Albert Kim, and Nadja Rüger.
+This analysis was funded by a Smithsonian Scholarly Studies grant to KAT, SM, Helene Muller-Landau, and CP.
+Tree-ring analysis at Cedar Breaks was supported by the Utah Agricultural Extension Station.
+The participation of PS, JK, and IV from the Czech Republic was supported by the Czech Science Foundation, project No. 19-09427S.
+PRISM climate data were purchased under an NSF grant to KAT (#DEB-1353301).
+Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.
+
+# Authors' contributions {-#Authors}
+KAT, VH, CR, RA, CP conceived the ideas and designed methodology; 
+NP, CDA, RAS, TA, JLB, JDB, SB, PC, RH, JK, JL, EQM, JM, PS, AES, AJT, IV, MV, and PAZ collected the data; 
+VH, BG, EGA, CD, and NP organized and analysed the data; 
+KAT led the writing of the manuscript. 
+All authors contributed critically to the drafts and gave final approval for publication.
+
+# Data availability {-#Data}
+
+Code and full results are available via the project repository in GitHub (github.com/EcoClimLab/ForestGEO-climate-sensitivity) and archived in Zenodo (DOI: TBD) .
+Data for [# TBD] of the sites are archived in the The DendroEcological Network (DEN) database [SCBI, ... ; @rayback_dendroecological_2020] and/or the International Tree-Ring Data Bank, ITRDB (CB; ...). 
+
+# Supplementary files {-#Supplementary}
+
+`r site_details_appendix_title`
+
+`r DBH_reconstruction_title`
+
+`r climate_correction_title`
+
+`r traditional_comparison_title`
+
+`r changing_climate_title` 
+
+`r site_details_legend` 
+
+`r species_table_legend`
+
+`r sampling_details_legend`
+
+`r bark_allometries_legend` 
+
+`r qualitative_results_comparison_legend`
+
+Figures `r all_recruitment_plots`. Density plots of core record start years by species for all sites.
+
+Figures `r all_traditional_comparisons`. Comparison of our approach with traditional methods of identifying climate signals for four species.
+
+Figures `r all_climwin`. Climwin output for water and temperature variable groups at all sites.
+
+Figures `r all_GLS`. Best GLS models models excluding and including year for all sites.
+
+`r SC_1970break_legend`
+
+`r RW_interactions_all_legend ` 
+
+`r BAI_interactions_all_legend`
+
+Figures `r decadal_analysis_figs_all`. Relationships between DBH and BAI by decade for all sites. 
+
+
+# References {-#References}
+
+
+
+
