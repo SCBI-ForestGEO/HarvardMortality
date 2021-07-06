@@ -1,8 +1,4 @@
 # Harvard Tree Mortality 
-
-<!-- badges: start -->
-[![data-tests](https://github.com/SCBI-ForestGEO/Harvardmortality/workflows/data-tests/badge.svg)](https://github.com/SCBI-ForestGEO/Harvardmortality/tree/main/testthat/reports)
-<!-- badges: end -->
   
 *This repo was copied from [SCBI-ForestGEO/SCBImortality](https://github.com/SCBI-ForestGEO/SCBImortality) and modified for use at Harvard Forest.*
 
