@@ -8,7 +8,7 @@ A summary of n errors by quadrat is [here](https://github.com/SCBI-ForestGEO/SCB
 
 All fixes need to be done in FastField (unless this proves awful, in which case we can come up with an alternative). To send records back to FastField for editing, follow these steps:
 
-### 1. Login to the [FFF's account](https://manage.fastfieldforms.com/Account/Login) (username ecoclimlab@gmail.com) and choose 'Legacy Portal' at bottom of left sidebar.
+### 1. Login to the [FFF's account](https://manage.fastfieldforms.com/Account/Login) and choose 'Legacy Portal' at bottom of left sidebar.
 
 <img src="https://user-images.githubusercontent.com/6355854/124400940-2bce3f80-dcf4-11eb-8660-ec6004f38968.png" alt="drawing" width="300"/>
 
