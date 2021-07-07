@@ -20,7 +20,8 @@ Imports:
     testthat,
     here,
     readxl,
-    rgdal
+    rgdal,
+    dplyr
 URL: https://github.com/SCBI-ForestGEO/SCBImortality
 BugReports: https://github.com/SCBI-ForestGEO/SCBImortality/issues
 Config/testthat/edition: 3
