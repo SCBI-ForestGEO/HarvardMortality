@@ -50,8 +50,12 @@ mort <- mort[!is.na(mort$Quad), ] # fix empty lines
 # remove repeated columns
 mort <- mort[, unique(names(mort))]
 
-mort <- mort %>% 
-  as_tibble()
+# Convert character vectors to numeric 
+mort[, "DBH"] <- as.numeric(mort[, "DBH"])
+mort[, "HOM"] <- as.numeric(mort[, "HOM"])
+mort[, 'Percentage of crown intact'] <- as.numeric(mort[, 'Percentage of crown intact'])
+mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown living'])
+
 
 
 
@@ -114,7 +118,11 @@ if(length(tag_stem_with_error) > 0) {
 # check that all censused trees have a crown position recorded ####
 error_name <- "missing_crown_position"
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Crown position')]
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- mort[, status_column] %in% c("A", "AU", "DS")
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Crown position') & idx_trees]
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
@@ -123,9 +131,11 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # check that all censused trees have a percent of crown intact recorded ####
 error_name <- "missing_percent_crown_intact"
 
+status_column <- rev(grep("Status", names(mort), value = T))[1]
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Percentage of crown intact')]
+idx_trees <- mort[, status_column] %in% c("A", "AU", "DS")
 
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Percentage of crown intact') & idx_trees]
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
@@ -133,8 +143,11 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # check that all censused trees have a percent of crown living recorded ####
 error_name <- "missing_percent_crown_living"
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Percentage of crown living')]
+status_column <- rev(grep("Status", names(mort), value = T))[1]
 
+idx_trees <- mort[, status_column] %in% c("A", "AU", "DS")
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Percentage of crown living') & idx_trees]
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ] , error_name))
 
@@ -142,9 +155,11 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # check percent of crown living <=  percent of crown intact####
 error_name <- "crown_living_greater_than_crown_intact"
 
+status_column <- rev(grep("Status", names(mort), value = T))[1]
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!is.na(mort$'Percentage of crown living') & !is.na(mort$'Percentage of crown intact') & mort$'Percentage of crown living' < mort$'Percentage of crown intact']
+idx_trees <- mort[, status_column] %in% c("A", "AU", "DS")
 
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!is.na(mort$'Percentage of crown living') & !is.na(mort$'Percentage of crown intact') & (mort$'Percentage of crown living' > mort$'Percentage of crown intact') & idx_trees]
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ] , error_name))
 
@@ -430,11 +445,12 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 # 
 # 
 # idx_trees <- mort$Species %in% c( "fram", "frni", "frpe", "frsp", "chvi")
-# idx_missing_EAB_info <- !complete.cases(mort[, c("Crown thinning", "Epicormic growth", "D-shaped exit hole count", "Crown position < 10 cm DBH") ])
+# idx_missing_EAB_info <- !complete.cases(mort[, c("Crown thinning", "Epicormic growth", "D-shaped exit hole count") ])
+# idx_missing_crwn_pos <- !complete.cases(mort[, c("Crown position < 10 cm DBH")])
+# idx_trees_less_10cm <-  !is.na( as.numeric(mort$DBH)) & as.numeric(mort$DBH) <100
 # 
 # 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_missing_EAB_info ]
-# 
+# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(idx_trees & idx_missing_EAB_info) | (idx_trees & idx_missing_crwn_pos & idx_trees_less_10cm)]# 
 # 
 # if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
