@@ -50,7 +50,7 @@ mort <- mort[!is.na(mort$Quad), ] # fix empty lines
 # remove repeated columns
 mort <- mort[, unique(names(mort))]
 
-# Convert character vectors to numeric
+# Convert character vectors to numeric 
 mort[, "DBH"] <- as.numeric(mort[, "DBH"])
 mort[, "HOM"] <- as.numeric(mort[, "HOM"])
 mort[, 'Percentage of crown intact'] <- as.numeric(mort[, 'Percentage of crown intact'])
