@@ -50,8 +50,12 @@ mort <- mort[!is.na(mort$Quad), ] # fix empty lines
 # remove repeated columns
 mort <- mort[, unique(names(mort))]
 
-mort <- mort %>% 
-  as_tibble()
+# Convert character vectors to numeric
+mort[, "DBH"] <- as.numeric(mort[, "DBH"])
+mort[, "HOM"] <- as.numeric(mort[, "HOM"])
+mort[, 'Percentage of crown intact'] <- as.numeric(mort[, 'Percentage of crown intact'])
+mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown living'])
+
 
 
 
@@ -155,7 +159,7 @@ status_column <- rev(grep("Status", names(mort), value = T))[1]
 
 idx_trees <- mort[, status_column] %in% c("A", "AU", "DS")
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!is.na(mort$'Percentage of crown living') & !is.na(mort$'Percentage of crown intact') & mort$'Percentage of crown living' > mort$'Percentage of crown intact' & idx_trees]
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!is.na(mort$'Percentage of crown living') & !is.na(mort$'Percentage of crown intact') & (mort$'Percentage of crown living' > mort$'Percentage of crown intact') & idx_trees]
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ] , error_name))
 
