@@ -10,13 +10,13 @@ library(here)
 
 # load files ####
 
-will_auto_fix_error_file <- file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv")
-if(file.exists(will_auto_fix_error_file)) will_auto_fix_error_file <- read.csv(will_auto_fix_error_file)
+will_auto_fix_error_filepath <- file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv")
+if(file.exists(will_auto_fix_error_filepath)) will_auto_fix_error_file <- read.csv(will_auto_fix_error_filepath)
 
 
 
-warning_file <- file.path(here("testthat"), "reports/warnings/warnings_file.csv")
-if(file.exists(warning_file)) warning_file <- read.csv(warning_file)
+warning_filepath <- file.path(here("testthat"), "reports/warnings/warnings_file.csv")
+if(file.exists(warning_filepath)) warning_file <- read.csv(warning_filepath)
 
 
 # write warning messages ####
@@ -26,7 +26,6 @@ warning_messages <- c("unhealthy_but_wrong_status" = "There are living tress tha
                       "canker_level_but_wrong_status_or_FAD" = "There are trees with canker level but no K in FAD.",
                       "rot_level_but_wrong_status_or_FAD" = "There are trees with rot level but no R in FAD",
                       "epicormic_growth_but_not_AU" = "There are trees with epicormic growth but status is not AU.",
-                      
                       "DBH_dead_suspicious" = "There are DBH measurements of dead trees that are not withing 2cm of previous census.", 
                       "Dead_but_now_alive" = "There are trees that are alive but were previously dead.",
                       "DC_but_now_A_AU_or_DS" = "There are trees that were DC but now A, Au or Ds.")
@@ -34,10 +33,11 @@ warning_messages <- c("unhealthy_but_wrong_status" = "There are living tress tha
 
 # check if files exist and generate a plot with the warning ####
 
-if(exists("will_auto_fix_error_file")) all_will_be_fixed <- warning_messages[unique(will_auto_fix_error_file$error_name)]
+all_will_be_fixed <- NULL
+if(file.exists(will_auto_fix_error_filepath)) all_will_be_fixed <- warning_messages[unique(will_auto_fix_error_file$error_name)]
 
-
-if(exists("warning_file")) all_warns <- warning_messages[unique(warning_file$warning_name)]
+all_warns <- NULL
+if(file.exists(warning_filepath)) all_warns <- warning_messages[unique(warning_file$warning_name)]
 
 
 filename <- file.path(here("testthat"), "reports/warnings.png")
