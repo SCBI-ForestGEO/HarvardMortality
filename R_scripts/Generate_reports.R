@@ -143,7 +143,7 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 error_name <- "crown_living_greater_than_crown_intact"
 
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!is.na(mort$'Percentage of crown living') & !is.na(mort$'Percentage of crown intact') & mort$'Percentage of crown living' > mort$'Percentage of crown intact']
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!is.na(mort$'Percentage of crown living') & !is.na(mort$'Percentage of crown intact') & mort$'Percentage of crown living' < mort$'Percentage of crown intact']
 
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ] , error_name))
@@ -598,9 +598,11 @@ if(!is.null(warning_file))
 
 
 # save
-write.csv(require_field_fix_error_file, file = file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"), row.names = F)
+if(!is.null(require_field_fix_error_file))
+  write.csv(require_field_fix_error_file, file = file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"), row.names = F)
 
-write.csv(will_auto_fix_error_file, file = file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"), row.names = F)
+if(!is.null(will_auto_fix_error_file))
+  write.csv(will_auto_fix_error_file, file = file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"), row.names = F)
 
 if(!is.null(warning_file))
   write.csv(warning_file, file = file.path(here("testthat"), "reports/warnings/warnings_file.csv"), row.names = F)
