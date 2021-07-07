@@ -13,7 +13,7 @@ Make sure you are in the NEW portal.
 
 ## 5. save as zip [here](https://github.com/SCBI-ForestGEO/SCBImortality/tree/main/raw_data/FFF_excel)
 
-## 6. unzip into the same folder (https://github.com/SCBI-ForestGEO/SCBImortality/tree/main/raw_data/FFF_excel)
+## 6. unzip into the same folder (https://github.com/SCBI-ForestGEO/HarvardMortality/tree/main/raw_data/FFF_excel)
 
 ## 7. push to GitHub. 
 Preferably, flag everyone who helped collect the data as coauthors in the commit.
