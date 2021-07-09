@@ -227,20 +227,21 @@ if(length(tag_stem_with_error) > 0) if(length(tag_stem_with_error) > 0) require_
 
 
 
-# TODO: Fix missing column
-# # check that status 'DS' or 'DC' have a dbh measured  ####
-# error_name <- "status_DS_or_DC_but_DBH_measured"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("DS", "DC")
-# idx_no_DBH_if_dead <- is.na(mort$'Dead DBH')
-# 
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_DBH_if_dead]
-# 
-# 
-# if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+# check that status 'DS' or 'DC' have a dbh measured  ####
+error_name <- "status_DS_or_DC_but_DBH_measured"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
+
+idx_trees <- mort[, status_column] %in% c("DS", "DC")
+idx_previously_dead <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column])
+idx_no_DBH_if_dead <- is.na(mort$'Dead DBH')
+
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_DBH_if_dead & !idx_previously_dead]
+
+
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
