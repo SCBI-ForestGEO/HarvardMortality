@@ -16,7 +16,13 @@ latest_FFFs <- list.files(here("raw_data/FFF_excel/"), pattern = ".xlsx", full.n
 
 
 mort <- as.data.frame(read_xlsx(latest_FFFs, sheet = "subform_1", .name_repair = "minimal" ))
+mort_root <- as.data.frame(read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" ))
 
+# Slightly different than SCBI version b/c of weird renaming of "Percentage of crown intact" to 
+# "Percentage.of.crown.intact"
+orig.names <- names(mort)
+mort <- data.frame(SurveyorID = mort_root$Personnel[match(mort$`Submission Id`, mort_root$`Submission Id`)], mort)
+names(mort) <- c("SurveyorID", orig.names)
 
 ## TODO: fix once you have main census
 # # load and clean up the 3rd main census ####
