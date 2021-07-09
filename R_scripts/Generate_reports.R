@@ -116,12 +116,12 @@ idx_trees <- !mort[, status_column] %in% c("DN")
 mort <- mort[idx_trees, ]
 
 
-# check if all species exist in species table, if not save a file, if yes, delete that file ####
-error_name <- "species_code_error"
-
-idx_error <- !mort$Species %in% spptable$sp
-
-require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
+# # check if all species exist in species table, if not save a file, if yes, delete that file ####
+# error_name <- "species_code_error"
+# 
+# idx_error <- !mort$Species %in% spptable$sp
+# 
+# require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
 
 
 
