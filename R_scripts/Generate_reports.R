@@ -16,7 +16,13 @@ latest_FFFs <- list.files(here("raw_data/FFF_excel/"), pattern = ".xlsx", full.n
 
 
 mort <- as.data.frame(read_xlsx(latest_FFFs, sheet = "subform_1", .name_repair = "minimal" ))
+mort_root <- as.data.frame(read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" ))
 
+# Slightly different than SCBI version b/c of weird renaming of "Percentage of crown intact" to 
+# "Percentage.of.crown.intact"
+orig.names <- names(mort)
+mort <- data.frame(SurveyorID = mort_root$Personnel[match(mort$`Submission Id`, mort_root$`Submission Id`)], mort)
+names(mort) <- c("SurveyorID", orig.names)
 
 ## TODO: fix once you have main census
 # # load and clean up the 3rd main census ####
@@ -617,14 +623,13 @@ if(!is.null(warning_file))
 
 # save
 if(!is.null(require_field_fix_error_file))
-  write.csv(require_field_fix_error_file, file = file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"), row.names = F)
+  write.csv(require_field_fix_error_file[, c(ncol(require_field_fix_error_file), 1:(ncol(require_field_fix_error_file) -1))], file = file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"), row.names = F)
 
 if(!is.null(will_auto_fix_error_file))
-  write.csv(will_auto_fix_error_file, file = file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"), row.names = F)
+  write.csv(will_auto_fix_error_file[, c(ncol(will_auto_fix_error_file), 1:(ncol(will_auto_fix_error_file) -1))], file = file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"), row.names = F)
 
 if(!is.null(warning_file))
-  write.csv(warning_file, file = file.path(here("testthat"), "reports/warnings/warnings_file.csv"), row.names = F)
-
+  write.csv(warning_file[, c(ncol(warning_file), 1:(ncol(warning_file) -1))], file = file.path(here("testthat"), "reports/warnings/warnings_file.csv"), row.names = F)
 
 
 # KEEP TRACK OF ALL THE ISSUES ####
