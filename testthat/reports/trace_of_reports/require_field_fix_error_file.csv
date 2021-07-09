@@ -108,7 +108,6 @@
 "status_AU_DS_or_DC_but_no_FAD","LM","814db3ea-2008-489f-a0ac-7db9c21e23c0","0212-12",21005,21005,"tsugca",8.92139,4.2861,NA,"D",1.3,"DC","False",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "missing_crown_position","LM","814db3ea-2008-489f-a0ac-7db9c21e23c0","0212-21",21017,21017,"tsugca",5.6813,8.39072,33.9,"A",1.3,"A","False",NA,95,85,NA,0,NA,NA,NA,NA,NA
 "status_AU_DS_or_DC_but_no_FAD","LM","814db3ea-2008-489f-a0ac-7db9c21e23c0","0212-21",21026,21026,"tsugca",5.5459,3.61301,NA,"D",1.3,"DC","False",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"status_AU_DS_or_DC_but_no_FAD","LM","814db3ea-2008-489f-a0ac-7db9c21e23c0","0212-21",21026,21026,"tsugca",5.5459,3.61301,NA,"D",1.3,"DC","False",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "status_AU_DS_or_DC_but_no_FAD","LM","814db3ea-2008-489f-a0ac-7db9c21e23c0","0212-22",21010,21010,"tsugca",3.6105,6.7244,NA,"D",1.3,"DS","False",1,20,0,NA,0,NA,NA,NA,NA,NA
 "status_AU_DS_or_DC_but_no_FAD","LM","814db3ea-2008-489f-a0ac-7db9c21e23c0","0212-22",21012,21013,"tsugca",9.2561,6.2143,NA,"D",1.3,"DS","False",1,25,0,NA,0,NA,NA,NA,NA,NA
 "status_AU_DS_or_DC_but_no_FAD","LM","a7c5db7e-7b53-4c6a-a7d2-d8d41f7cdf2d","0213-11",21031,21031,"tsugca",1.94334,9.6429,NA,"D",1.3,"DS","False",1,15,0,NA,0,NA,NA,NA,NA,NA
