@@ -16,7 +16,13 @@ latest_FFFs <- list.files(here("raw_data/FFF_excel/"), pattern = ".xlsx", full.n
 
 
 mort <- as.data.frame(read_xlsx(latest_FFFs, sheet = "subform_1", .name_repair = "minimal" ))
+mort_root <- as.data.frame(read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" ))
 
+# Slightly different than SCBI version b/c of weird renaming of "Percentage of crown intact" to 
+# "Percentage.of.crown.intact"
+orig.names <- names(mort)
+mort <- data.frame(SurveyorID = mort_root$Personnel[match(mort$`Submission Id`, mort_root$`Submission Id`)], mort)
+names(mort) <- c("SurveyorID", orig.names)
 
 ## TODO: fix once you have main census
 # # load and clean up the 3rd main census ####
@@ -58,6 +64,19 @@ mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown l
 
 
 
+# TODO: When you have census data
+# # give a % completion status ####
+# percent_completion <- round(sum(paste(main_census$tag, main_census$StemTag) %in% paste(mort$Tag, mort$StemTag)) / nrow(main_census) * 100)
+# 
+# png(file.path(here("testthat"), "reports/percent_completion.png"), width = 1, height = 1, units = "in", res = 150)
+# par(mar = c(0,0,0,0))
+# plot(0,0, axes = F, xlab = "", ylab = "", type = "n")
+# text(0,0, paste(percent_completion, "%"))
+# dev.off()
+# # write.table(percent_completion, file = file.path(here("testthat"), "reports/percent_completion.txt"),  col.names = F, row.names = F)
+
+
+
 
 # --- PERFORM CHECKS ---- ####
 
@@ -65,14 +84,6 @@ mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown l
 require_field_fix_error_file <- NULL
 will_auto_fix_error_file <- NULL
 warning_file <- NULL
-
-# TODO: Incorport after you get species data
-# # check if all species exist in species table, if not save a file, if yes, delete that file ####
-# error_name <- "species_code_error"
-# 
-# idx_error <- !mort$Species %in% spptable$sp
-# 
-# require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
 
 
 # TODO: After you get census data
@@ -93,6 +104,25 @@ warning_file <- NULL
 # } else {
 #   if(file.exists(filename) ) file.remove(filename)
 # }
+
+
+
+
+# remove any tree with current status DN as we don't need to check errors on those ####
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- !mort[, status_column] %in% c("DN")
+
+mort <- mort[idx_trees, ]
+
+
+# # check if all species exist in species table, if not save a file, if yes, delete that file ####
+# error_name <- "species_code_error"
+# 
+# idx_error <- !mort$Species %in% spptable$sp
+# 
+# require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
+
 
 
 
@@ -221,20 +251,21 @@ if(length(tag_stem_with_error) > 0) if(length(tag_stem_with_error) > 0) require_
 
 
 
-# TODO: Fix missing column
-# # check that status 'DS' or 'DC' have a dbh measured  ####
-# error_name <- "status_DS_or_DC_but_DBH_measured"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("DS", "DC")
-# idx_no_DBH_if_dead <- is.na(mort$'Dead DBH')
-# 
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_DBH_if_dead]
-# 
-# 
-# if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+# check that status 'DS' or 'DC' have a dbh measured  ####
+error_name <- "status_DS_or_DC_but_DBH_measured"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
+
+idx_trees <- mort[, status_column] %in% c("DS", "DC")
+idx_previously_dead <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column])
+idx_no_DBH_if_dead <- is.na(mort$'Dead DBH')
+
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_DBH_if_dead & !idx_previously_dead]
+
+
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
@@ -257,18 +288,24 @@ if(length(tag_stem_with_error) > 0) if(length(tag_stem_with_error) > 0) require_
 
 
 
-# check that newly censused 'AU', 'DS' or 'DC trees have at least one FAD  selected ####
+# check that newly censused 'AU', 'DS' or 'DC trees that were alive in previous census have at least one FAD selected ####
 error_name <- "status_AU_DS_or_DC_but_no_FAD"
 
 status_column <- rev(grep("Status", names(mort), value = T))[1]
+previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
 
 idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
+idx_previously_dead <- idx_previously_dead <- grepl("D", mort[,previous_status_column]) & !is.na(mort[,previous_status_column])
+
 idx_no_FAD <- is.na(mort$FAD)
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_FAD ]
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_FAD & !idx_previously_dead]
 
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+
+
 
 
 # check that newly censused 'AU', 'DS' or 'DC trees have at one photo taken ####
@@ -581,19 +618,6 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 
 
 
-# TODO: When you have census data
-# # give a % completion status ####
-# percent_completion <- round(sum(paste(main_census$tag, main_census$StemTag) %in% paste(mort$Tag, mort$StemTag)) / nrow(main_census) * 100)
-# 
-# png(file.path(here("testthat"), "reports/percent_completion.png"), width = 1, height = 1, units = "in", res = 150)
-# par(mar = c(0,0,0,0))
-# plot(0,0, axes = F, xlab = "", ylab = "", type = "n")
-# text(0,0, paste(percent_completion, "%"))
-# dev.off()
-# # write.table(percent_completion, file = file.path(here("testthat"), "reports/percent_completion.txt"),  col.names = F, row.names = F)
-
-
-
 
 # clean and save files ####
 
@@ -605,9 +629,11 @@ will_auto_fix_error_file <- will_auto_fix_error_file[!is.na(will_auto_fix_error_
 warning_file <- warning_file[!is.na(warning_file$Tag),]
 
 ## order by quadrat and tag
-require_field_fix_error_file <- require_field_fix_error_file[order(require_field_fix_error_file$Quad, require_field_fix_error_file$Tag, require_field_fix_error_file$StemTag),]
+if(!is.null(require_field_fix_error_file))
+  require_field_fix_error_file <- require_field_fix_error_file[order(require_field_fix_error_file$Quad, require_field_fix_error_file$Tag, require_field_fix_error_file$StemTag),]
 
-will_auto_fix_error_file <- will_auto_fix_error_file[order(will_auto_fix_error_file$Quad, will_auto_fix_error_file$Tag, will_auto_fix_error_file$StemTag),]
+if(!is.null(will_auto_fix_error_file))
+  will_auto_fix_error_file <- will_auto_fix_error_file[order(will_auto_fix_error_file$Quad, will_auto_fix_error_file$Tag, will_auto_fix_error_file$StemTag),]
 
 if(!is.null(warning_file))
   warning_file <- warning_file[order(warning_file$Quad, warning_file$Tag, warning_file$StemTag),]
@@ -615,14 +641,13 @@ if(!is.null(warning_file))
 
 # save
 if(!is.null(require_field_fix_error_file))
-  write.csv(require_field_fix_error_file, file = file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"), row.names = F)
+  write.csv(require_field_fix_error_file[, c(ncol(require_field_fix_error_file), 1:(ncol(require_field_fix_error_file) -1))], file = file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"), row.names = F)
 
 if(!is.null(will_auto_fix_error_file))
-  write.csv(will_auto_fix_error_file, file = file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"), row.names = F)
+  write.csv(will_auto_fix_error_file[, c(ncol(will_auto_fix_error_file), 1:(ncol(will_auto_fix_error_file) -1))], file = file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"), row.names = F)
 
 if(!is.null(warning_file))
-  write.csv(warning_file, file = file.path(here("testthat"), "reports/warnings/warnings_file.csv"), row.names = F)
-
+  write.csv(warning_file[, c(ncol(warning_file), 1:(ncol(warning_file) -1))], file = file.path(here("testthat"), "reports/warnings/warnings_file.csv"), row.names = F)
 
 
 # KEEP TRACK OF ALL THE ISSUES ####
