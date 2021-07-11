@@ -300,3 +300,9 @@
 "missing_crown_position","JS","00c7b28c-8892-45c4-b3b6-20d3e7684093","0607-22",60794,"tsugca",5.7132,7.5031,NA,"D",1.3,"DS",NA,0,0,45,0,NA,NA,NA,NA,"False",NA
 "missing_crown_position","JS","fd74da20-3648-443d-a0e8-fbca61706e4d","0608-21",60866,"pinust",9.3386,3.39862,NA,"D",1.3,"DS",NA,10,0,NA,0,NA,NA,NA,NA,"False",NA
 "missing_crown_position","JS","be822264-3d70-478f-ac47-1c9d6d83ddc3","0609-22",60904,"tsugca",9.8283,8.1666,NA,"D",1.3,"DS",NA,10,0,18,0,NA,NA,NA,NA,"False",NA
+"missing_crown_position","LM","2bc19f6f-3ade-4f6e-9b76-a3ae4d8366b9","0120-22",11629,"betupa",7.7549,9.7316,NA,"D",1.3,"DS",NA,0,0,NA,0,NA,NA,NA,NA,"False",NA
+"status_AU_DS_or_DC_but_no_FAD","NM","6c5481e6-7df9-41b8-8acc-9a5ab71b109c","0317-22",31421,"tsugca",1.8751,5.8259,35,"A",1.3,"DS",2,85,0,NA,0,NA,NA,NA,NA,"False",NA
+"crown_living_greater_than_crown_intact","NM","7c0937b6-84ec-4233-9b3a-9638c967328c","0320-12",31755,"querru",3.8361,9.7007,24.8,"A",1.3,"A",4,95,99,NA,0,NA,NA,NA,NA,NA,NA
+"crown_living_greater_than_crown_intact","NM","7c0937b6-84ec-4233-9b3a-9638c967328c","0320-12",31791,"betual",7.17613,6.8499,14.3,"A",1.3,"AU",2,98,99,NA,0,"LF,I",NA,NA,NA,"False",NA
+"missing_crown_position","RB","3e718164-c49b-4ac0-a033-1875ce2aad84","0518-21",51709,"betule",5.2676,7.70374,19.6,"A",1.3,"A",NA,95,95,NA,0,NA,NA,NA,NA,NA,NA
+"status_AU_DS_or_DC_but_no_FAD","RB","3e718164-c49b-4ac0-a033-1875ce2aad84","0518-22",51700,"betule",2.4191,0.9037,24,"A",1.69,"DS",3,30,0,NA,0,NA,NA,NA,NA,"False",NA
