@@ -635,21 +635,21 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 # clean and save files ####
 
 ## remove empty tags
-require_field_fix_error_file <- require_field_fix_error_file[!is.na(require_field_fix_error_file$StemTag),]
+require_field_fix_error_file <- require_field_fix_error_file[!is.na(require_field_fix_error_file$Tag),]
 
-will_auto_fix_error_file <- will_auto_fix_error_file[!is.na(will_auto_fix_error_file$StemTag),]
+will_auto_fix_error_file <- will_auto_fix_error_file[!is.na(will_auto_fix_error_file$Tag),]
 
-warning_file <- warning_file[!is.na(warning_file$StemTag),]
+warning_file <- warning_file[!is.na(warning_file$Tag),]
 
 ## order by quadrat and tag
 if(!is.null(require_field_fix_error_file))
-  require_field_fix_error_file <- require_field_fix_error_file[order(require_field_fix_error_file$Quad, require_field_fix_error_file$StemTag),]
+  require_field_fix_error_file <- require_field_fix_error_file[order(require_field_fix_error_file$Quad, require_field_fix_error_file$Tag, require_field_fix_error_file$StemTag),]
 
 if(!is.null(will_auto_fix_error_file))
-  will_auto_fix_error_file <- will_auto_fix_error_file[order(will_auto_fix_error_file$Quad, will_auto_fix_error_file$StemTag),]
+  will_auto_fix_error_file <- will_auto_fix_error_file[order(will_auto_fix_error_file$Quad, will_auto_fix_error_file$Tag, will_auto_fix_error_file$StemTag),]
 
 if(!is.null(warning_file))
-  warning_file <- warning_file[order(warning_file$Quad, warning_file$StemTag),]
+  warning_file <- warning_file[order(warning_file$Quad, warning_file$Tag, warning_file$StemTag),]
 
 
 # save
@@ -673,17 +673,10 @@ for(f in all_reports) {
   new_f <- gsub("/reports/", "/reports/trace_of_reports/", f)
   new_f <- gsub("/requires_field_fix/|/will_auto_fix/|/warnings/", "",new_f)
   
-  new_form <- read.csv(f)
-  old_form <- read.csv(new_f)
-  
-  old_form <- old_form[, names(new_form)]
-  
-  
-  if(file.exists(new_f)){
-    write.csv(unique(rbind(old_form, new_form)), file = new_f, row.names = F)
-  } else{ 
+  if(file.exists(new_f))
+    write.csv(unique(rbind(read.csv(new_f), read.csv(f))), file = new_f, row.names = F)
+  else 
     write.csv(read.csv(f), file = new_f, row.names = F)
-  }
   
 }
 
