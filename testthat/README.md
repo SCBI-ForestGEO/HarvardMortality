@@ -7,7 +7,8 @@ No|level | category | applied to | test  | warning (W) or error (E) | coded | re
 1|plot | census progress | all stems in census | percent trees censused | NA |  2021 | NA | NA | core
 2|plot | census progress | all stems in census | list or map of quadrats completed, with additional category for censused with fixes pending | NA |  2021 | NA | NA | core 
 3|quadrat | completion check | newly censused quadrats | all trees censused |  E | 2021 | Y | NA | core
-4|quadrat  | consistency check | newly censused quadrats | no trees are duplicated |   W | 2021 | N | use latest record | core
+4|quadrat  | consistency check | newly censused quadrats | no trees are duplicated |   E | 2021 | N | use latest record | core
+5|tree | completion check | newly censused trees (A, AU, DS) | `SurveyorID` is recorded | E | 2021 | N | NA | core
 5|tree | completion check | newly censused trees (A, AU, DS) | `crown position` is recorded | E | 2021 | Y | NA | core
 6|tree | completion check | newly censused trees (A, AU, DS) |`percentage of crown intact` is recorded | E | 2021 | Y | NA | core
 7|tree | completion check | newly censused trees (A, AU, DS) |`percentage of crown living` is recorded | E | 2021 | Y | NA | core
@@ -26,7 +27,8 @@ No|level | category | applied to | test  | warning (W) or error (E) | coded | re
 20|tree | consistency check | newly censused trees (AU or dead, with level selected for `canker,swelling,deformity`)| "canker" selected as FAD | W| 2021 | N | add canker to FAD list* | core
 21|tree | consistency check | newly censused trees (AU or dead, with level selected for `rotting main stem`)| "rotting stem" or "hollow stem" selected as FAD| W| 2021 | N | add `rotting main stem` to FAD list* | core
 22|tree | consistency check | newly censused trees (any FAD selected, or level selected for `canker,swelling,deformity`, `wounded main stem` , or `rotting main stem`)| status selected as AU or dead | W| 2021 | N | change live to AU | core
-23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year | W| 2021 | Y | NA| SCBI
+23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with note (indicating previous misclassification) | W| 2021 | Y | NA| SCBI
+23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with no note | E| 2021 | Y | NA| SCBI
 24|tree | consistency check - with previous | newly censused trees (A or AU or DS) | tree was not DC in previous year | W| 2021 | Y | NA| SCBI
 25|tree | completion check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) **excluding DN and those dead in previous census**| `Crown thinning`, `Epicormic growth`, `Crown position < 10 cm DBH` **(for stems <10cm)** all recorded | E | 2021 | Y | NA | SCBI
 26|tree | consistency check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) | if `Epicormic growth`>0, tree is AU | E | 2021 | N | set status to AU | SCBI
