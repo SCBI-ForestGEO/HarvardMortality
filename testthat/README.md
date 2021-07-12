@@ -30,14 +30,6 @@ No|level | category | applied to | test  | warning (W) or error (E) | coded | re
 23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with note (indicating previous misclassification) | W| 2021 | Y | NA| SCBI
 23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with no note | E| 2021 | Y | NA| SCBI
 24|tree | consistency check - with previous | newly censused trees (A or AU or DS) | tree was not DC in previous year | W| 2021 | Y | NA| SCBI
-25|tree | completion check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) **excluding DN and those dead in previous census**| `Crown thinning`, `Epicormic growth`, `Crown position < 10 cm DBH` **(for stems <10cm)** all recorded | E | 2021 | Y | NA | SCBI
-26|tree | consistency check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) | if `Epicormic growth`>0, tree is AU | E | 2021 | N | set status to AU | SCBI
-27|tree | consistency check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) | if `Crown thinning`>1 , tree is AU or dead | E | 2021 |  sometimes | | SCBI
-28|tree | consistency check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) | if any EABF recorded, tree is AU or dead | E | 2021 | sometimes | --- | SCBI
-29|tree | consistency check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) | if `D-shaped exit hole count`>0, tree is AU or dead | E | 2021 | sometimes | --- | SCBI
-30|tree | consistency check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) **excluding DN and those dead in previous census**| if tree is dead, `Epicormic growth`=0  | E | 2021 | sometimes | --- | SCBI
-31|tree | consistency check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) **excluding DN and those dead in previous census**| if tree is dead, `Crown thinning`=5 | E | 2021 |  sometimes | Just the ones that are zero should be auto changed to 5.| SCBI
-32|tree | completion check | newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI) with `EFDB` including `DE`|  `D-shaped exit hole count` has value (>0) | E | 2021 | Y | NA | SCBI
 
 
 
