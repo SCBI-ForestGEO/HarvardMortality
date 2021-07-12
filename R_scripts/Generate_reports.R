@@ -8,6 +8,7 @@ rm(list = ls())
 library(here)
 library(readxl)
 library(dplyr)
+library(readr)
 
 # load latest mortality data ####
 
@@ -93,24 +94,23 @@ will_auto_fix_error_file <- NULL
 warning_file <- NULL
 
 
-# TODO: After you get census data
-# # for each quadrat censused, check all expected trees were censused ####
-# filename <- file.path(here("testthat"), "reports/requires_field_fix/quadrat_censused_missing_stems.csv")
-# 
-# 
-# idx_quadrat_censused <- main_census$quadrat %in% as.numeric(mort$Quad)
-# 
-# 
-# tag_stem_with_error <- paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] [!paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] %in% paste(mort$Tag, mort$StemTag)]
-# table(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ]$sp)
-# 
-# 
-# 
-# if(length(tag_stem_with_error) > 0) {
-#   write.csv(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
-# } else {
-#   if(file.exists(filename) ) file.remove(filename)
-# }
+# for each quadrat censused, check all expected trees were censused ####
+filename <- file.path(here("testthat"), "reports/requires_field_fix/quadrat_censused_missing_stems.csv")
+
+
+idx_quadrat_censused <- main_census$quadrat %in% as.numeric(mort$Quad)
+
+
+tag_stem_with_error <- paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] [!paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] %in% paste(mort$Tag, mort$StemTag)]
+table(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ]$sp)
+
+
+
+if(length(tag_stem_with_error) > 0) {
+  write.csv(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
+} else {
+  if(file.exists(filename) ) file.remove(filename)
+}
 
 
 
