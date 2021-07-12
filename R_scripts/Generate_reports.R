@@ -141,18 +141,19 @@ mort <- mort[idx_trees, ]
 
 
 # for each quadrat censused, check that there is no duplicated stems ####
-filename <- file.path(here("testthat"), "reports/will_auto_fix/quadrat_censused_duplicated_stems.csv")
-
+# Previously wrote duplicates to reports/will_auto_fix/, now writing to reports/require_field_fix:
+# filename <- file.path(here("testthat"), "reports/will_auto_fix/quadrat_censused_duplicated_stems.csv")
+#
+# if(length(tag_stem_with_error) > 0) {
+#   write.csv(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
+# } else {
+#   if(file.exists(filename) ) file.remove(filename)
+# }
+error_name <- "duplicated_stem"
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[duplicated(paste(mort$Tag, mort$StemTag))]
 
-
-if(length(tag_stem_with_error) > 0) {
-  write.csv(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
-} else {
-  if(file.exists(filename) ) file.remove(filename)
-}
-
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
