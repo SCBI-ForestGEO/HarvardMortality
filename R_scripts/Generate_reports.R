@@ -8,6 +8,8 @@ rm(list = ls())
 library(here)
 library(readxl)
 library(dplyr)
+library(readr)
+library(stringr)
 
 # load latest mortality data ####
 
@@ -24,19 +26,16 @@ orig.names <- names(mort)
 mort <- data.frame(SurveyorID = mort_root$Personnel[match(mort$`Submission Id`, mort_root$`Submission Id`)], mort)
 names(mort) <- c("SurveyorID", orig.names)
 
-## TODO: fix once you have main census
-# # load and clean up the 3rd main census ####
-# main_census <-  read.csv(paste0("https://raw.githubusercontent.com/SCBI-ForestGEO/SCBI-ForestGEO-Data/master/tree_main_census/data/census-csv-files/scbi.stem3.csv"))
-# 
-# ## convert dbh to numeric
-# main_census$dbh <- as.numeric(main_census$dbh)
-# 
-# ## only keep trees > 10cm except for fraxinus and Chionanthus virginicus
-# main_census <-  main_census[grepl("^fr..|^ch..", main_census$sp) | (!is.na(main_census$dbh) & main_census$dbh >= 100), ]
-# 
-# ## remove trees that are dead
-# main_census <- main_census[!main_census$status %in% "D",]
-# 
+# Load list of stems to census ####
+main_census <- read_tsv("data/HFmort_stemtag.txt") %>% 
+  select(quadrat, StemTag = stem.tag) %>% 
+  # Ensure all quadrat names are 4 characters long
+  mutate(quadrat = str_pad(quadrat, 4, side = "left", pad = "0"))
+
+
+
+
+## TODO: fix once 
 # # load species table ####
 # 
 # spptable <- read.csv("https://raw.githubusercontent.com/SCBI-ForestGEO/SCBI-ForestGEO-Data/master/tree_main_census/data/census-csv-files/scbi.spptable.csv")
@@ -63,17 +62,29 @@ mort[, 'Percentage of crown intact'] <- as.numeric(mort[, 'Percentage of crown i
 mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown living'])
 
 
+# Add original collection date
+mort_info <- as.data.frame(read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" )) %>% 
+  select('Submission Id', 'Orig.collection.date' = 'Date/Time')
 
-# TODO: When you have census data
-# # give a % completion status ####
-# percent_completion <- round(sum(paste(main_census$tag, main_census$StemTag) %in% paste(mort$Tag, mort$StemTag)) / nrow(main_census) * 100)
-# 
-# png(file.path(here("testthat"), "reports/percent_completion.png"), width = 1, height = 1, units = "in", res = 150)
-# par(mar = c(0,0,0,0))
-# plot(0,0, axes = F, xlab = "", ylab = "", type = "n")
-# text(0,0, paste(percent_completion, "%"))
-# dev.off()
-# # write.table(percent_completion, file = file.path(here("testthat"), "reports/percent_completion.txt"),  col.names = F, row.names = F)
+mort <- mort %>% 
+  left_join(
+    mort_root %>% 
+      select('Submission Id', 'Orig.collection.date' = 'Date/Time'), 
+    by = 'Submission Id') %>% 
+  select(SurveyorID, 'Submission Id', 'Orig.collection.date', everything())
+
+
+
+
+# give a % completion status ####
+percent_completion <- round(sum(paste(main_census$StemTag) %in% paste(mort$StemTag)) / nrow(main_census) * 100)
+
+png(file.path(here("testthat"), "reports/percent_completion.png"), width = 1, height = 1, units = "in", res = 150)
+par(mar = c(0,0,0,0))
+plot(0,0, axes = F, xlab = "", ylab = "", type = "n")
+text(0,0, paste(percent_completion, "%"))
+dev.off()
+# write.table(percent_completion, file = file.path(here("testthat"), "reports/percent_completion.txt"),  col.names = F, row.names = F)
 
 
 
@@ -86,25 +97,23 @@ will_auto_fix_error_file <- NULL
 warning_file <- NULL
 
 
-# TODO: After you get census data
-# # for each quadrat censused, check all expected trees were censused ####
-# filename <- file.path(here("testthat"), "reports/requires_field_fix/quadrat_censused_missing_stems.csv")
-# 
-# 
-# idx_quadrat_censused <- main_census$quadrat %in% as.numeric(mort$Quad)
-# 
-# 
-# tag_stem_with_error <- paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] [!paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] %in% paste(mort$Tag, mort$StemTag)]
-# table(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ]$sp)
-# 
-# 
-# 
-# if(length(tag_stem_with_error) > 0) {
-#   write.csv(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
-# } else {
-#   if(file.exists(filename) ) file.remove(filename)
-# }
+# for each quadrat censused, check all expected trees were censused ####
+filename <- file.path(here("testthat"), "reports/requires_field_fix/quadrat_censused_missing_stems.csv")
 
+
+idx_quadrat_censused <- main_census$quadrat %in% str_sub(mort$`Quad Sub Quad`, 1, 4)
+
+
+tag_stem_with_error <- paste(main_census$StemTag)[idx_quadrat_censused] [!paste(main_census$StemTag)[idx_quadrat_censused] %in% mort$StemTag]
+# table(main_census[paste(main_census$StemTag) %in% tag_stem_with_error, ]$sp)
+
+
+
+if(length(tag_stem_with_error) > 0) {
+  write.csv(main_census[paste(main_census$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
+} else {
+  if(file.exists(filename) ) file.remove(filename)
+}
 
 
 
@@ -116,30 +125,33 @@ idx_trees <- !mort[, status_column] %in% c("DN")
 mort <- mort[idx_trees, ]
 
 
-# # check if all species exist in species table, if not save a file, if yes, delete that file ####
-# error_name <- "species_code_error"
-# 
-# idx_error <- !mort$Species %in% spptable$sp
-# 
-# require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
+
+
+# check that personnel who collected data is entered  ####
+error_name <- "personnel_missing"
+
+idx_error <- is.na(mort$SurveyorID)
+
+require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
 
 
 
 
 
 # for each quadrat censused, check that there is no duplicated stems ####
-filename <- file.path(here("testthat"), "reports/will_auto_fix/quadrat_censused_duplicated_stems.csv")
-
+# Previously wrote duplicates to reports/will_auto_fix/, now writing to reports/require_field_fix:
+# filename <- file.path(here("testthat"), "reports/will_auto_fix/quadrat_censused_duplicated_stems.csv")
+#
+# if(length(tag_stem_with_error) > 0) {
+#   write.csv(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
+# } else {
+#   if(file.exists(filename) ) file.remove(filename)
+# }
+error_name <- "duplicated_stem"
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[duplicated(paste(mort$Tag, mort$StemTag))]
 
-
-if(length(tag_stem_with_error) > 0) {
-  write.csv(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
-} else {
-  if(file.exists(filename) ) file.remove(filename)
-}
-
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
@@ -438,20 +450,52 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 # check that newly censused 'A' or 'AU', were A or AU in previous year ####
-warning_name <- "Dead_but_now_alive"
+# 
+# As noted here https://github.com/SCBI-ForestGEO/HarvardMortality/issues/16
+# in some rare instances, we can have a newly censused 'A' or 'AU' that were dead previously
+# because stem was previously misclassified. i.e. they are "brought back to life"
+# For such stems we expect a note. If there is no note, issue error below.
+# See "Dead_but_now_alive_with_note" for opposite case. 
+error_name <- "Dead_but_now_alive_no_note"
 
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
 
 
 idx_trees <- mort[, status_column] %in% c("AU","A")
-idx_previously_dead <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column])
+idx_previously_dead_no_note <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column]) & is.na(mort$`Notes 2021`)
 
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead ]
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead_no_note ]
+
+
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name)) 
+
+
+
+# check that newly censused 'A' or 'AU', were A or AU in previous year ####
+# 
+# As noted here https://github.com/SCBI-ForestGEO/HarvardMortality/issues/16
+# in some rare instances, we can have a newly censused 'A' or 'AU' that were dead previously
+# because stem was previously misclassified. i.e. they are "brought back to life"
+# For such stems we expect a note. If there is a note, issue warning below
+# See "Dead_but_now_alive_no_note" for opposite case. 
+warning_name <- "Dead_but_now_alive_with_note"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
+
+
+idx_trees <- mort[, status_column] %in% c("AU","A")
+idx_previously_dead_with_note <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column]) & !is.na(mort$`Notes 2021`)
+
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead_with_note ]
 
 
 if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], warning_name)) 
+
+
 
 
 
@@ -660,17 +704,10 @@ for(f in all_reports) {
   new_f <- gsub("/reports/", "/reports/trace_of_reports/", f)
   new_f <- gsub("/requires_field_fix/|/will_auto_fix/|/warnings/", "",new_f)
   
-  new_form <- read.csv(f)
-  old_form <- read.csv(new_f)
-  
-  old_form <- old_form[, names(new_form)]
-  
-  
-  if(file.exists(new_f)){
-    write.csv(unique(rbind(old_form, new_form)), file = new_f, row.names = F)
-  } else{ 
+  if(file.exists(new_f))
+    write.csv(unique(rbind(read.csv(new_f), read.csv(f))), file = new_f, row.names = F)
+  else 
     write.csv(read.csv(f), file = new_f, row.names = F)
-  }
   
 }
 
