@@ -26,9 +26,9 @@ No|level | category | applied to | test  | warning (W) or error (E) | coded | re
 20|tree | consistency check | newly censused trees (AU or dead, with level selected for `canker,swelling,deformity`)| "canker" selected as FAD | W| 2021 | N | add canker to FAD list* | core
 21|tree | consistency check | newly censused trees (AU or dead, with level selected for `rotting main stem`)| "rotting stem" or "hollow stem" selected as FAD| W| 2021 | N | add `rotting main stem` to FAD list* | core
 22|tree | consistency check | newly censused trees (any FAD selected, or level selected for `canker,swelling,deformity`, `wounded main stem` , or `rotting main stem`)| status selected as AU or dead | W| 2021 | N | change live to AU | core
-23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with note (indicating previous misclassification) | W| 2021 | Y | NA| SCBI
-23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with no note | E| 2021 | Y | NA| SCBI
-24|tree | consistency check - with previous | newly censused trees (A or AU or DS) | tree was not DC in previous year | W| 2021 | Y | NA| SCBI
+23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with note (indicating previous misclassification) | W| 2021 | Y | NA| core
+23|tree | consistency check - with previous | newly censused trees (A or AU) | tree was A or AU in previous year with no note | E| 2021 | Y | NA| core
+24|tree | consistency check - with previous | newly censused trees (A or AU or DS) | tree was not DC in previous year | W| 2021 | Y | NA| core or SCBI?
 
 
 
