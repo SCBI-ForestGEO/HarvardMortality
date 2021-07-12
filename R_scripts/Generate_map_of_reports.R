@@ -29,17 +29,15 @@ latest_FFFs <- list.files(here("raw_data/FFF_excel/"), pattern = ".xlsx", full.n
 hf <- read.table("./data/Harvard_Forest_FFF.csv", header=T, sep = ",")
 hf_quads <- unique(hf$QuadratName)
 
+# swamp area with no trees over 10 cm
 swmp <- quadrats[!(quadrats$quadrats %in% hf_quads),]$quadrats
 
 ## load the latest mortality survey
 
 mort <- as.data.frame(read_xlsx(latest_FFFs, sheet = "subform_1", .name_repair = "minimal" ))
-mort <- mort[, unique(names(mort))]# remove repeated columns
+mort <- mort[, unique(names(mort))] # remove repeated columns
 mort$quadrat <- substr(mort$`Quad Sub Quad`, start = 1, stop = 4)
 complete_quads <- as.integer(unique(mort$quadrat))
-
-
-
 
 
 # Identify quadrats with errors
@@ -69,7 +67,7 @@ all_warnings_to_be_fixed <- do.call(rbind, lapply(all_warnings_to_be_fixed, read
 quadrats_with_warnings <- unique(all_warnings_to_be_fixed$Quad.Sub.Quad)
 quadrats_with_warnings <- as.integer(substr(quadrats_with_warnings, start = 1, stop = 4))
 
-
+# assign codes for coloring quadrats
 quadrats$checks <- ifelse(quadrats$quadrats %in% quadrats_with_errors, 'error',
                           ifelse(quadrats$quadrats %in% quadrats_with_warnings, 'no error, only warning', 
                                  ifelse(quadrats$quadrats %in% complete_quads, 'complete',
@@ -78,10 +76,14 @@ quadrats$checks <- ifelse(quadrats$quadrats %in% quadrats_with_errors, 'error',
 
 filename <- file.path(here("testthat"), "reports/map_of_error_and_warnings.png")
 
+#assign color palette
 clrs <- c( "aquamarine1", "coral2", "grey50","antiquewhite", "darkgoldenrod1")
+
+# dragon flare
 img <- readPNG(source = "./data/dragon.png")
 g <- rasterGrob(img, interpolate=TRUE)
 
+# make plot
 pr <- ggplot(quadrats, aes(gx-10, gy-10, fill = checks))+
   geom_tile(color='grey80')+
   scale_fill_manual(values = clrs)+
@@ -93,15 +95,3 @@ pr <- ggplot(quadrats, aes(gx-10, gy-10, fill = checks))+
 ggsave(filename, plot= pr, device = 'png', 
        width = 8, height = 6, units = "in",dpi = 300 )
 
-# 
-# png(filename, width = 9, height = 8, units = "in", res = 300)
-# par(mar = c(0,3,0,0))
-# 
-# plot(quadrats)
-# plot(quadrats[quadrats$PLOT %in% mort$Quad,], col = "grey", add = T)
-# plot(quadrats[quadrats$PLOT %in%  quadrats_with_error, ], col = "orange", add = T)
-# plot(quadrats[quadrats$PLOT %in%  quadrats_with_warnings, ], col = "yellow", add = T)
-# plot(quadrats[quadrats$PLOT %in%  intersect(quadrats_with_warnings, quadrats_with_error), ], col = "red", add = T)
-# legend("bottomleft", fill = c("grey", "yellow", "orange", "red"), legend = c("done", "warning pending", "error pending", "warning & error pending"), bty = "n")
-# 
-# dev.off()
