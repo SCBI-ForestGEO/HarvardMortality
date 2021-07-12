@@ -9,6 +9,7 @@ library(here)
 library(readxl)
 library(dplyr)
 library(readr)
+library(stringr)
 
 # load latest mortality data ####
 
@@ -27,7 +28,9 @@ names(mort) <- c("SurveyorID", orig.names)
 
 # Load list of stems to census ####
 main_census <- read_tsv("data/HFmort_stemtag.txt") %>% 
-  select(StemTag = stem.tag)
+  select(quadrat, StemTag = stem.tag) %>% 
+  # Ensure all quadrat names are 4 characters long
+  mutate(quadrat = str_pad(quadrat, 4, side = "left", pad = "0"))
 
 
 
@@ -98,20 +101,19 @@ warning_file <- NULL
 filename <- file.path(here("testthat"), "reports/requires_field_fix/quadrat_censused_missing_stems.csv")
 
 
-idx_quadrat_censused <- main_census$quadrat %in% as.numeric(mort$Quad)
+idx_quadrat_censused <- main_census$quadrat %in% str_sub(mort$`Quad Sub Quad`, 1, 4)
 
 
-tag_stem_with_error <- paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] [!paste(main_census$tag, main_census$StemTag)[idx_quadrat_censused] %in% paste(mort$Tag, mort$StemTag)]
-table(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ]$sp)
+tag_stem_with_error <- paste(main_census$StemTag)[idx_quadrat_censused] [!paste(main_census$StemTag)[idx_quadrat_censused] %in% mort$StemTag]
+# table(main_census[paste(main_census$StemTag) %in% tag_stem_with_error, ]$sp)
 
 
 
 if(length(tag_stem_with_error) > 0) {
-  write.csv(main_census[paste(main_census$tag, main_census$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
+  write.csv(main_census[paste(main_census$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
 } else {
   if(file.exists(filename) ) file.remove(filename)
 }
-
 
 
 

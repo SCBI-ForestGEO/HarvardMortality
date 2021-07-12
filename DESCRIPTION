@@ -22,7 +22,8 @@ Imports:
     readxl,
     rgdal,
     dplyr,
-    readr
+    readr,
+    stringr
 URL: https://github.com/SCBI-ForestGEO/SCBImortality
 BugReports: https://github.com/SCBI-ForestGEO/SCBImortality/issues
 Config/testthat/edition: 3
