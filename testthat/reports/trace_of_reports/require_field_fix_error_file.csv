@@ -465,3 +465,6 @@
 "Dead_but_now_alive_no_note","DJ","d003a067-14f1-42dd-834d-fddc27d5b2ec","2021-07-10","0419-11",41643,"tsugca",8.28541,9.03789,NA,"D",1.3,"AU",2,100,96,NA,0,"I,LF",NA,NA,NA,"False",NA
 "Dead_but_now_alive_no_note","RB","c0082bcf-63be-470e-adf4-1b81ac42de69","2021-07-10","0509-12",50789,"acerru",2.96275,6.6174,NA,"D",1.3,"AU",2,90,64,NA,0,"I,LF",NA,NA,NA,"False",NA
 "Dead_but_now_alive_no_note","RB","d4cd8a11-ca1b-4906-a30c-1cb556993389","2021-07-11","0515-22",51337,"tsugca",8.612,3.0463,NA,"D",1.3,"A",4,40,0,NA,0,NA,NA,NA,NA,NA,NA
+"wounded_but_no_level","LM","d8dedc48-41c3-4800-85a7-31a6acea2084","2021-07-11","0125-11",12677,"acerru",9.86142,9.77887,10.6,"A",1.71,"AU",2,100,100,NA,0,"W",NA,NA,2,"False",NA
+"wounded_but_no_level","NM","ec1cef5a-644b-4540-9ec0-f529cb54bdbd","2021-07-11","0318-21",31491,"tsugca",7.2788,4.8369,67.1,"A",1.3,"AU",3,90,50,NA,0,"I,LF,W",NA,NA,NA,"False",NA
+"wounded_but_no_level","RB","dff65a34-aaae-4e5b-a113-9cf20767463c","2021-07-08","0504-22",50429,"acerru",3.8036,0.3883,37.1,"A",1.3,"AU",4,70,70,NA,0,"W",NA,NA,NA,"False",NA
