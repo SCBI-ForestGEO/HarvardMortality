@@ -16,7 +16,6 @@ library(stringr)
 ## get the name of latest excel form
 latest_FFFs <- list.files(here("raw_data/FFF_excel/"), pattern = ".xlsx", full.names = T)
 
-
 mort <- as.data.frame(read_xlsx(latest_FFFs, sheet = "subform_1", .name_repair = "minimal" ))
 mort_root <- as.data.frame(read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" ))
 
@@ -32,14 +31,10 @@ main_census <- read_tsv("data/HFmort_stemtag.txt") %>%
   # Ensure all quadrat names are 4 characters long
   mutate(quadrat = str_pad(quadrat, 4, side = "left", pad = "0"))
 
-
-
-
 ## TODO: fix once 
 # # load species table ####
 # 
 # spptable <- read.csv("https://raw.githubusercontent.com/SCBI-ForestGEO/SCBI-ForestGEO-Data/master/tree_main_census/data/census-csv-files/scbi.spptable.csv")
-
 
 # NOTE: Doesn't apply to HF
 # # fix empty lines in mort ####
@@ -61,7 +56,6 @@ mort[, "HOM"] <- as.numeric(mort[, "HOM"])
 mort[, 'Percentage of crown intact'] <- as.numeric(mort[, 'Percentage of crown intact'])
 mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown living'])
 
-
 # Add original collection date
 mort_info <- as.data.frame(read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" )) %>% 
   select('Submission Id', 'Orig.collection.date' = 'Date/Time')
@@ -72,7 +66,6 @@ mort <- mort %>%
       select('Submission Id', 'Orig.collection.date' = 'Date/Time'), 
     by = 'Submission Id') %>% 
   select(SurveyorID, 'Submission Id', 'Orig.collection.date', everything())
-
 
 
 
@@ -88,7 +81,6 @@ dev.off()
 
 
 
-
 # --- PERFORM CHECKS ---- ####
 
 # prepare log files #####
@@ -97,17 +89,14 @@ will_auto_fix_error_file <- NULL
 warning_file <- NULL
 
 
+
 # for each quadrat censused, check all expected trees were censused ####
 filename <- file.path(here("testthat"), "reports/requires_field_fix/quadrat_censused_missing_stems.csv")
 
-
 idx_quadrat_censused <- main_census$quadrat %in% str_sub(mort$`Quad Sub Quad`, 1, 4)
-
 
 tag_stem_with_error <- paste(main_census$StemTag)[idx_quadrat_censused] [!paste(main_census$StemTag)[idx_quadrat_censused] %in% mort$StemTag]
 # table(main_census[paste(main_census$StemTag) %in% tag_stem_with_error, ]$sp)
-
-
 
 if(length(tag_stem_with_error) > 0) {
   write.csv(main_census[paste(main_census$StemTag) %in% tag_stem_with_error, ], file = filename, row.names = F)
@@ -126,15 +115,12 @@ mort <- mort[idx_trees, ]
 
 
 
-
 # check that personnel who collected data is entered  ####
 error_name <- "personnel_missing"
 
 idx_error <- is.na(mort$SurveyorID)
 
 require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
-
-
 
 
 
@@ -152,8 +138,6 @@ error_name <- "duplicated_stem"
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[duplicated(paste(mort$Tag, mort$StemTag))]
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-
-
 
 
 
@@ -182,6 +166,7 @@ tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Percentage of c
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
+
 # check that all censused trees have a percent of crown living recorded ####
 error_name <- "missing_percent_crown_living"
 
@@ -192,6 +177,7 @@ idx_trees <- mort[, status_column] %in% c("A", "AU", "DS")
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[is.na(mort$'Percentage of crown living') & idx_trees]
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ] , error_name))
+
 
 
 # check percent of crown living <=  percent of crown intact####
@@ -206,6 +192,7 @@ tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!is.na(mort$'Percentage of 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ] , error_name))
 
 
+
 # check that newly censused alive trees have no FAD selected; no record of wounded main stem, canker, or rotting trunk; DWR (dead with resprouts) not selected ####
 error_name <- "status_A_but_unhealthy"
 
@@ -218,9 +205,7 @@ idx_canker <- !is.na(mort$'Canker; swelling, deformity')
 idx_rot <- !is.na(mort$'Rotting trunk')
 idx_DWR <- !mort$'DWR' %in% "False"
 
-
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & (idx_FAD | idx_wound | idx_wound | idx_canker | idx_rot | idx_DWR)]
-
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
@@ -238,13 +223,9 @@ idx_canker <- !is.na(mort$'Canker; swelling, deformity')
 idx_rot <- !is.na(mort$'Rotting trunk')
 idx_DWR <- !mort$'DWR' %in% "False"
 
-
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!idx_trees & (idx_FAD | idx_wound | idx_wound | idx_canker | idx_rot | idx_DWR)]
 
 if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-
-
-
 
 
 
@@ -255,7 +236,6 @@ status_column <- rev(grep("Status", names(mort), value = T))[1]
 
 idx_trees <- mort[, status_column] %in% "AU"
 idx_DWR <- !mort$'DWR' %in% "False"
-
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_DWR]
 
@@ -273,12 +253,9 @@ idx_trees <- mort[, status_column] %in% c("DS", "DC")
 idx_previously_dead <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column])
 idx_no_DBH_if_dead <- is.na(mort$'Dead DBH')
 
-
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_DBH_if_dead & !idx_previously_dead]
 
-
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-
 
 
 
@@ -299,7 +276,6 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 
-
 # check that newly censused 'AU', 'DS' or 'DC trees that were alive in previous census have at least one FAD selected ####
 error_name <- "status_AU_DS_or_DC_but_no_FAD"
 
@@ -311,12 +287,9 @@ idx_previously_dead <- idx_previously_dead <- grepl("D", mort[,previous_status_c
 
 idx_no_FAD <- is.na(mort$FAD)
 
-
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_no_FAD & !idx_previously_dead]
 
-
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-
 
 
 
@@ -338,7 +311,6 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # }
 # 
 # 
-
 
 
 
@@ -374,6 +346,7 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # 
 # 
 # will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+
 
 
 # TODO: Missing variable
@@ -412,7 +385,6 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 
-
 # TODO: Fix this
 # # check that newly censused 'AU', 'DS' or 'DC with "rotting stem" selected as FAD have selected a level for rotting main stem ####
 # error_name <- "rot_but_no_level"
@@ -448,7 +420,6 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 
-
 # check that newly censused 'A' or 'AU', were A or AU in previous year ####
 # 
 # As noted here https://github.com/SCBI-ForestGEO/HarvardMortality/issues/16
@@ -461,13 +432,10 @@ error_name <- "Dead_but_now_alive_no_note"
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
 
-
 idx_trees <- mort[, status_column] %in% c("AU","A")
 idx_previously_dead_no_note <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column]) & is.na(mort$`Notes 2021`)
 
-
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead_no_note ]
-
 
 if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name)) 
 
@@ -485,19 +453,12 @@ warning_name <- "Dead_but_now_alive_with_note"
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
 
-
 idx_trees <- mort[, status_column] %in% c("AU","A")
 idx_previously_dead_with_note <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column]) & !is.na(mort$`Notes 2021`)
 
-
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead_with_note ]
 
-
 if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], warning_name)) 
-
-
-
-
 
 
 
@@ -507,16 +468,12 @@ warning_name <- "DC_but_now_A_AU_or_DS"
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
 
-
 idx_trees <- mort[, status_column] %in% c("AU","A", "DS")
 idx_previously_dead <- mort[,previous_status_column] %in% c("DC") & !is.na(mort[,previous_status_column])
 
-
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead ]
 
-
 if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], warning_name)) 
-
 
 
 
@@ -557,8 +514,6 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 
 
 
-
-
 # TODO: remove since it's SCBI specific?
 # # check that, for newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI),	if Crown thinning>1, tree is AU or dead ####
 # error_name <- "crown_thinning_more_than_1_but_not_AU_or_dead"
@@ -575,7 +530,6 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 # tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_crown & idx_status ]
 # 
 # if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-
 
 
 
@@ -599,7 +553,6 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 
 
 
-
 # TODO: remove since it's SCBI specific?
 # # check that, for newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI),	if D-shaped exit hole count>0, tree is AU or dead ####
 # error_name <- "exit_hole_count_but_not_AU_or_dead"
@@ -617,7 +570,6 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 # 
 # 
 # if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-
 
 
 
@@ -640,7 +592,6 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 
 
 
-
 # TODO: remove since it's SCBI specific?
 # # check that, for newly censused trees (FRAM, FRNI, FRPE, FRSP, or CHVI),	if tree is dead, Crown thinning=5 ####
 # error_name <- "dead_but_crown_thinning_less_than_5"
@@ -659,7 +610,6 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 # 
 # if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 # 
-
 
 
 
@@ -694,10 +644,9 @@ if(!is.null(warning_file))
   write.csv(warning_file[, c(ncol(warning_file), 1:(ncol(warning_file) -1))], file = file.path(here("testthat"), "reports/warnings/warnings_file.csv"), row.names = F)
 
 
+
 # KEEP TRACK OF ALL THE ISSUES ####
-
 all_reports <- list.files(here("testthat/reports/", c("requires_field_fix", "will_auto_fix", "warnings")), recursive = T, pattern = ".csv", full.names = T)
-
 
 for(f in all_reports) {
   
@@ -710,6 +659,7 @@ for(f in all_reports) {
     write.csv(read.csv(f), file = new_f, row.names = F)
   
 }
+
 
 
 # TODO: Need quadrats
