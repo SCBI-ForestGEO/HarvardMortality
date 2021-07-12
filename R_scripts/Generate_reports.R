@@ -63,6 +63,19 @@ mort[, 'Percentage of crown intact'] <- as.numeric(mort[, 'Percentage of crown i
 mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown living'])
 
 
+# Add original collection date
+mort_info <- as.data.frame(read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" )) %>% 
+  select('Submission Id', 'Orig.collection.date' = 'Date/Time')
+
+mort <- mort %>% 
+  left_join(
+    mort_root %>% 
+      select('Submission Id', 'Orig.collection.date' = 'Date/Time'), 
+    by = 'Submission Id') %>% 
+  select(SurveyorID, 'Submission Id', 'Orig.collection.date', everything())
+
+
+
 
 # TODO: When you have census data
 # # give a % completion status ####
