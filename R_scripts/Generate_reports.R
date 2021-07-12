@@ -276,29 +276,25 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # } else {
 #   if(file.exists(filename) ) file.remove(filename)
 # }
-# 
-# 
 
 
 
-# TODO: Fix this
-# # check that newly censused 'AU', 'DS' or 'DC with "wound" selected as FAD have selected a level for wounded main stem ####
-# error_name <- "wounded_but_no_level"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
-# idx_wounded <- !is.na(mort$FAD) & grepl("W", mort$FAD)
-# idx_wnd_main_stem <- !is.na(mort$'Wounded main stem')
-# 
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_wounded & !idx_wnd_main_stem ]
-# 
-# if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-# 
-# 
-# 
-# 
+# check that newly censused 'AU', 'DS' or 'DC with "wound" selected as FAD have selected a level for wounded main stem ####
+error_name <- "wounded_but_no_level"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
+idx_wounded <- !is.na(mort$FAD) & grepl("W", mort$FAD)
+idx_wnd_main_stem <- !is.na(mort$'Wounded main stem')
+
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_wounded & !idx_wnd_main_stem ]
+
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+
+
+
 # ## and vice versa ####
 # error_name <- "wounded_level_but_wrong_status_or_FAD"
 # 
@@ -308,33 +304,27 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # idx_wounded <- !is.na(mort$FAD) & grepl("W", mort$FAD)
 # idx_wnd_main_stem <- !is.na(mort$'Wounded main stem')
 # 
-# 
 # if(length(tag_stem_with_error) > 0) tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees | !idx_wounded) & idx_wnd_main_stem ]
-# 
 # 
 # will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
-# TODO: Missing variable
-# # check that newly censused 'AU', 'DS' or 'DC with "canker" selected as FAD have selected a level for canker,swelling,deformity ####
-# error_name <- "canker_but_no_level"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
-# idx_canker <- !is.na(mort$FAD) & grepl("K", mort$FAD)
-# idx_ckr_level <- !is.na(mort$'canker,swelling,deformity')
-# 
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_canker & !idx_ckr_level ]
-# 
-# 
-# if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-# 
-# 
-# 
-# 
+# check that newly censused 'AU', 'DS' or 'DC with "canker" selected as FAD have selected a level for canker,swelling,deformity ####
+error_name <- "canker_but_no_level"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
+idx_canker <- !is.na(mort$FAD) & grepl("K", mort$FAD)
+idx_ckr_level <- !is.na(mort$'canker,swelling,deformity')
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_canker & !idx_ckr_level ]
+
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+
+
+
 # ## and vice versa ####
 # error_name <- "canker_level_but_wrong_status_or_FAD"
 # 
@@ -344,32 +334,27 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 # idx_canker <- !is.na(mort$FAD) & grepl("K", mort$FAD)
 # idx_ckr_level <- !is.na(mort$'canker,swelling,deformity')
 # 
-# 
 # tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees & !idx_canker) & idx_ckr_level ]
-# 
 # 
 # if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
-# TODO: Fix this
-# # check that newly censused 'AU', 'DS' or 'DC with "rotting stem" selected as FAD have selected a level for rotting main stem ####
-# error_name <- "rot_but_no_level"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
-# idx_rot <- !is.na(mort$FAD) & grepl("R\\>", mort$FAD)
-# idx_rot_level <- !is.na(mort$'rotting main stem')
-# 
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_rot & !idx_rot_level ]
-# 
-# 
-# if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-# 
-# 
-# 
+# check that newly censused 'AU', 'DS' or 'DC with "rotting stem" selected as FAD have selected a level for rotting main stem ####
+error_name <- "rot_but_no_level"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
+idx_rot <- !is.na(mort$FAD) & grepl("R\\>", mort$FAD)
+idx_rot_level <- !is.na(mort$'rotting main stem')
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_rot & !idx_rot_level ]
+
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+
+
+
 # ## and vice versa ####
 # error_name <- "rot_level_but_wrong_status_or_FAD"
 # 
