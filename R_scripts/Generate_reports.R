@@ -635,21 +635,21 @@ if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.fra
 # clean and save files ####
 
 ## remove empty tags
-require_field_fix_error_file <- require_field_fix_error_file[!is.na(require_field_fix_error_file$Tag),]
+require_field_fix_error_file <- require_field_fix_error_file[!is.na(require_field_fix_error_file$StemTag),]
 
-will_auto_fix_error_file <- will_auto_fix_error_file[!is.na(will_auto_fix_error_file$Tag),]
+will_auto_fix_error_file <- will_auto_fix_error_file[!is.na(will_auto_fix_error_file$StemTag),]
 
-warning_file <- warning_file[!is.na(warning_file$Tag),]
+warning_file <- warning_file[!is.na(warning_file$StemTag),]
 
 ## order by quadrat and tag
 if(!is.null(require_field_fix_error_file))
-  require_field_fix_error_file <- require_field_fix_error_file[order(require_field_fix_error_file$Quad, require_field_fix_error_file$Tag, require_field_fix_error_file$StemTag),]
+  require_field_fix_error_file <- require_field_fix_error_file[order(require_field_fix_error_file$Quad, require_field_fix_error_file$StemTag),]
 
 if(!is.null(will_auto_fix_error_file))
-  will_auto_fix_error_file <- will_auto_fix_error_file[order(will_auto_fix_error_file$Quad, will_auto_fix_error_file$Tag, will_auto_fix_error_file$StemTag),]
+  will_auto_fix_error_file <- will_auto_fix_error_file[order(will_auto_fix_error_file$Quad, will_auto_fix_error_file$StemTag),]
 
 if(!is.null(warning_file))
-  warning_file <- warning_file[order(warning_file$Quad, warning_file$Tag, warning_file$StemTag),]
+  warning_file <- warning_file[order(warning_file$Quad, warning_file$StemTag),]
 
 
 # save
