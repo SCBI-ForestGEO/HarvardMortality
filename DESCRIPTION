@@ -23,7 +23,10 @@ Imports:
     rgdal,
     dplyr,
     readr,
-    stringr
+    stringr,
+    ggplot2,
+    png, 
+    grid
 URL: https://github.com/SCBI-ForestGEO/SCBImortality
 BugReports: https://github.com/SCBI-ForestGEO/SCBImortality/issues
 Config/testthat/edition: 3
