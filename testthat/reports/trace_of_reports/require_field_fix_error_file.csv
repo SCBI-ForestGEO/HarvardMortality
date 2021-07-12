@@ -468,3 +468,10 @@
 "wounded_but_no_level","LM","d8dedc48-41c3-4800-85a7-31a6acea2084","2021-07-11","0125-11",12677,"acerru",9.86142,9.77887,10.6,"A",1.71,"AU",2,100,100,NA,0,"W",NA,NA,2,"False",NA
 "wounded_but_no_level","NM","ec1cef5a-644b-4540-9ec0-f529cb54bdbd","2021-07-11","0318-21",31491,"tsugca",7.2788,4.8369,67.1,"A",1.3,"AU",3,90,50,NA,0,"I,LF,W",NA,NA,NA,"False",NA
 "wounded_but_no_level","RB","dff65a34-aaae-4e5b-a113-9cf20767463c","2021-07-08","0504-22",50429,"acerru",3.8036,0.3883,37.1,"A",1.3,"AU",4,70,70,NA,0,"W",NA,NA,NA,"False",NA
+"missing_crown_position","LM","693383af-6a15-4925-9932-3326ba8733e4","2021-07-12","0115-11",10935,"piceru",8.60303,4.49802,NA,"D",1.7,"DS",NA,10,0,NA,0,NA,NA,NA,NA,"False",NA
+"wounded_but_no_level","LM","cf9d2305-7d30-4da4-9e23-4228a190a5f9","2021-07-12","0117-12",11156,"piceru",3.02018,8.5023,36.8,"A",1.3,"AU",5,95,90,NA,0,"W",NA,NA,NA,"False","Bleeding pitch"
+"missing_crown_position","LM","550a6e4d-9269-4912-9496-64b81114061b","2021-07-12","0118-11",11215,"tsugca",3.28927,9.09318,42.2,"A",1.3,"A",NA,95,85,NA,0,NA,NA,NA,NA,NA,NA
+"missing_crown_position","LM","550a6e4d-9269-4912-9496-64b81114061b","2021-07-12","0118-21",11271,"pinust",0.6606,8.0404,NA,"D",1.3,"DS",NA,0,0,NA,0,NA,NA,NA,NA,"False",NA
+"crown_living_greater_than_crown_intact","NM","b915b30b-5947-45a7-9e44-e9c2f5b186c6","2021-07-12","0322-22",32478,"querru",7.8119,9.5852,31.1,"A",1.3,"A",4,95,99,NA,0,NA,NA,NA,NA,NA,NA
+"wounded_but_no_level","RB","a26a051d-5044-45a0-a03b-091e71ba3101","2021-07-12","0520-11",51829,"acerru",3.1734,8.7466,12.7,"A",1.3,"DS",1,0,0,NA,0,"B,W",NA,NA,NA,"False",NA
+"wounded_but_no_level","RB","a26a051d-5044-45a0-a03b-091e71ba3101","2021-07-12","0520-11",51839,"betupa",3.93018,1.53717,19.4,"A",1.3,"AU",2,60,60,NA,0,"W,B",NA,NA,NA,"False",NA
