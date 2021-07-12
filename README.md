@@ -18,9 +18,7 @@
 
 ### mortality survey completion status
 
-**Note:** this is a completion status for the SCBI mortality census as of 2021-07-06 and is only meant as a preview of eventual dashboard for Harvard Forest. 
-
-![percent_completion](https://raw.githubusercontent.com/SCBI-ForestGEO/SCBImortality/main/testthat/reports/percent_completion.png)
+![percent_completion](testthat/reports/percent_completion.png)
 
 ### map of census progress
 

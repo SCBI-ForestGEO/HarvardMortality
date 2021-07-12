@@ -73,7 +73,7 @@ mort <- mort %>%
 
 
 # give a % completion status ####
-percent_completion <- round(sum(paste(main_census$tag, main_census$StemTag) %in% paste(mort$Tag, mort$StemTag)) / nrow(main_census) * 100)
+percent_completion <- round(sum(paste(main_census$StemTag) %in% paste(mort$StemTag)) / nrow(main_census) * 100)
 
 png(file.path(here("testthat"), "reports/percent_completion.png"), width = 1, height = 1, units = "in", res = 150)
 par(mar = c(0,0,0,0))
