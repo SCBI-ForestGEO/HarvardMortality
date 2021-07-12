@@ -115,7 +115,7 @@ mort <- mort[idx_trees, ]
 
 
 
-# check that personnel who collected data is entered  ####
+# check that personnel/surveyor ID who collected data is entered  ####
 error_name <- "personnel_missing"
 
 idx_error <- is.na(mort$SurveyorID)
