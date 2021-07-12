@@ -24,19 +24,14 @@ orig.names <- names(mort)
 mort <- data.frame(SurveyorID = mort_root$Personnel[match(mort$`Submission Id`, mort_root$`Submission Id`)], mort)
 names(mort) <- c("SurveyorID", orig.names)
 
-## TODO: fix once you have main census
-# # load and clean up the 3rd main census ####
-# main_census <-  read.csv(paste0("https://raw.githubusercontent.com/SCBI-ForestGEO/SCBI-ForestGEO-Data/master/tree_main_census/data/census-csv-files/scbi.stem3.csv"))
-# 
-# ## convert dbh to numeric
-# main_census$dbh <- as.numeric(main_census$dbh)
-# 
-# ## only keep trees > 10cm except for fraxinus and Chionanthus virginicus
-# main_census <-  main_census[grepl("^fr..|^ch..", main_census$sp) | (!is.na(main_census$dbh) & main_census$dbh >= 100), ]
-# 
-# ## remove trees that are dead
-# main_census <- main_census[!main_census$status %in% "D",]
-# 
+# Load list of stems to census ####
+main_census <- read_tsv("data/HFmort_stemtag.txt") %>% 
+  select(StemTag = stem.tag)
+
+
+
+
+## TODO: fix once 
 # # load species table ####
 # 
 # spptable <- read.csv("https://raw.githubusercontent.com/SCBI-ForestGEO/SCBI-ForestGEO-Data/master/tree_main_census/data/census-csv-files/scbi.spptable.csv")
@@ -77,16 +72,15 @@ mort <- mort %>%
 
 
 
-# TODO: When you have census data
-# # give a % completion status ####
-# percent_completion <- round(sum(paste(main_census$tag, main_census$StemTag) %in% paste(mort$Tag, mort$StemTag)) / nrow(main_census) * 100)
-# 
-# png(file.path(here("testthat"), "reports/percent_completion.png"), width = 1, height = 1, units = "in", res = 150)
-# par(mar = c(0,0,0,0))
-# plot(0,0, axes = F, xlab = "", ylab = "", type = "n")
-# text(0,0, paste(percent_completion, "%"))
-# dev.off()
-# # write.table(percent_completion, file = file.path(here("testthat"), "reports/percent_completion.txt"),  col.names = F, row.names = F)
+# give a % completion status ####
+percent_completion <- round(sum(paste(main_census$tag, main_census$StemTag) %in% paste(mort$Tag, mort$StemTag)) / nrow(main_census) * 100)
+
+png(file.path(here("testthat"), "reports/percent_completion.png"), width = 1, height = 1, units = "in", res = 150)
+par(mar = c(0,0,0,0))
+plot(0,0, axes = F, xlab = "", ylab = "", type = "n")
+text(0,0, paste(percent_completion, "%"))
+dev.off()
+# write.table(percent_completion, file = file.path(here("testthat"), "reports/percent_completion.txt"),  col.names = F, row.names = F)
 
 
 
