@@ -12,7 +12,7 @@
 ### warnings? 
 *These do not cause the tests to fail, but may indicate problems and should be reviewed.*
 
-[![There_are_no_warnings_:-)](https://raw.githubusercontent.com/SCBI-ForestGEO/HarvardMortality/main/testthat/reports/warnings.png)](https://github.com/SCBI-ForestGEO/HarvardMortality/tree/main/testthat/reports/warnings)
+[![There_are_no_warnings_:-)](testthat/reports/warnings.png)](https://github.com/SCBI-ForestGEO/HarvardMortality/tree/main/testthat/reports/warnings)
 
 
 ### mortality survey completion status
