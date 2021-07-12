@@ -259,23 +259,6 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 
-# TODO: Doesn't run. missing `Dead DBH` variable
-# # check that status 'DS' or 'DC' have a dbh within 2cm of most recent census DBH  ####
-# warning_name <- "DBH_dead_suspicious"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("DS", "DC")
-# idx_DBH_ouside_range <- !is.na(mort$'Dead DBH') & (abs(mort$'Dead DBH' - as.numeric(mort$DBH)) > 20)
-# 
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_DBH_ouside_range]
-# 
-# 
-# if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], warning_name))
-
-
-
 # check that newly censused 'AU', 'DS' or 'DC trees that were alive in previous census have at least one FAD selected ####
 error_name <- "status_AU_DS_or_DC_but_no_FAD"
 
