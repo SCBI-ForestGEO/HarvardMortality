@@ -89,7 +89,8 @@ pr <- ggplot(quadrats, aes(gx-10, gy-10, fill = checks))+
   scale_fill_manual(values = clrs)+
   annotation_custom(g, xmin=370, xmax = 510, ymin = 240, ymax = 380)+
   annotate(geom=  "text", x = 380, y = 370, label = "Here be\ndragons!" )+
-  labs(x="", y="")
+  labs(x="", y="") +
+  coord_fixed()
 
 
 ggsave(filename, plot= pr, device = 'png', 
