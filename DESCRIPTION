@@ -21,7 +21,12 @@ Imports:
     here,
     readxl,
     rgdal,
-    dplyr
+    dplyr,
+    readr,
+    stringr,
+    ggplot2,
+    png, 
+    grid
 URL: https://github.com/SCBI-ForestGEO/SCBImortality
 BugReports: https://github.com/SCBI-ForestGEO/SCBImortality/issues
 Config/testthat/edition: 3
