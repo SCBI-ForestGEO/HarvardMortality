@@ -10,6 +10,8 @@ library(here)
 library(rgdal)
 library(readxl)
 library(ggplot2)
+library(png)
+library(grid)
 
 # load map of quadrats ####
 #quadrats <- rgdal::readOGR(file.path(here(""),"maps/20m_grid/20m_grid.shp"))
@@ -20,6 +22,11 @@ quadrats <- read.table("./data/HFquadrats.txt", header=TRUE, sep = '\t')
 ## get the name of latest excel form
 latest_FFFs <- list.files(here("raw_data/FFF_excel/"), pattern = ".xlsx", full.names = T)
 
+# get the census data to find missing swamp quadrats
+hf <- read.table("./data/Harvard_Forest_FFF.csv", header=T, sep = ",")
+hf_quads <- unique(hf$QuadratName)
+
+swmp <- quadrats[!(quadrats$quadrats %in% hf_quads),]$quadrats
 
 ## load the latest mortality survey
 
@@ -46,15 +53,21 @@ quadrats_with_warnings <- as.integer(substr(quadrats_with_warnings, start = 1, s
 
 quadrats$checks <- ifelse(quadrats$quadrats %in% quadrats_with_errors, 'error',
                           ifelse(quadrats$quadrats %in% quadrats_with_warnings, 'warning', 
-                                 ifelse(quadrats$quadrats %in% complete_quads, 'complete', "incomplete")))
+                                 ifelse(quadrats$quadrats %in% complete_quads, 'complete',
+                                        ifelse(quadrats$quadrats %in% swmp, "swamp", "incomplete"))))
+
 
 filename <- file.path(here("testthat"), "reports/map_of_error_and_warnings.pdf")
 
-clrs <- c( "aquamarine1","coral2", "grey50", "darkgoldenrod1")
+clrs <- c( "aquamarine1", "coral2", "grey50","antiquewhite", "darkgoldenrod1")
+img <- readPNG(source = "./data/dragon.png")
+g <- rasterGrob(img, interpolate=TRUE)
 
-pr <- ggplot(quadrats, aes(gx, gy, fill = checks))+
-  geom_tile(color='grey10')+
+pr <- ggplot(quadrats, aes(gx-10, gy-10, fill = checks))+
+  geom_tile(color='grey80')+
   scale_fill_manual(values = clrs)+
+  annotation_custom(g, xmin=370, xmax = 510, ymin = 240, ymax = 380)+
+  annotate(geom=  "text", x = 380, y = 370, label = "Here be\ndragons!" )+
   labs(x="", y="")
 
 
