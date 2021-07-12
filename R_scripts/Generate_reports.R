@@ -36,14 +36,6 @@ main_census <- read_tsv("data/HFmort_stemtag.txt") %>%
 # 
 # spptable <- read.csv("https://raw.githubusercontent.com/SCBI-ForestGEO/SCBI-ForestGEO-Data/master/tree_main_census/data/census-csv-files/scbi.spptable.csv")
 
-# NOTE: Doesn't apply to HF
-# # fix empty lines in mort ####
-# idx_empty_line <- which(is.na(mort$Quad))
-# EAB_columns <- c("Crown thinning","Epicormic growth","EABF","D-shaped exit hole count","Crown position < 10 cm DBH")
-# 
-# # replace empty EAB column of line before by the EAB of empty lines
-# mort[idx_empty_line-1, EAB_columns] <- mort[idx_empty_line, EAB_columns] 
-
 # remove empty lines
 mort <- mort[!is.na(mort$Quad), ] # fix empty lines
 
@@ -295,18 +287,18 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 
-# ## and vice versa ####
-# error_name <- "wounded_level_but_wrong_status_or_FAD"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
-# idx_wounded <- !is.na(mort$FAD) & grepl("W", mort$FAD)
-# idx_wnd_main_stem <- !is.na(mort$'Wounded main stem')
-# 
-# if(length(tag_stem_with_error) > 0) tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees | !idx_wounded) & idx_wnd_main_stem ]
-# 
-# will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+## and vice versa ####
+error_name <- "wounded_level_but_wrong_status_or_FAD"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
+idx_wounded <- !is.na(mort$FAD) & grepl("W", mort$FAD)
+idx_wnd_main_stem <- !is.na(mort$'Wounded main stem')
+
+if(length(tag_stem_with_error) > 0) tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees | !idx_wounded) & idx_wnd_main_stem ]
+
+will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
@@ -325,18 +317,18 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 
-# ## and vice versa ####
-# error_name <- "canker_level_but_wrong_status_or_FAD"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
-# idx_canker <- !is.na(mort$FAD) & grepl("K", mort$FAD)
-# idx_ckr_level <- !is.na(mort$'canker,swelling,deformity')
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees & !idx_canker) & idx_ckr_level ]
-# 
-# if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+## and vice versa ####
+error_name <- "canker_level_but_wrong_status_or_FAD"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
+idx_canker <- !is.na(mort$FAD) & grepl("K", mort$FAD)
+idx_ckr_level <- !is.na(mort$'canker,swelling,deformity')
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees & !idx_canker) & idx_ckr_level ]
+
+if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
@@ -355,20 +347,20 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 
-# ## and vice versa ####
-# error_name <- "rot_level_but_wrong_status_or_FAD"
-# 
-# status_column <- rev(grep("Status", names(mort), value = T))[1]
-# 
-# idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
-# idx_rot <- !is.na(mort$FAD) & grepl("R\\>", mort$FAD)
-# idx_rot_level <- !is.na(mort$'rotting main stem')
-# 
-# 
-# tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees & !idx_rot) & idx_rot_level ]
-# 
-# 
-# if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+## and vice versa ####
+error_name <- "rot_level_but_wrong_status_or_FAD"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+
+idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
+idx_rot <- !is.na(mort$FAD) & grepl("R\\>", mort$FAD)
+idx_rot_level <- !is.na(mort$'rotting main stem')
+
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees & !idx_rot) & idx_rot_level ]
+
+
+if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
 
 
 
