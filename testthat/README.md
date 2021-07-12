@@ -8,6 +8,7 @@ No|level | category | applied to | test  | warning (W) or error (E) | coded | re
 2|plot | census progress | all stems in census | list or map of quadrats completed, with additional category for censused with fixes pending | NA |  2021 | NA | NA | core 
 3|quadrat | completion check | newly censused quadrats | all trees censused |  E | 2021 | Y | NA | core
 4|quadrat  | consistency check | newly censused quadrats | no trees are duplicated |   E | 2021 | N | use latest record | core
+5|tree | completion check | newly censused trees (A, AU, DS) | `SurveyorID` is recorded | E | 2021 | N | NA | core
 5|tree | completion check | newly censused trees (A, AU, DS) | `crown position` is recorded | E | 2021 | Y | NA | core
 6|tree | completion check | newly censused trees (A, AU, DS) |`percentage of crown intact` is recorded | E | 2021 | Y | NA | core
 7|tree | completion check | newly censused trees (A, AU, DS) |`percentage of crown living` is recorded | E | 2021 | Y | NA | core
