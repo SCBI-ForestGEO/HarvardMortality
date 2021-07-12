@@ -450,20 +450,52 @@ if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(requir
 
 
 # check that newly censused 'A' or 'AU', were A or AU in previous year ####
-warning_name <- "Dead_but_now_alive"
+# 
+# As noted here https://github.com/SCBI-ForestGEO/HarvardMortality/issues/16
+# in some rare instances, we can have a newly censused 'A' or 'AU' that were dead previously
+# because stem was previously misclassified. i.e. they are "brought back to life"
+# For such stems we expect a note. If there is no note, issue error below.
+# See "Dead_but_now_alive_with_note" for opposite case. 
+error_name <- "Dead_but_now_alive_no_note"
 
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
 
 
 idx_trees <- mort[, status_column] %in% c("AU","A")
-idx_previously_dead <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column])
+idx_previously_dead_no_note <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column]) & is.na(mort$`Notes 2021`)
 
 
-tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead ]
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead_no_note ]
+
+
+if(length(tag_stem_with_error) > 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name)) 
+
+
+
+# check that newly censused 'A' or 'AU', were A or AU in previous year ####
+# 
+# As noted here https://github.com/SCBI-ForestGEO/HarvardMortality/issues/16
+# in some rare instances, we can have a newly censused 'A' or 'AU' that were dead previously
+# because stem was previously misclassified. i.e. they are "brought back to life"
+# For such stems we expect a note. If there is a note, issue warning below
+# See "Dead_but_now_alive_no_note" for opposite case. 
+warning_name <- "Dead_but_now_alive_with_note"
+
+status_column <- rev(grep("Status", names(mort), value = T))[1]
+previous_status_column <- rev(grep("Status", names(mort), value = T))[2]
+
+
+idx_trees <- mort[, status_column] %in% c("AU","A")
+idx_previously_dead_with_note <- !mort[,previous_status_column] %in% c("AU","A") & !is.na(mort[,previous_status_column]) & !is.na(mort$`Notes 2021`)
+
+
+tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_previously_dead_with_note ]
 
 
 if(length(tag_stem_with_error) > 0) warning_file <- rbind(warning_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], warning_name)) 
+
+
 
 
 
