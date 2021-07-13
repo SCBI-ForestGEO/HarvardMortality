@@ -290,10 +290,10 @@ idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
 idx_wounded <- !is.na(mort$FAD) & grepl("W", mort$FAD)
 idx_wnd_main_stem <- !is.na(mort$'Wounded main stem')
 
-if(length(tag_stem_with_error) > 0) tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees | !idx_wounded) & idx_wnd_main_stem ]
-
-will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
-
+if(length(tag_stem_with_error) > 0) {
+  tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees | !idx_wounded) & idx_wnd_main_stem ]
+  will_auto_fix_error_file <- rbind(will_auto_fix_error_file, data.frame(mort[paste(mort$Tag, mort$StemTag) %in% tag_stem_with_error, ], error_name))
+}
 
 
 # check that newly censused 'AU', 'DS' or 'DC with "canker" selected as FAD have selected a level for canker,swelling,deformity ####
