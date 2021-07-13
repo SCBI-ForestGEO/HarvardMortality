@@ -39,3 +39,8 @@
 "wounded_level_but_wrong_status_or_FAD","JS","c0fe9bb6-e1e9-46b3-beca-91ae85952338","2021-07-10","0605-21",60540,"acerru",6.9754,8.1192,31.3,"A",1.3,"DS",4,80,0,NA,0,"R",1,NA,2,"False",NA
 "wounded_level_but_wrong_status_or_FAD","NM","6feed65c-11fe-4c57-9962-d345b9b326a9","2021-07-12","0321-12",32066,"acerru",1.72771,2.8262,12.2,"A",1.3,"DS",2,2,0,NA,0,"B,DF",2,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","NM","b915b30b-5947-45a7-9e44-e9c2f5b186c6","2021-07-12","0322-11",32239,"acerru",0.52893,1.66076,15.5,"A",1.3,"AU",3,20,10,NA,0,"B",2,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","LM","6d417e0d-6ec3-4c97-894a-da7fbeb40bdd","2021-07-08","0210-11",20783,"tsugca",5.11362,1.57916,NA,"D",1.3,"DS",2,85,80,NA,0,NA,NA,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","LM","a7c5db7e-7b53-4c6a-a7d2-d8d41f7cdf2d","2021-07-08","0213-11",21042,"tsugca",2.77242,2.11889,18.9,"A",1.3,"DS",2,90,55,NA,0,"I,DF,OT",NA,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","AK","8da507fe-0720-47e3-ad20-592d93c78111","2021-07-10","0214-22",21102,"tsugca",4.1802,1.3965,31.1,"A",1.3,"DS",3,90,90,NA,0,"I,DF",NA,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","AK","8735a6be-8ee7-4508-aaea-3d49ae9229f1","2021-07-10","0220-21",21611,"pinust",5.2632,9.85363,18.1,"A",1.3,"DS",1,100,100,23,0,"DF",NA,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","JS","72b111ea-7363-43d9-a933-d0fe4cd490a6","2021-07-08","0601-21",60091,"pinure",9.584,4.47974,NA,"D",1.3,"DS",1,100,100,NA,0,"B",NA,NA,NA,"False",NA
