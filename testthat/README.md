@@ -13,7 +13,7 @@ Repo README |plot | census progress | all stems in census | list or map of quadr
 `missing_percent_crown_intact`|tree | completion check | newly censused trees (A, AU, DS) |`percentage of crown intact` is recorded | E | 2021 | Y | NA | core
 `missing_percent_crown_living`|tree | completion check | newly censused trees (A, AU, DS) |`percentage of crown living` is recorded | E | 2021 | Y | NA | core
 `crown_living_greater_than_crown_intact`|tree | consistency check | newly censused trees (A, AU, DS) | `percentage of crown living` ≤ `percentage of crown intact` | E | 2021 | initially | [issue 13](https://github.com/SCBI-ForestGEO/SCBImortality/issues/13)| core
-??? |tree | consistency check | newly censused trees (DS or DC) | `percentage of crown living` = 0 | E | 2021 | Y | NA| core
+`dead_but_crown_living_not_zero` |tree | consistency check | newly censused trees (DS or DC) | `percentage of crown living` = 0 | E | 2021 | Y | NA| core
 `status_A_but_unhealthy` & `unhealthy_but_wrong_status`|tree | consistency check | newly censused trees (alive) | no FAD is selected; no record of wounded main stem, canker, or rotting trunk; DWR (dead with resprouts) not selected | E | 2021 | sometimes | if `percentage of crown living`>0, change status to AU; otherwise requires field check (to determine DS vs DC) | core
 `status_AU_but_DWR_selected`|tree | consistency check | newly censused trees (AU) | DWR (dead with resprouts) not selected |E |  2021 | initially | ---| core
 `status_AU_DS_or_DC_but_no_FAD`|tree | completion check | newly censused trees (AU, DS or DC) **that were live in previous census** | at least one FAD is selected (OR level selected for `wounded main stem`,`canker,swelling,deformity`, `rotting main stem`)* | E |2021 | Y | NA | core
