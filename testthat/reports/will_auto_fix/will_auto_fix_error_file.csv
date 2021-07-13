@@ -3,6 +3,10 @@
 "wounded_level_but_wrong_status_or_FAD","KN","d63e2716-1ff8-40bf-b55d-34391751c3ab","2021-07-08","0103-21","10262","tsugca","6.2616","7.16931",15.1,"A",1.3,"AU","2",90,88,NA,"0","B,OT","2",NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","KN","d63e2716-1ff8-40bf-b55d-34391751c3ab","2021-07-08","0103-22","10243","tsugca","1.7615","0.8558",10.7,"A",1.3,"AU","1",50,50,NA,"0","B,I,LF,OT","3",NA,NA,"False","Missing top appears old, some HWA visible"
 "wounded_level_but_wrong_status_or_FAD","LM","71b1a1be-7c8e-4e71-92e9-ceba75144cb2","2021-07-11","0123-22","12426","acerru","7.5201","0.5269",14.4,"A",1.3,"AU","2",100,100,NA,"0","HS","1",NA,NA,"False",NA
+"dead_but_crown_living_not_zero","LM","6d417e0d-6ec3-4c97-894a-da7fbeb40bdd","2021-07-08","0210-11","20783","tsugca","5.11362","1.57916",NA,"D",1.3,"DS","2",85,80,NA,"0",NA,NA,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","LM","a7c5db7e-7b53-4c6a-a7d2-d8d41f7cdf2d","2021-07-08","0213-11","21042","tsugca","2.77242","2.11889",18.9,"A",1.3,"DS","2",90,55,NA,"0","I,DF,OT",NA,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","AK","8da507fe-0720-47e3-ad20-592d93c78111","2021-07-10","0214-22","21102","tsugca","4.1802","1.3965",31.1,"A",1.3,"DS","3",90,90,NA,"0","I,DF",NA,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","AK","8735a6be-8ee7-4508-aaea-3d49ae9229f1","2021-07-10","0220-21","21611","pinust","5.2632","9.85363",18.1,"A",1.3,"DS","1",100,100,23,"0","DF",NA,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","NM","6d6e2282-2af4-4dd5-9b33-e92640c9f471","2021-07-08","0303-11","30216","acerru","8.93865","9.66115",11.7,"A",1.3,"DC","1",0,0,NA,"0","B,F","2",NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","NM","6d6e2282-2af4-4dd5-9b33-e92640c9f471","2021-07-08","0303-21","30377","acerru","4.9344","9.72508",10.2,"A",1.3,"DS","1",0,0,NA,"0","B,F","2",NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","NM","0579c5c1-963e-421c-bb81-803fb6ee326d","2021-07-08","0304-11","30484","betual","2.21452","0.74255",14.9,"A",1.3,"DS","1",0,0,NA,"0","B,F","2",NA,NA,"False",NA
@@ -38,4 +42,5 @@
 "wounded_level_but_wrong_status_or_FAD","RB","fee82df3-b34d-4642-ba43-dc5a285cddb2","2021-07-08","0501-22","50075","pinure","2.694","4.0879",37.1,"A",1.3,"DS","3",65,0,NA,"0","U,AN,I","1",NA,NA,"False","Main stem covered in many tiny holes"
 "wounded_level_but_wrong_status_or_FAD","RB","fee82df3-b34d-4642-ba43-dc5a285cddb2","2021-07-08","0501-22","50087","pinure","3.6255","9.3445",41.7,"A",1.3,"AU","4",90,3,NA,"0","U,AN,LF","1",NA,NA,"False","Foliage is almost completely gone small holes on main stem"
 "wounded_level_but_wrong_status_or_FAD","RB","fee82df3-b34d-4642-ba43-dc5a285cddb2","2021-07-08","0501-22","50095","pinure","8.4934","1.0508",29.1,"A",1.3,"DS","3",76,0,NA,"0","U,AN,I","1",NA,NA,"False","Main stem covered in many tiny holes. Small wood dust pies at tree base"
+"dead_but_crown_living_not_zero","JS","72b111ea-7363-43d9-a933-d0fe4cd490a6","2021-07-08","0601-21","60091","pinure","9.584","4.47974",NA,"D",1.3,"DS","1",100,100,NA,"0","B",NA,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","JS","c0fe9bb6-e1e9-46b3-beca-91ae85952338","2021-07-10","0605-21","60540","acerru","6.9754","8.1192",31.3,"A",1.3,"DS","4",80,0,NA,"0","R","1",NA,"2","False",NA
