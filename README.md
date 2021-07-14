@@ -23,4 +23,8 @@
 
 ![map_of_completion](testthat/reports/map_of_error_and_warnings.png) 
 
+### Daily progress report
+
+![daily_progress](testthat/reports/daily_progress.png)
+
 
