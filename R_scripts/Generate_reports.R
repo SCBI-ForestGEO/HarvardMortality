@@ -112,7 +112,7 @@ error_name <- "personnel_missing"
 
 idx_error <- is.na(mort$SurveyorID)
 
-require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
+if(sum(idx_error) != 0) require_field_fix_error_file <- rbind(require_field_fix_error_file, data.frame(mort[idx_error,], error_name))
 
 
 
