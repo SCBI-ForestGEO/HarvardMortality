@@ -1,20 +1,27 @@
 Package: SCBImortality
-Title: Smithsonian Conservation Biology Institute (SCBI) ForestGEO Tree Mortality Data
-Description: This is the private data portal for the SCBI ForestGEO plot tree mortality raw data. A script generates the cleaned data, which is then puchsed to the public repo.
+Title: Harvard Forest ForestGEO Tree Mortality Data
+Description: This is the private data portal for the Harvard Forest ForestGEO plot tree mortality raw data. A script generates the cleaned data, which is then puchsed to the public repo.
 License: MIT + file LICENSE
 Version: 0.1.0
 Authors@R: c(
-    person(given = "Kristina", family = "Anderson-Teixeira", role = "aut"),
-    person(given = "William", family = "McShea", role = "aut"),
-    person(given = "Erika", family = "Gonzalez-Akre", role = "aut"),
+    person(given = "Kristina", family = "Anderson-Teixeira", role = "aut", comment = c(ORCID = "0000-0001-8461-9713")),
+    person(given = "William", family = "McShea", role = "aut", comment = c(ORCID = "0000-0002-8102-0200")),
+    person(given = "Erika", family = "Gonzalez-Akre", role = "aut", comment = c(ORCID = "0000-0001-8305-6672")),
     person(given = "Victoria", family = "Meakem", role = "aut"),
     person(given = "Ryan", family = "Helcoski", role = "aut"),
-    person(given = "Ian", family = "McGregor", role = "aut"),
+    person(given = "Ian", family = "McGregor", role = "aut", comment = c(ORCID = "0000-0001-8305-6672")),
     person(given = "Alyssa", family = "Terrell", role = "aut"),
     person(given = c("Albert", "Y."), family = "Kim", role = c("cre", "aut"), email = "albert.ys.kim@gmail.com", comment = c(ORCID = "0000-0001-7824-306X")),
     person(given = c("Valentine"), family = "Herrmann", role = c("aut"), email = "HerrmannV@si.edu", comment = c(ORCID = "0000-0002-4519-481X")),
     person(given = "Nidhi", family = "Vinod", role = "aut"),
-    person(given = "Cameron", family = "Dow", role = "aut"))
+    person(given = "Cameron", family = "Dow", role = "aut"),
+    person(given = c("Daniel", "J."), family = "Johnson", role = "aut", email = "johnson.daniel@ufl.edu"),
+    person(given = "Lukas", family = "Magee", role = "aut", email = "mageel@ufl.edu"),
+    person(given = "Jess", family = "Shue", role = "aut", email = "shuej@si.edu"),
+    person(given = "Ross", family = "B", role = "aut"),
+    person(given = "N", family = "M", role = "aut"),
+    person(given = "K", family = "N", role = "aut")
+    )
 Depends: R (>= 4.0.0)
 Imports: 
     testthat,
@@ -27,6 +34,6 @@ Imports:
     ggplot2,
     png, 
     grid
-URL: https://github.com/SCBI-ForestGEO/SCBImortality
-BugReports: https://github.com/SCBI-ForestGEO/SCBImortality/issues
+URL: https://github.com/SCBI-ForestGEO/HarvardMortality/
+BugReports: https://github.com/SCBI-ForestGEO/HarvardMortality/issues
 Config/testthat/edition: 3
