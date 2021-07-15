@@ -18,9 +18,9 @@ Authors@R: c(
     person(given = c("Daniel", "J."), family = "Johnson", role = "aut", email = "johnson.daniel@ufl.edu"),
     person(given = "Lukas", family = "Magee", role = "aut", email = "mageel@ufl.edu"),
     person(given = "Jess", family = "Shue", role = "aut", email = "shuej@si.edu"),
-    person(given = "Ross", family = "B", role = "aut"),
-    person(given = "N", family = "M", role = "aut"),
-    person(given = "K", family = "N", role = "aut")
+    person(given = "Ross", family = "Barreto", role = "aut"),
+    person(given = "Nicolle", family = "Montero", role = "aut"),
+    person(given = "Karl", family = "Novack", role = "aut")
     )
 Depends: R (>= 4.0.0)
 Imports: 
@@ -37,8 +37,7 @@ Imports:
     patchwork,
     janitor, 
     lubridate, 
-    patchwork,
-    ggplot2
+    patchwork
 URL: https://github.com/SCBI-ForestGEO/HarvardMortality/
 BugReports: https://github.com/SCBI-ForestGEO/HarvardMortality/issues
 Config/testthat/edition: 3
