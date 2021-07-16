@@ -38,6 +38,7 @@ stems_censused_per_day <- quadrat_info %>%
 # Field fix errors per day
 field_fix_errors <- read_csv("testthat/reports/trace_of_reports/require_field_fix_error_file.csv") %>% 
   clean_names() %>% 
+  distinct() %>% 
   select(error_name, surveyor_id, submission_id, date_time = orig_collection_date, quad_sub_quad, stem_tag) %>% 
   mutate(
     quad = str_sub(quad_sub_quad, 1, 4),
@@ -51,6 +52,7 @@ field_fix_errors <- read_csv("testthat/reports/trace_of_reports/require_field_fi
 # Auto fixes
 auto_fix_errors <- read_csv("testthat/reports/trace_of_reports/will_auto_fix_error_file.csv") %>% 
   clean_names() %>% 
+  distinct() %>% 
   select(error_name, surveyor_id, submission_id, date_time = orig_collection_date, quad_sub_quad, stem_tag) %>% 
   mutate(
     quad = str_sub(quad_sub_quad, 1, 4),
@@ -64,6 +66,7 @@ auto_fix_errors <- read_csv("testthat/reports/trace_of_reports/will_auto_fix_err
 # Missing stems
 quadrat_censused_missing_stems <- read_csv("testthat/reports/trace_of_reports/quadrat_censused_missing_stems.csv") %>% 
   clean_names() %>% 
+  distinct() %>% 
   mutate(
     quad = str_pad(quadrat, 4, "left", "0")
   ) %>% 
