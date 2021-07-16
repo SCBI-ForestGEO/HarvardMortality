@@ -2063,3 +2063,27 @@
 "duplicated_stem","LM","440c42bf-2e45-47d4-9417-945edd2a25a1","2021-07-15","1119-22",111385,"querru",3.3316,2.6444,20.9,"A",1.3,"A",3,100,100,NA,NA,NA,NA,NA,NA,NA,NA
 "duplicated_stem","LM","a1db2cf0-85b4-4bdc-a679-b17cdae19b3a","2021-07-15","1119-22",111386,"tsugca",2.5326,2.0347,28,"A",1.3,"AU",2,100,67,NA,NA,"I,LF",NA,NA,NA,"False",NA
 "duplicated_stem","LM","440c42bf-2e45-47d4-9417-945edd2a25a1","2021-07-15","1119-22",111386,"tsugca",2.5326,2.0347,28,"A",1.3,"AU",2,100,67,NA,NA,"I,LF",NA,NA,NA,"False",NA
+"crown_living_greater_than_crown_intact","KN","1bf6ce0d-cf4a-43e6-a171-26caf7149c2a","2021-07-16","1123-22",111779,"querru",5.9374,6.01,33,"A",1.3,"A",3,94,95,NA,NA,NA,NA,NA,NA,NA,NA
+"Dead_but_now_alive_no_note","DJ","55a6ec86-28c1-4bae-a631-9b64144a368f","2021-07-16","1214-11",120903,"prunse",9.3207,4.92569,NA,"D",1.3,"A",3,100,100,NA,NA,NA,NA,NA,NA,NA,NA
+"status_AU_DS_or_DC_but_no_FAD","DJ","ea9e77a3-e2ba-4bd6-8a88-d305906d091e","2021-07-16","1219-11",121242,"acerru",1.44999,7.20206,17.3,"A",1.5,"DS",1,32,0,NA,NA,NA,NA,NA,NA,"False",NA
+"Dead_but_now_alive_no_note","DJ","4957c574-ea10-4129-8eaf-8be9059fcb14","2021-07-16","1223-21",121616,"querru",2.3813,1.84622,NA,"D",1.3,"A",3,100,100,NA,NA,NA,NA,NA,NA,NA,NA
+"duplicated_stem","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11",130180,"pinust",0.95667,5.18418,46,"A",1.3,"DC",NA,NA,NA,NA,NA,NA,NA,NA,NA,"False",NA
+"duplicated_stem","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11",130180,"pinust",0.95667,5.18418,46,"A",1.3,"A",4,95,92,NA,0,NA,NA,NA,NA,NA,NA
+"status_AU_DS_or_DC_but_no_FAD","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11",130180,"pinust",0.95667,5.18418,46,"A",1.3,"DC",NA,NA,NA,NA,NA,NA,NA,NA,NA,"False",NA
+"status_AU_DS_or_DC_but_no_FAD","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11",130180,"pinust",0.95667,5.18418,46,"A",1.3,"A",4,95,92,NA,0,NA,NA,NA,NA,NA,NA
+"wounded_but_no_level","LM","0a28a2b5-a544-4436-a585-b46db6b2501c","2021-07-16","1305-21",130292,"acerru",2.1476,5.5101,17.3,"A",1.3,"AU",3,90,45,NA,NA,"R,W,F,LF",NA,NA,NA,"False","Canopy dieback plus rot"
+"duplicated_stem","LM","30d4c85e-87cb-4351-8586-df1a55d335be","2021-07-16","1311-11",130719,"pinust",4.47936,2.07821,38.9,"A",1.3,"A",5,96,89,NA,NA,NA,NA,NA,NA,NA,NA
+"duplicated_stem","LM","30d4c85e-87cb-4351-8586-df1a55d335be","2021-07-16","1311-11",130719,"pinust",4.47936,2.07821,38.9,"A",1.3,"A",4,96,88,NA,0,NA,NA,NA,NA,NA,NA
+"status_AU_DS_or_DC_but_no_FAD","LM","30d4c85e-87cb-4351-8586-df1a55d335be","2021-07-16","1311-22",130739,"acerru",1.4283,2.9903,18.1,"A",1.3,"DS",3,35,0,NA,NA,NA,NA,NA,2,"False",NA
+"status_AU_DS_or_DC_but_no_FAD","NM","30057623-261f-48c8-af4b-44d85ef55a2f","2021-07-16","1403-21",140240,"acerru",1.784,8.79051,29.1,"A",1.4,"DS",1,0,0,NA,0,NA,NA,NA,NA,"False",NA
+"Dead_but_now_alive_no_note","NM","290c6df9-3ea0-4ffc-9314-21c0d0ebd73b","2021-07-16","1404-22",140300,"acerru",4.9011,7.8398,NA,"D",1.3,"AU",2,80,75,NA,0,"B",1,NA,NA,"False",NA
+"duplicated_stem","NM","290c6df9-3ea0-4ffc-9314-21c0d0ebd73b","2021-07-16","1404-22",140317,"acerru",4.5559,3.4706,16.8,"A",1.3,"AU",2,98,98,NA,0,"W",1,NA,NA,"False",NA
+"duplicated_stem","NM","290c6df9-3ea0-4ffc-9314-21c0d0ebd73b","2021-07-16","1404-22",140317,"acerru",4.5559,3.4706,16.8,"A",1.3,"A",2,100,100,NA,0,NA,NA,NA,NA,NA,NA
+"wounded_but_no_level","NM","7e609717-210b-4c2d-9829-5721117f9aa8","2021-07-16","1405-22",140387,"acerru",3.0585,7.366,10.3,"A",1.3,"AU",2,100,100,NA,0,"W",NA,NA,NA,"False",NA
+"status_AU_DS_or_DC_but_no_FAD","NM","d2158039-277e-46b4-9f17-52a182bd7886","2021-07-16","1407-12",140636,"querru",0.3437,7.7716,12.8,"A",1.3,"DS",2,15,0,NA,0,NA,NA,NA,NA,"False",NA
+"status_AU_DS_or_DC_but_no_FAD","NM","0002fb8c-2eec-4cad-8c27-446aad2ab96d","2021-07-16","1408-12",140739,"querru",6.62669,5.6604,19,"A",1.3,"DS",2,30,0,NA,0,NA,NA,NA,NA,"False",NA
+"duplicated_stem","NM","0002fb8c-2eec-4cad-8c27-446aad2ab96d","2021-07-16","1408-22",140759,"querru",6.2292,4.7151,21.1,"A",1.3,"A",3,96,89,NA,0,NA,NA,NA,NA,NA,NA
+"duplicated_stem","NM","0002fb8c-2eec-4cad-8c27-446aad2ab96d","2021-07-16","1408-22",140759,"querru",6.2292,4.7151,21.1,"A",1.3,"A",3,97,93,NA,0,NA,NA,NA,NA,NA,NA
+"Dead_but_now_alive_no_note","RB","df186be7-c5e0-4158-85f9-ce7846329f3f","2021-07-16","1501-21",150068,"tsugca",3.99,5.78169,NA,"D",1.3,"AU",1,95,90,NA,0,"I",NA,NA,NA,"False",NA
+"duplicated_stem","RB","8e2e1b33-1630-4b9e-a68c-8be5d6c450c9","2021-07-16","1502-21",150187,"querru",8.4464,5.3399,16.4,"A",1.3,"A",3,100,95,NA,0,NA,NA,NA,NA,NA,NA
+"duplicated_stem","RB","8e2e1b33-1630-4b9e-a68c-8be5d6c450c9","2021-07-16","1502-21",150187,"querru",8.4464,5.3399,16.4,"A",1.3,"A",3,100,93,NA,0,NA,NA,NA,NA,NA,NA

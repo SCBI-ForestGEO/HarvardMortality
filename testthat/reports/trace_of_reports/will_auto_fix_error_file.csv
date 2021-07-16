@@ -92,3 +92,17 @@
 "wounded_level_but_wrong_status_or_FAD","DJ","3f1b9b01-eca4-44b8-9621-809103834c67","2021-07-15","1209-22",120588,"acerru",5.4747,5.62,12.3,"A",1.3,"DS",1,0,0,NA,NA,"CR,B",3,NA,NA,"False",NA
 "dead_but_crown_living_not_zero","DJ","5c7f11e5-38ef-42f7-8f1d-cee0f19c8a8c","2021-07-15","1212-22",120807,"pinust",3.3683,3.4778,NA,"D",1.3,"DS",1,100,100,NA,NA,NA,NA,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","LM","4a7d64cf-23c3-4292-b16c-eaf84eebf270","2021-07-14","0707-12",70599,"tsugca",9.8654,8.3939,26,"A",1.3,"AU",3,90,90,17,NA,"I,LF",1,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","53b3d2fb-e1fd-4ab6-b5f9-6f5d8d7cf3e3","2021-07-16","1120-11",111421,"tsugca",7.56864,5.52205,15.5,"A",1.3,"AU",1,25,20,NA,NA,"B,I,LF",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","747bd8c2-3f8f-4d64-9b8d-18ef99a3b9d0","2021-07-16","1121-11",111476,"acerru",2.89625,9.07867,12.2,"A",1.3,"AU",2,100,100,NA,NA,"R,K",1,NA,1,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","747bd8c2-3f8f-4d64-9b8d-18ef99a3b9d0","2021-07-16","1121-12",111495,"querru",0.20578,0.1828,26.5,"A",1.3,"AU",3,85,85,NA,NA,"B",2,NA,NA,"False","Large branch broken"
+"wounded_level_but_wrong_status_or_FAD","KN","747bd8c2-3f8f-4d64-9b8d-18ef99a3b9d0","2021-07-16","1121-12",111509,"acerru",8.82268,9.2627,27.4,"A",1.3,"AU",3,100,100,NA,NA,"AN",1,NA,NA,"False","It ate a wire"
+"wounded_level_but_wrong_status_or_FAD","KN","1222fad6-a65a-4528-a733-e69fd54f2e79","2021-07-16","1122-22",111667,"betual",7.2129,4.0561,13.8,"A",1.3,"AU",2,0,0,NA,NA,"B",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","e4a1cc92-9b42-4e91-b00b-a8b9b34e955c","2021-07-16","1125-11",111906,"tsugca",6.52139,8.2177,58,"A",1.3,"AU",4,80,60,NA,NA,"B,I,LF",3,NA,NA,"False","Split top half broke off"
+"dead_but_crown_living_not_zero","DJ","ea9e77a3-e2ba-4bd6-8a88-d305906d091e","2021-07-16","1219-11",121247,"querru",5.16535,2.84284,NA,"D",1.3,"DS",1,100,100,NA,NA,NA,NA,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","DJ","45587ae3-d8e1-4211-9735-19ee3d53a106","2021-07-16","1222-22",121492,"tsugca",7.1474,2.3443,14.5,"A",1.3,"AU",1,27,13,NA,NA,"B,R,I,LF",2,NA,2,"False",NA
+"dead_but_crown_living_not_zero","LM","e090a37f-fc50-48a5-9fc0-2754a770d444","2021-07-16","1302-12",130080,"acerru",9.59984,7.9923,12.2,"A",1.3,"DS",2,95,94,NA,NA,"LF,U",NA,NA,NA,"False","Stressed- abnormal shoots and leaf rust"
+"dead_but_crown_living_not_zero","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-22",130208,"querru",0.188,7.2933,30.1,"A",1.3,"DS",2,90,5,22,NA,"R,DF,W,CR",2,NA,3,"False","Barely alive"
+"wounded_level_but_wrong_status_or_FAD","NM","9c215fe7-f1d6-48b2-8846-22cab79171e8","2021-07-16","1402-21",140150,"acerru",1.1501,9.05055,13.8,"A",1.3,"AU",2,100,100,NA,0,"R",2,NA,1,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","30057623-261f-48c8-af4b-44d85ef55a2f","2021-07-16","1403-21",140248,"tsugca",7.7072,3.37933,12.9,"A",1.3,"AU",1,80,40,NA,0,"B,I,LF",2,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","290c6df9-3ea0-4ffc-9314-21c0d0ebd73b","2021-07-16","1404-22",140300,"acerru",4.9011,7.8398,NA,"D",1.3,"AU",2,80,75,NA,0,"B",1,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","d2158039-277e-46b4-9f17-52a182bd7886","2021-07-16","1407-11",140604,"fagugr",0.49444,4.26337,11.8,"A",1.3,"AU",2,95,90,NA,0,"B,F",3,NA,NA,"False",NA
