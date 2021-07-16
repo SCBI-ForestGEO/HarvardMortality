@@ -52,6 +52,7 @@
 "dead_but_crown_living_not_zero","KN","b06bd8b1-cb31-49be-93ff-0fa3a36453d9","2021-07-13","0701-21","70107","pinure","6.9323","1.40992",32.8,"A",1.3,"DS","3",100,5,NA,"U",NA,NA,NA,"0","False","No exit holes"
 "wounded_level_but_wrong_status_or_FAD","KN","0b093687-eea8-4735-a2f3-96fa04f1c203","2021-07-13","0702-22","70189","pinure","5.5314","4.6437",25,"A",1.3,"DS","1",0,0,NA,"BB,B","3",NA,NA,"0","False",NA
 "wounded_level_but_wrong_status_or_FAD","KN","6ca26fb4-35c9-47f5-9447-86d23a328b02","2021-07-13","0705-12","70415","tsugca","8.36709","9.2814",20.3,"A",1.3,"AU","2",100,50,NA,"CR,I,LF","2",NA,NA,"0","False",NA
+"wounded_level_but_wrong_status_or_FAD","LM","4a7d64cf-23c3-4292-b16c-eaf84eebf270","2021-07-14","0707-12","70599","tsugca","9.8654","8.3939",26,"A",1.3,"AU","3",90,90,17,"I,LF","1",NA,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","LM","ab8388be-71d2-4c5e-b501-f95a2420c485","2021-07-14","0707-12","70599","tsugca","9.8654","8.3939",26,"A",1.3,"AU","3",90,90,17,"I,LF","1",NA,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","DJ","e3ce212f-ff4e-428e-ad11-1e1a5f9d9a17","2021-07-13","0801-11","80036","tsugca","4.9322","2.11234",11.1,"A",1.3,"AU","1",78,71,NA,"B,I,LF","1",NA,NA,"0","False",NA
 "wounded_level_but_wrong_status_or_FAD","DJ","e3ce212f-ff4e-428e-ad11-1e1a5f9d9a17","2021-07-13","0801-12","80052","acerru","7.25636","9.9178",14.2,"A",1.45,"AU","1",50,45,NA,"B","2",NA,NA,"0","False",NA
