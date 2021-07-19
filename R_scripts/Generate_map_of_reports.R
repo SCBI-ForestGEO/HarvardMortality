@@ -7,18 +7,24 @@ rm(list = ls())
 
 # load libraries ####
 library(here)
-library(rgdal)
 library(readxl)
 library(ggplot2)
 library(png)
 library(grid)
 library(stringr)
+library(gganimate)
+library(gifski)
 library(dplyr)
 library(readr)
+library(janitor)
+library(lubridate)
+library(patchwork)
 
 # load map of quadrats ####
 #quadrats <- rgdal::readOGR(file.path(here(""),"maps/20m_grid/20m_grid.shp"))
 quadrats <- read.table("./data/HFquadrats.txt", header=TRUE, sep = '\t')
+quadrats$quad <- as.character(  quadrats$quadrats)
+quadrats$quad <- ifelse(nchar(quadrats$quad) < 4, paste0("0",   quadrats$quad),   quadrats$quad)
 
 # load latest mortality data ####
 
@@ -69,7 +75,7 @@ quadrats_with_warnings <- as.integer(substr(quadrats_with_warnings, start = 1, s
 
 # assign codes for coloring quadrats
 quadrats$checks <- ifelse(quadrats$quadrats %in% quadrats_with_errors, 'error',
-                          ifelse(quadrats$quadrats %in% quadrats_with_warnings, 'no error, only warning', 
+                          ifelse(quadrats$quadrats %in% quadrats_with_warnings, 'warning', 
                                  ifelse(quadrats$quadrats %in% complete_quads, 'complete',
                                         ifelse(quadrats$quadrats %in% swmp, "swamp", "incomplete"))))
 
@@ -77,22 +83,60 @@ quadrats$checks <- ifelse(quadrats$quadrats %in% quadrats_with_errors, 'error',
 filename <- file.path(here("testthat"), "reports/map_of_error_and_warnings.png")
 
 #assign color palette
-clrs <- c( "aquamarine1", "coral2", "grey50","antiquewhite", "darkgoldenrod1")
+clrs <- c( "aquamarine1", "coral2", "grey50","ivory1", "gold")
 
 # dragon flare
-img <- readPNG(source = "./data/dragon.png")
+img <- readPNG(source = "./data/redeft_2.png")
 g <- rasterGrob(img, interpolate=TRUE)
 
 # make plot
 pr <- ggplot(quadrats, aes(gx-10, gy-10, fill = checks))+
   geom_tile(color='grey80')+
   scale_fill_manual(values = clrs)+
-  annotation_custom(g, xmin=370, xmax = 510, ymin = 240, ymax = 380)+
+  annotation_custom(g, xmin=355, xmax = 540, ymin = 210, ymax = 380)+
   annotate(geom=  "text", x = 380, y = 370, label = "Here be\ndragons!" )+
   labs(x="", y="") +
+  scale_x_continuous(expand = c(0, 0), limits = c(0, NA)) + 
+  scale_y_continuous(expand = c(0, 0), limits = c(0, NA))+
   coord_fixed()
 
 
 ggsave(filename, plot= pr, device = 'png', 
        width = 8, height = 6, units = "in",dpi = 300 )
 
+#### plot progress map by researcher
+
+
+# # Get info on all quadrats censused so far
+quadrat_info <- read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" ) %>%
+  clean_names() %>%
+  select(submission_id, quad, date_time, personnel, quadrat_stem_count) %>%
+  mutate(
+    quadrat_stem_count = as.numeric(quadrat_stem_count),
+    date_time = ymd(date_time)
+  )
+
+
+q2 <- base::merge(quadrats, quadrat_info, by = 'quad')
+q2$personnel <- ifelse(q2$checks=='incomplete', NA,
+                       ifelse(q2$checks == 'swamp', "swamp", q2$personnel))
+
+cruisers <- unique(q2$personnel)
+
+cruiser.color <- c("red", "forestgreen","salmon1", "blue",
+                   "darkorchid3", "purple4", "chartreuse",
+                   "antiquewhite", "grey50")
+
+# make plot
+cr <- ggplot(q2, aes(gx-10, gy-10, fill = personnel))+
+  geom_tile(color='grey80')+
+  scale_fill_manual(values=  cruiser.color)+
+  labs(x="", y="") +
+  coord_fixed()
+
+#### animate collection ####
+cr.ani <- cr + transition_manual(date_time, cumulative = TRUE)+
+  labs(title = 'Date: {current_frame}')
+
+cr.ani <- animate(cr.ani,duration = 20, end_pause = 5)
+anim_save(filename = "Crew_cumulative_quadrats_animated.gif", animation = cr.ani, path = "./testthat/reports/")

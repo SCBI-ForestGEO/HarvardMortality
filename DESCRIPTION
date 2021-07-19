@@ -37,7 +37,9 @@ Imports:
     patchwork,
     janitor, 
     lubridate, 
-    patchwork
+    patchwork,
+    gganimate,
+    gifski
 URL: https://github.com/SCBI-ForestGEO/HarvardMortality/
 BugReports: https://github.com/SCBI-ForestGEO/HarvardMortality/issues
 Config/testthat/edition: 3
