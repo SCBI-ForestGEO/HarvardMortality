@@ -2087,3 +2087,7 @@
 "Dead_but_now_alive_no_note","RB","df186be7-c5e0-4158-85f9-ce7846329f3f","2021-07-16","1501-21",150068,"tsugca",3.99,5.78169,NA,"D",1.3,"AU",1,95,90,NA,0,"I",NA,NA,NA,"False",NA
 "duplicated_stem","RB","8e2e1b33-1630-4b9e-a68c-8be5d6c450c9","2021-07-16","1502-21",150187,"querru",8.4464,5.3399,16.4,"A",1.3,"A",3,100,95,NA,0,NA,NA,NA,NA,NA,NA
 "duplicated_stem","RB","8e2e1b33-1630-4b9e-a68c-8be5d6c450c9","2021-07-16","1502-21",150187,"querru",8.4464,5.3399,16.4,"A",1.3,"A",3,100,93,NA,0,NA,NA,NA,NA,NA,NA
+"status_AU_DS_or_DC_but_no_FAD","NM","ffd090fa-435a-4a8f-afab-20f5669a09b1","2021-07-19","1312-11",130775,"querru",7.15437,7.29654,19.5,"A",1.3,"DS",1,24,0,NA,0,NA,NA,NA,NA,"False",NA
+"status_AU_DS_or_DC_but_no_FAD","NM","4e96cd94-612d-46da-9d6f-9643063b55b2","2021-07-19","1314-21",130947,"pinust",6.8813,0.64162,24,"A",1.3,"DS",1,94,0,NA,0,NA,NA,NA,NA,"False",NA
+"crown_living_greater_than_crown_intact","KN","f181d80e-66a5-451a-accc-55fb1be51c94","2021-07-19","1413-12",141059,"acerru",7.40007,3.1292,31.4,"A",1.3,"A",3,10,100,NA,NA,NA,NA,NA,NA,NA,NA
+"wounded_but_no_level","NM","d4071deb-7790-49ff-88ce-5e6b5f07fc20","2021-07-19","1415-21",141210,"querru",6.2492,6.53338,51.5,"A",1.3,"AU",3,96,90,NA,0,"W,F",NA,NA,NA,"False",NA
