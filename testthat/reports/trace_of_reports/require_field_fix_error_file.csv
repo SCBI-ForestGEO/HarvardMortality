@@ -2091,3 +2091,12 @@
 "status_AU_DS_or_DC_but_no_FAD","NM","4e96cd94-612d-46da-9d6f-9643063b55b2","2021-07-19","1314-21",130947,"pinust",6.8813,0.64162,24,"A",1.3,"DS",1,94,0,NA,0,NA,NA,NA,NA,"False",NA
 "crown_living_greater_than_crown_intact","KN","f181d80e-66a5-451a-accc-55fb1be51c94","2021-07-19","1413-12",141059,"acerru",7.40007,3.1292,31.4,"A",1.3,"A",3,10,100,NA,NA,NA,NA,NA,NA,NA,NA
 "wounded_but_no_level","NM","d4071deb-7790-49ff-88ce-5e6b5f07fc20","2021-07-19","1415-21",141210,"querru",6.2492,6.53338,51.5,"A",1.3,"AU",3,96,90,NA,0,"W,F",NA,NA,NA,"False",NA
+"duplicated_stem","NM","a86d9d27-c4fa-4542-902a-12ea8c540f8e","2021-07-20","1506-21",150766,"tsugca",3.1474,2.96513,13.5,"A",1.3,"AU",3,97,92,NA,0,"R",NA,NA,2,"False",NA
+"duplicated_stem","NM","a86d9d27-c4fa-4542-902a-12ea8c540f8e","2021-07-20","1506-21",150766,"tsugca",3.1474,2.96513,13.5,"A",1.3,"AU",1,100,94,NA,0,"I,LF",NA,NA,NA,"False",NA
+"crown_living_greater_than_crown_intact","NM","a86d9d27-c4fa-4542-902a-12ea8c540f8e","2021-07-20","1506-22",150709,"betual",6.4411,9.1558,14.9,"A",1.3,"A",2,10,98,NA,0,NA,NA,NA,NA,NA,NA
+"status_AU_DS_or_DC_but_no_FAD","NM","93d26ea1-f23e-4659-a47b-b19b9da0bb77","2021-07-20","1509-11",150916,"pinust",0.68913,4.98399,20.5,"A",1.3,"DC",1,NA,NA,NA,0,NA,NA,NA,NA,"False",NA
+"duplicated_stem","NM","9b1287a4-a78f-400e-a8ee-a4a53a173f88","2021-07-20","1514-11",151255,"querru",7.71122,9.42341,22.6,"A",1.3,"A",2,100,98,NA,0,NA,NA,NA,NA,NA,NA
+"duplicated_stem","NM","9b1287a4-a78f-400e-a8ee-a4a53a173f88","2021-07-20","1514-11",151255,"querru",7.71122,9.42341,22.6,"A",1.3,"A",3,100,98,NA,0,NA,NA,NA,NA,NA,NA
+"duplicated_stem","NM","6fe1d3fe-30d0-45ca-9ee3-f37fe7504d1c","2021-07-20","1517-21",151565,"tsugca",4.2391,8.81271,15.2,"A",1.26,"AU",1,100,96,NA,0,"I,LF",NA,NA,NA,"False",NA
+"duplicated_stem","NM","6fe1d3fe-30d0-45ca-9ee3-f37fe7504d1c","2021-07-20","1517-21",151565,"tsugca",4.2391,8.81271,15.2,"A",1.26,"A",4,93,85,NA,0,NA,NA,NA,NA,NA,NA
+"wounded_but_no_level","LM","8974f9ac-5f99-4d9b-8126-15be4fe8a2b8","2021-07-20","1625-11",162205,"acerru",0.79109,0.94285,19,"A",1.3,"AU",3,99,95,NA,NA,"W,R,HS",NA,1,2,"False",NA

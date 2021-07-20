@@ -1,18 +1,9 @@
 "error_name","SurveyorID","Submission.Id","Orig.collection.date","Quad.Sub.Quad","StemTag","Species","QX","QY","DBH","Status.census.2","HOM","Status.2021","Crown.position","Percentage.of.crown.intact","Percentage.of.crown.living","Lean.angle.if.greater.than.15.degrees","FAD","Wounded.main.stem","Canker..swelling..deformity","Rotting.trunk","Lianas","Dead.with.resprout","Notes.2021"
 "Dead_but_now_alive_no_note","DJ","94df47b6-fe83-41d6-ba74-c7ec5a95a2d4","2021-07-14","0816-21","81226","tsugca","5.4868","0.45632",NA,"D",1.3,"AU","3",97,94,NA,"I,LF",NA,NA,NA,NA,"False",NA
 "Dead_but_now_alive_no_note","NM","6f0da994-eb3f-4341-83f0-d8ad2da59e2c","2021-07-15","0903-22","90207","pinure","1.3495","6.6803",NA,"D",1.3,"A","3",15,0,NA,NA,NA,NA,NA,"0",NA,NA
-"crown_living_greater_than_crown_intact","KN","1bf6ce0d-cf4a-43e6-a171-26caf7149c2a","2021-07-16","1123-22","111779","querru","5.9374","6.01",33,"A",1.3,"A","3",94,95,NA,NA,NA,NA,NA,NA,NA,NA
 "Dead_but_now_alive_no_note","DJ","55a6ec86-28c1-4bae-a631-9b64144a368f","2021-07-16","1214-11","120903","prunse","9.3207","4.92569",NA,"D",1.3,"A","3",100,100,NA,NA,NA,NA,NA,NA,NA,NA
 "status_AU_DS_or_DC_but_no_FAD","DJ","ea9e77a3-e2ba-4bd6-8a88-d305906d091e","2021-07-16","1219-11","121242","acerru","1.44999","7.20206",17.3,"A",1.5,"DS","1",32,0,NA,NA,NA,NA,NA,NA,"False",NA
 "Dead_but_now_alive_no_note","DJ","4957c574-ea10-4129-8eaf-8be9059fcb14","2021-07-16","1223-21","121616","querru","2.3813","1.84622",NA,"D",1.3,"A","3",100,100,NA,NA,NA,NA,NA,NA,NA,NA
-"duplicated_stem","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11","130180","pinust","0.95667","5.18418",46,"A",1.3,"DC",NA,NA,NA,NA,NA,NA,NA,NA,NA,"False",NA
-"duplicated_stem","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11","130180","pinust","0.95667","5.18418",46,"A",1.3,"A","4",95,92,NA,NA,NA,NA,NA,"0",NA,NA
-"status_AU_DS_or_DC_but_no_FAD","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11","130180","pinust","0.95667","5.18418",46,"A",1.3,"DC",NA,NA,NA,NA,NA,NA,NA,NA,NA,"False",NA
-"status_AU_DS_or_DC_but_no_FAD","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-11","130180","pinust","0.95667","5.18418",46,"A",1.3,"A","4",95,92,NA,NA,NA,NA,NA,"0",NA,NA
-"wounded_but_no_level","LM","0a28a2b5-a544-4436-a585-b46db6b2501c","2021-07-16","1305-21","130292","acerru","2.1476","5.5101",17.3,"A",1.3,"AU","3",90,45,NA,"R,W,F,LF",NA,NA,NA,NA,"False","Canopy dieback plus rot"
-"duplicated_stem","LM","30d4c85e-87cb-4351-8586-df1a55d335be","2021-07-16","1311-11","130719","pinust","4.47936","2.07821",38.9,"A",1.3,"A","5",96,89,NA,NA,NA,NA,NA,NA,NA,NA
-"duplicated_stem","LM","30d4c85e-87cb-4351-8586-df1a55d335be","2021-07-16","1311-11","130719","pinust","4.47936","2.07821",38.9,"A",1.3,"A","4",96,88,NA,NA,NA,NA,NA,"0",NA,NA
-"status_AU_DS_or_DC_but_no_FAD","LM","30d4c85e-87cb-4351-8586-df1a55d335be","2021-07-16","1311-22","130739","acerru","1.4283","2.9903",18.1,"A",1.3,"DS","3",35,0,NA,NA,NA,NA,"2",NA,"False",NA
 "status_AU_DS_or_DC_but_no_FAD","NM","ffd090fa-435a-4a8f-afab-20f5669a09b1","2021-07-19","1312-11","130775","querru","7.15437","7.29654",19.5,"A",1.3,"DS","1",24,0,NA,NA,NA,NA,NA,"0","False",NA
 "status_AU_DS_or_DC_but_no_FAD","NM","4e96cd94-612d-46da-9d6f-9643063b55b2","2021-07-19","1314-21","130947","pinust","6.8813","0.64162",24,"A",1.3,"DS","1",94,0,NA,NA,NA,NA,NA,"0","False",NA
 "status_AU_DS_or_DC_but_no_FAD","NM","30057623-261f-48c8-af4b-44d85ef55a2f","2021-07-16","1403-21","140240","acerru","1.784","8.79051",29.1,"A",1.4,"DS","1",0,0,NA,NA,NA,NA,NA,"0","False",NA
@@ -26,6 +17,12 @@
 "duplicated_stem","NM","0002fb8c-2eec-4cad-8c27-446aad2ab96d","2021-07-16","1408-22","140759","querru","6.2292","4.7151",21.1,"A",1.3,"A","3",97,93,NA,NA,NA,NA,NA,"0",NA,NA
 "crown_living_greater_than_crown_intact","KN","f181d80e-66a5-451a-accc-55fb1be51c94","2021-07-19","1413-12","141059","acerru","7.40007","3.1292",31.4,"A",1.3,"A","3",10,100,NA,NA,NA,NA,NA,NA,NA,NA
 "wounded_but_no_level","NM","d4071deb-7790-49ff-88ce-5e6b5f07fc20","2021-07-19","1415-21","141210","querru","6.2492","6.53338",51.5,"A",1.3,"AU","3",96,90,NA,"W,F",NA,NA,NA,"0","False",NA
-"Dead_but_now_alive_no_note","RB","df186be7-c5e0-4158-85f9-ce7846329f3f","2021-07-16","1501-21","150068","tsugca","3.99","5.78169",NA,"D",1.3,"AU","1",95,90,NA,"I",NA,NA,NA,"0","False",NA
-"duplicated_stem","RB","8e2e1b33-1630-4b9e-a68c-8be5d6c450c9","2021-07-16","1502-21","150187","querru","8.4464","5.3399",16.4,"A",1.3,"A","3",100,95,NA,NA,NA,NA,NA,"0",NA,NA
-"duplicated_stem","RB","8e2e1b33-1630-4b9e-a68c-8be5d6c450c9","2021-07-16","1502-21","150187","querru","8.4464","5.3399",16.4,"A",1.3,"A","3",100,93,NA,NA,NA,NA,NA,"0",NA,NA
+"duplicated_stem","NM","a86d9d27-c4fa-4542-902a-12ea8c540f8e","2021-07-20","1506-21","150766","tsugca","3.1474","2.96513",13.5,"A",1.3,"AU","3",97,92,NA,"R",NA,NA,"2","0","False",NA
+"duplicated_stem","NM","a86d9d27-c4fa-4542-902a-12ea8c540f8e","2021-07-20","1506-21","150766","tsugca","3.1474","2.96513",13.5,"A",1.3,"AU","1",100,94,NA,"I,LF",NA,NA,NA,"0","False",NA
+"crown_living_greater_than_crown_intact","NM","a86d9d27-c4fa-4542-902a-12ea8c540f8e","2021-07-20","1506-22","150709","betual","6.4411","9.1558",14.9,"A",1.3,"A","2",10,98,NA,NA,NA,NA,NA,"0",NA,NA
+"status_AU_DS_or_DC_but_no_FAD","NM","93d26ea1-f23e-4659-a47b-b19b9da0bb77","2021-07-20","1509-11","150916","pinust","0.68913","4.98399",20.5,"A",1.3,"DC","1",NA,NA,NA,NA,NA,NA,NA,"0","False",NA
+"duplicated_stem","NM","9b1287a4-a78f-400e-a8ee-a4a53a173f88","2021-07-20","1514-11","151255","querru","7.71122","9.42341",22.6,"A",1.3,"A","2",100,98,NA,NA,NA,NA,NA,"0",NA,NA
+"duplicated_stem","NM","9b1287a4-a78f-400e-a8ee-a4a53a173f88","2021-07-20","1514-11","151255","querru","7.71122","9.42341",22.6,"A",1.3,"A","3",100,98,NA,NA,NA,NA,NA,"0",NA,NA
+"duplicated_stem","NM","6fe1d3fe-30d0-45ca-9ee3-f37fe7504d1c","2021-07-20","1517-21","151565","tsugca","4.2391","8.81271",15.2,"A",1.26,"AU","1",100,96,NA,"I,LF",NA,NA,NA,"0","False",NA
+"duplicated_stem","NM","6fe1d3fe-30d0-45ca-9ee3-f37fe7504d1c","2021-07-20","1517-21","151565","tsugca","4.2391","8.81271",15.2,"A",1.26,"A","4",93,85,NA,NA,NA,NA,NA,"0",NA,NA
+"wounded_but_no_level","LM","8974f9ac-5f99-4d9b-8126-15be4fe8a2b8","2021-07-20","1625-11","162205","acerru","0.79109","0.94285",19,"A",1.3,"AU","3",99,95,NA,"W,R,HS",NA,"1","2",NA,"False",NA
