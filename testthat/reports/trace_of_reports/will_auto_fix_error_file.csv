@@ -128,3 +128,17 @@
 "wounded_level_but_wrong_status_or_FAD","NM","a86d9d27-c4fa-4542-902a-12ea8c540f8e","2021-07-20","1506-12",150670,"tsugca",0.89983,6.8964,16.7,"A",1.47,"AU",1,70,55,NA,0,"B,I,LF",2,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","NM","9b1287a4-a78f-400e-a8ee-a4a53a173f88","2021-07-20","1514-21",151332,"betule",9.0202,6.07745,10.3,"A",1.3,"AU",1,95,95,NA,0,"B",2,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","KN","53d87952-b870-4b4c-a8e9-84b8ffc878b0","2021-07-20","1516-11",151427,"fagugr",9.79282,7.85217,39.5,"A",1.3,"AU",2,60,50,NA,NA,"B,F",3,NA,NA,"False","No BBD visible, large broken top with decay fungi"
+"wounded_level_but_wrong_status_or_FAD","NM","290c6df9-3ea0-4ffc-9314-21c0d0ebd73b","2021-07-16","1404-22",140300,"acerru",4.9011,7.8398,NA,"D",1.3,"AU",2,80,75,NA,0,"B",1,NA,NA,"False","Confirmed alive again"
+"wounded_level_but_wrong_status_or_FAD","NM","6f3b6f66-14ea-4694-a1a5-ee944905cc38","2021-07-21","1519-12",151736,"betual",0.2015,0.5156,10.1,"A",1.4,"AU",1,96,96,NA,0,"B",2,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","6f3b6f66-14ea-4694-a1a5-ee944905cc38","2021-07-21","1519-12",151752,"tsugca",9.6078,8.7102,38.5,"A",1.3,"DS",1,35,0,NA,0,"B",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","6f3b6f66-14ea-4694-a1a5-ee944905cc38","2021-07-21","1519-12",151761,"tsugca",6.16447,3.0647,22.3,"A",1.3,"AU",1,94,88,NA,0,"B,I",2,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","379bb662-4661-4edc-857a-eaba5bc341e2","2021-07-21","1520-11",151845,"tsugca",1.71968,3.1105,29.1,"A",1.28,"AU",1,92,80,NA,0,"B,I,LF",3,NA,2,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","379bb662-4661-4edc-857a-eaba5bc341e2","2021-07-21","1520-12",151869,"tsugca",4.07037,6.6134,NA,"D",1.3,"AU",1,90,90,NA,0,"B,I",3,NA,NA,"False","Confirmed alive again"
+"wounded_level_but_wrong_status_or_FAD","KN","7dee43a8-e1c8-466b-a7be-39f2fdc0bb29","2021-07-21","1521-12",152031,"acerru",9.70419,4.0029,14.2,"A",1.3,"AU",1,50,50,NA,NA,"B",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","a0ed4f5e-5907-4164-ab51-c02f1986f602","2021-07-21","1523-22",152218,"fagugr",3.1919,3.2921,28.2,"A",1.3,"AU",3,65,35,NA,0,"F,B,LF",2,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","fb95a695-7032-4cd9-a127-ddf711f799d3","2021-07-21","1524-12",152318,"tsugca",2.46899,7.3212,40,"A",1.3,"DS",1,90,0,NA,NA,"I,DF,AN",2,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","591960ee-e036-4072-9d32-f0cfeae3c723","2021-07-21","1706-12",171085,"tsugca",5.65684,9.6077,10.5,"A",1.35,"AU",1,85,85,NA,0,"R,I",2,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","cfeea8a3-f329-4f8f-8205-dbe58c2f70c8","2021-07-21","1712-22",171515,"acerru",7.0562,7.4612,19,"A",1.3,"AU",1,95,93,NA,0,"B",2,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","93ff6d3a-d8e1-45d1-a41e-8b2259a7aef5","2021-07-21","1714-22",171640,"tsugca",2.2812,7.4345,13.8,"A",1.24,"AU",1,30,25,20,NA,"B,I,LF",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","NM","a8c74b07-3e24-4bb4-9b6c-d74559fad8b7","2021-07-21","1716-22",171846,"tsugca",0.2862,1.4559,16.9,"A",1.3,"AU",1,97,97,NA,0,"B,I",2,NA,NA,"False",NA
+"dead_but_crown_living_not_zero","LM","150d780d-fd57-4258-8acf-5a4856d02f8e","2021-07-21","1721-12",171991,"acerru",3.45101,1.4265,15.9,"A",1.3,"DS",1,95,93,NA,NA,NA,NA,NA,NA,"False",NA
