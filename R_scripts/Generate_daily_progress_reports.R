@@ -112,7 +112,6 @@ error_rates <-
 
 
 
-
 # Generate all plots ---------------------------------------
 census_rate_plot <- stems_censused_per_day %>% 
   ggplot(aes(x=date_time, y = n_stems)) + 
