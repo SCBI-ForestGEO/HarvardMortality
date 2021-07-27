@@ -52,7 +52,9 @@ field_fix_errors <-
   # Actions did not include these "duplicated_stem" errors:
   # https://github.com/SCBI-ForestGEO/HarvardMortality/commit/ec83b37fcf582fb0d574f52df0ae9f5177bc6f9e
   # Hence I'm manually filtering them out:
-  filter(orig_collection_date != ymd("2021-07-15") & error_name != "duplicated_stem")
+  filter(!(orig_collection_date == ymd("2021-07-15") & error_name == "duplicated_stem")) %>% 
+  # Also the previous day
+  filter(!(orig_collection_date == ymd("2021-07-14") & error_name == "duplicated_stem"))
 
 # NOTE: After 2021-07-11 duplicated_stems errors were merged into field_fix_error report
 quadrat_censused_duplicated_stems <- 
