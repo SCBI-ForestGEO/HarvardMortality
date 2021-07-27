@@ -27,4 +27,6 @@
 
 ![daily_progress](testthat/reports/daily_progress.png)
 
+### Daily field fix error counts
 
+![daily_field_fix_error_counts](testthat/reports/daily_field_fix_error_counts.png)
