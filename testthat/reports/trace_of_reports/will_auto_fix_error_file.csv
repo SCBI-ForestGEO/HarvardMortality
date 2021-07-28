@@ -338,3 +338,15 @@
 "dead_but_crown_living_not_zero","NM","61de6cf4-f906-42fd-8b8c-efbae5bcaf27","2021-07-26","3113-12",311514,"tsugca",2.34706,7.8285,NA,"D",1.3,"DS",1,0,2,NA,NA,NA,NA,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","KN","efdb8089-d802-4532-80fd-d6658d3274ff","2021-07-27","3218-11",321921,"acerru",3.88233,8.18153,26.9,"A",1.3,"AU",3,75,75,NA,NA,"B",3,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","KN","8d9a54bc-00fb-47d7-a726-22bdab22acff","2021-07-27","3221-21",322444,"tsugca",3.2569,9.93572,13.3,"A",1.3,"DS",1,40,0,NA,NA,"B,I,DF",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","cc345d6b-5782-4593-9e7d-913c41dfb329","2021-07-28","3403-21",340301,"fagugr",9.0756,8.05007,22.8,"A",1.3,"AU",1,100,100,NA,NA,"CR",1,NA,NA,"False","340299 leaning against"
+"wounded_level_but_wrong_status_or_FAD","KN","cc345d6b-5782-4593-9e7d-913c41dfb329","2021-07-28","3403-22",340280,"acerru",5.6564,3.7788,11.8,"A",1.3,"AU",1,10,9,NA,NA,"R,B,F",3,NA,3,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","93f946f7-51a4-47ec-90e5-6f0bbc233400","2021-07-28","3405-11",340467,"acerru",0.78226,7.19173,16,"A",1.3,"AU",1,55,55,NA,NA,"B,R,F",3,NA,2,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","93f946f7-51a4-47ec-90e5-6f0bbc233400","2021-07-28","3405-21",340545,"betual",5.2829,9.63858,12.2,"A",1.3,"AU",1,60,60,NA,NA,"B",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","2db4a7fe-d077-46d7-b613-787ef0e51b56","2021-07-28","3409-11",340899,"tsugca",9.78826,8.18585,12.9,"A",1.3,"AU",1,60,10,NA,NA,"B,I,LF",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","afe48bcc-3d62-4518-bc26-3a6da20b1565","2021-07-28","3410-11",340977,"querru",7.85019,5.08359,25.2,"A",1.3,"AU",1,2,2,NA,NA,"B,CR",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","afe48bcc-3d62-4518-bc26-3a6da20b1565","2021-07-28","3410-11",340988,"acerru",2.36247,0.85813,15.1,"A",1.3,"AU",1,40,40,NA,NA,"B",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","afe48bcc-3d62-4518-bc26-3a6da20b1565","2021-07-28","3410-21",341030,"betual",9.1403,9.92743,12.4,"A",1.3,"AU",1,60,60,NA,NA,"B",3,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","c6cd93c5-803e-4159-9cc9-dc316a2ddd20","2021-07-28","3411-11",341045,"tsugca",4.16242,9.30669,59.7,"A",1.3,"AU",1,90,88,NA,NA,"CR,I,LF",1,NA,NA,"False",NA
+"wounded_level_but_wrong_status_or_FAD","KN","c6cd93c5-803e-4159-9cc9-dc316a2ddd20","2021-07-28","3411-22",341087,"acerru",7.2994,0.1272,16.1,"A",1.3,"AU",1,60,60,NA,NA,"B",3,NA,NA,"False","Epicormics"
+"wounded_level_but_wrong_status_or_FAD","KN","4e783312-ffe2-4448-9dee-83ead1ba1a7d","2021-07-28","3414-11",341275,"acerru",3.15475,0.39504,31,"A",1.3,"DS",1,0,0,NA,NA,"B,R",3,NA,3,"False",NA
+"dead_but_crown_living_not_zero","LM","15dc318a-532b-4799-a5c3-8b1349eae7f0","2021-07-28","3515-21",351411,"betual",1.9232,8.64606,17,"A",1.3,"DS",2,85,1,NA,NA,"DF,U,R",NA,NA,1,"False","Barely alive via 1 epicormic shoot"
