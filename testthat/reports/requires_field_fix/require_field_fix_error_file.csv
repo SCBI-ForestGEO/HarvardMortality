@@ -1,28 +1,8 @@
 "error_name","SurveyorID","Submission.Id","Orig.collection.date","Quad.Sub.Quad","StemTag","Species","QX","QY","DBH","Status.census.2","HOM","Status.2021","Crown.position","Percentage.of.crown.intact","Percentage.of.crown.living","Lean.angle.if.greater.than.15.degrees","FAD","Wounded.main.stem","Canker..swelling..deformity","Rotting.trunk","Lianas","Dead.with.resprout","Notes.2021"
 "Dead_but_now_alive_no_note","DJ","70f55e0f-f870-43ac-a0d1-374cdb8a6e3a","2021-07-23","2725-12","272180","betual","3.57533","4.882",NA,"D",1.3,"AU","3",100,100,NA,"K",NA,"2",NA,NA,"False",NA
-"status_AU_DS_or_DC_but_no_FAD","LM","7ed82e80-1d20-43b3-87a0-e2173d3df2c3","2021-07-24","2808-12","280781","pinure","7.88745","0.4102",36.5,"A",1.3,"DS","4",75,0,NA,NA,NA,NA,NA,NA,"False",NA
-"crown_living_greater_than_crown_intact","LM","96fe7f0d-bf2c-441b-90e8-c3211c2376b9","2021-07-27","2919-12","291799","tsugca","0.84238","5.9229",22,"A",1.3,"AU","2",67,70,NA,"I,B,LF",NA,NA,NA,NA,"False",NA
-"duplicated_stem","LM","96fe7f0d-bf2c-441b-90e8-c3211c2376b9","2021-07-27","2919-12","291803","pinust","9.4795","4.818",NA,"D",1.3,"DS","1",16,0,NA,NA,NA,NA,NA,NA,"False",NA
-"duplicated_stem","LM","96fe7f0d-bf2c-441b-90e8-c3211c2376b9","2021-07-27","2919-12","291803","pinust","9.4795","4.818",NA,"D",1.3,"A","3",100,100,NA,NA,NA,NA,NA,NA,NA,NA
-"Dead_but_now_alive_no_note","LM","96fe7f0d-bf2c-441b-90e8-c3211c2376b9","2021-07-27","2919-12","291803","pinust","9.4795","4.818",NA,"D",1.3,"DS","1",16,0,NA,NA,NA,NA,NA,NA,"False",NA
-"Dead_but_now_alive_no_note","LM","96fe7f0d-bf2c-441b-90e8-c3211c2376b9","2021-07-27","2919-12","291803","pinust","9.4795","4.818",NA,"D",1.3,"A","3",100,100,NA,NA,NA,NA,NA,NA,NA,NA
-"duplicated_stem","LM","caf49eb1-8e5f-4d67-b963-7ccb4d6fb5ac","2021-07-27","2922-21","292446","acerru","7.2065","3.55661",14.2,"A",1.3,"A","3",100,100,NA,NA,NA,NA,NA,NA,NA,NA
-"duplicated_stem","LM","caf49eb1-8e5f-4d67-b963-7ccb4d6fb5ac","2021-07-27","2922-21","292446","acerru","7.2065","3.55661",14.2,"A",1.3,"AU","3",100,90,NA,"W","1",NA,NA,NA,"False",NA
-"duplicated_stem","LM","caf49eb1-8e5f-4d67-b963-7ccb4d6fb5ac","2021-07-27","2922-22","292341","acerru","6.4536","6.5546",20.9,"A",1.3,"A","2",100,100,NA,NA,NA,NA,NA,NA,NA,NA
-"duplicated_stem","LM","caf49eb1-8e5f-4d67-b963-7ccb4d6fb5ac","2021-07-27","2922-22","292341","acerru","6.4536","6.5546",20.9,"A",1.3,"A","4",100,100,NA,NA,NA,NA,NA,NA,NA,NA
-"wounded_but_no_level","LM","553fadca-6baa-4a32-adc9-9407ae41f1d0","2021-07-27","2923-11","292510","acerru","5.87128","0.77517",10.2,"A",1.39,"DS","2",85,0,NA,"R,W,DF",NA,NA,NA,NA,"False","99% sure totally dead"
-"wounded_but_no_level","LM","bc403958-2458-4cf4-9749-1595df8caac2","2021-07-27","2925-12","292865","querru","4.3816","9.0495",46.6,"A",1.3,"AU","3",98,92,NA,"W,R,F",NA,NA,NA,NA,"False","Same small black fungus and wound"
-"status_AU_DS_or_DC_but_no_FAD","RB","ff2be54d-aba7-4e7b-aedd-4baafc0d549a","2021-07-27","3015-11","301410","betual","8.5697","5.24953",10,"A",1.3,"DS","2",30,0,NA,NA,NA,NA,NA,NA,"False",NA
-"status_AU_DS_or_DC_but_no_FAD","RB","26a0ecac-87d3-4682-9fc7-a57c90c81178","2021-07-27","3019-21","301955","tsugca","0.3262","4.38919",10.4,"A",1.3,"DS","1",0,0,52,NA,NA,NA,NA,NA,"False",NA
-"status_AU_DS_or_DC_but_no_FAD","RB","853e6704-2bbf-4c9d-80cd-7f5275a43900","2021-07-27","3021-21","302317","tsugca","2.996","2.63022",14.4,"A",1.3,"DS","2",95,0,NA,NA,NA,NA,NA,NA,"False",NA
-"Dead_but_now_alive_no_note","NM","b34c02b8-4eb0-4043-8b77-23c932aa0e9e","2021-07-26","3104-11","310433","acerru","9.8331","9.27609",NA,"D",1.3,"AU","1",95,20,NA,"W,LF","2",NA,NA,NA,"False",NA
-"crown_living_greater_than_crown_intact","NM","f5978395-6486-49e4-9081-3eeeb4f26994","2021-07-26","3106-12","310728","querru","6.61677","6.1595",44.5,"A",1.3,"A","4",9,98,NA,NA,NA,NA,NA,NA,NA,NA
-"status_AU_DS_or_DC_but_no_FAD","NM","b8d743a5-abb9-4e19-ae52-915a215b8830","2021-07-26","3110-12","311225","pinure","6.45184","0.5884",26.2,"A",1.3,"DS","4",97,0,NA,NA,NA,NA,NA,NA,"False",NA
-"crown_living_greater_than_crown_intact","NM","61de6cf4-f906-42fd-8b8c-efbae5bcaf27","2021-07-26","3113-12","311514","tsugca","2.34706","7.8285",NA,"D",1.3,"DS","1",0,2,NA,NA,NA,NA,NA,NA,"False",NA
-"duplicated_stem","NM","41c709c1-b8dd-4b06-902b-6a60d8b832ae","2021-07-26","3114-21","311628","tsugca","7.3385","2.05995",37.5,"A",1.3,"AU","1",100,42,NA,"I,LF",NA,NA,NA,NA,"False",NA
-"duplicated_stem","NM","41c709c1-b8dd-4b06-902b-6a60d8b832ae","2021-07-26","3114-21","311628","tsugca","7.3385","2.05995",37.5,"A",1.3,"DS","1",0,0,NA,NA,NA,NA,NA,NA,"False",NA
-"status_AU_DS_or_DC_but_no_FAD","NM","41c709c1-b8dd-4b06-902b-6a60d8b832ae","2021-07-26","3114-21","311628","tsugca","7.3385","2.05995",37.5,"A",1.3,"AU","1",100,42,NA,"I,LF",NA,NA,NA,NA,"False",NA
-"status_AU_DS_or_DC_but_no_FAD","NM","41c709c1-b8dd-4b06-902b-6a60d8b832ae","2021-07-26","3114-21","311628","tsugca","7.3385","2.05995",37.5,"A",1.3,"DS","1",0,0,NA,NA,NA,NA,NA,NA,"False",NA
+"wounded_but_no_level","RB","3d057a3c-8cd9-45d2-a060-5fc5a3045c8f","2021-07-28","3023-12","302580","acerru","3.91235","5.7472",20.2,"A",1.3,"AU","3",100,98,NA,"W,F",NA,NA,NA,NA,"False","New tag needed"
+"status_AU_DS_or_DC_but_no_FAD","RB","18adfea8-a446-4453-b399-7514563e42f2","2021-07-28","3024-22","302823","pinust","9.286","0.8693",13,"A",1.3,"DS","1",80,0,NA,NA,NA,NA,NA,NA,"False",NA
+"wounded_but_no_level","RB","4fb54a24-9a88-4a19-9c90-3528e2b7a75a","2021-07-28","3025-11","302925","betupo","1.22626","1.06452",13.4,"A",1.3,"DS","2",3,0,NA,"W",NA,NA,NA,NA,"False",NA
 "wounded_but_no_level","NM","d50812c1-9c2a-4c3a-b782-14af812aab6a","2021-07-27","3117-12","311839","querru","1.64148","0.7514",50.9,"A",1.3,"AU","4",97,92,NA,"W,F",NA,NA,NA,NA,"False",NA
 "duplicated_stem","NM","4cadf8b5-d4eb-4556-a878-07784c700129","2021-07-27","3120-11","312130","acerru","2.36695","3.97034",10.8,"A",1.3,"A","4",100,100,NA,NA,NA,NA,NA,NA,NA,NA
 "duplicated_stem","NM","4cadf8b5-d4eb-4556-a878-07784c700129","2021-07-27","3120-11","312130","acerru","2.36695","3.97034",10.8,"A",1.3,"A","2",100,100,NA,NA,NA,NA,NA,NA,NA,NA
@@ -32,3 +12,18 @@
 "duplicated_stem","NM","f0e27e49-3b81-43bc-810a-53c59e4be4ee","2021-07-27","3225-11","322985","querru","2.42286","6.96588",34.6,"A",1.3,"A","4",100,98,NA,NA,NA,NA,NA,NA,NA,NA
 "duplicated_stem","NM","f0e27e49-3b81-43bc-810a-53c59e4be4ee","2021-07-27","3225-11","322985","querru","2.42286","6.96588",34.6,"A",1.3,"A","1",100,99,NA,NA,NA,NA,NA,NA,NA,NA
 "wounded_but_no_level","DJ","468da2f1-d3df-4c08-bd07-682d1fdab576","2021-07-27","3324-11","332672","acerru","0.28025","7.43551",12.3,"A",1.3,"AU","2",100,100,NA,"W,R",NA,NA,NA,NA,"False",NA
+"wounded_but_no_level","KN","afe48bcc-3d62-4518-bc26-3a6da20b1565","2021-07-28","3410-11","340979","tsugca","9.4789","3.62053",10.4,"A",1.3,"AU","1",80,65,NA,"W,I,LF",NA,NA,NA,NA,"False",NA
+"wounded_but_no_level","RB","432c7aab-0114-4dda-a09b-aed31c1843d0","2021-07-28","3413-11","341193","querru","3.47146","3.5207",41.6,"A",1.3,"AU","4",100,98,NA,"W",NA,NA,NA,NA,"False","Small weeping wound at base"
+"wounded_but_no_level","LM","843bb228-fab4-4dbc-807b-027d1d31967f","2021-07-28","3503-12","350342","querru","3.11151","2.0485",46,"A",1.3,"AU","3",100,95,NA,"W,F",NA,NA,NA,NA,"False","Same small basal wound/black fungus"
+"wounded_but_no_level","LM","843bb228-fab4-4dbc-807b-027d1d31967f","2021-07-28","3503-21","350375","querru","1.4309","4.63327",38.8,"A",1.3,"AU","3",98,78,NA,"LF,W,R,F",NA,NA,NA,NA,"False","Canopy dieback and fungus/wound"
+"wounded_but_no_level","LM","843bb228-fab4-4dbc-807b-027d1d31967f","2021-07-28","3503-21","350383","querru","5.6849","6.33047",51.1,"A",1.3,"AU","3",98,94,NA,"W,F",NA,NA,NA,NA,"False","Same wound and fungus"
+"wounded_but_no_level","LM","e1060c47-7506-4098-bdcd-6aefa2511381","2021-07-28","3505-21","350605","acerru","4.1025","1.10315",17,"A",1.3,"AU","1",95,85,NA,"W,R,F",NA,NA,NA,NA,"False","Rotting with fungus midway up tree"
+"duplicated_stem","LM","05f794b4-e47a-42f1-8eed-4f665fd16add","2021-07-28","3506-21","350665","acerru","0.109","1.68043",NA,"D",1.3,"DS","1",0,0,NA,NA,NA,NA,NA,NA,"False",NA
+"duplicated_stem","LM","05f794b4-e47a-42f1-8eed-4f665fd16add","2021-07-28","3506-21","350665","acerru","0.109","1.68043",NA,"D",1.3,"DC",NA,NA,NA,NA,NA,NA,NA,NA,NA,"False",NA
+"wounded_but_no_level","LM","25efc9be-bac1-4cd2-8d8e-f2a6574103f1","2021-07-28","3507-11","350683","querru","6.01168","6.39022",63.7,"A",1.3,"AU","4",99,93,NA,"W,F",NA,NA,NA,NA,"False","Same wound/fungus"
+"wounded_but_no_level","LM","25efc9be-bac1-4cd2-8d8e-f2a6574103f1","2021-07-28","3507-11","352684","querru","8.4007","7.3857",50.7,"A",1.3,"AU","3",100,95,NA,"W,F,I",NA,NA,NA,NA,"False","See photo"
+"wounded_but_no_level","LM","5a911d71-190c-43f7-82e3-dea02d599cfe","2021-07-28","3508-22","350824","querve","8.0827","0.0487",51.6,"A",1.3,"AU","3",98,94,NA,"W,F",NA,NA,NA,NA,"False","Same oak wound/fungi"
+"wounded_but_no_level","LM","e71e9d05-a2da-4dc1-b88e-ebb5e1354dc0","2021-07-28","3509-22","350890","querru","0.2517","3.7516",53.9,"A",1.3,"AU","3",98,96,NA,"W,R",NA,"2","1",NA,"False",NA
+"wounded_but_no_level","LM","5a09a474-d742-460e-b0a4-69b8fa4685b6","2021-07-28","3513-21","351275","querru","8.6138","4.97544",54.8,"A",1.3,"AU","3",100,100,NA,"W,F",NA,NA,NA,NA,"False","Same small wound/fungus"
+"wounded_but_no_level","LM","15dc318a-532b-4799-a5c3-8b1349eae7f0","2021-07-28","3515-11","351356","querru","2.31776","5.72116",50.2,"A",1.3,"AU","4",100,97,NA,"W,F",NA,NA,NA,NA,"False","Same fungi wound"
+"Dead_but_now_alive_no_note","LM","d6aba3b7-57e7-40a2-8099-781404a7b6aa","2021-07-28","3517-11","351526","tsugca","4.78954","1.40471",NA,"D",1.3,"AU","1",20,0,NA,"U",NA,NA,NA,NA,"False",NA
