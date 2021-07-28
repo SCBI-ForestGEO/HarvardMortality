@@ -144,7 +144,8 @@ census_rate_plot <- stems_censused_per_day %>%
   labs(
     x = "Census date", y = "# of new stems censused",
     title = "Daily new stems censused"
-  )
+  ) +
+  theme_bw()
 
 
 ## Daily error rate ----
@@ -160,7 +161,8 @@ error_rate_plot <- error_rates %>%
   coord_cartesian(
     ylim = c(0, NA)
   ) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") +
+  theme_bw()
 
 ## Merge ggplots using patchwork and save ----
 filename <- file.path(here("testthat"), "reports/daily_progress.png")
@@ -183,7 +185,8 @@ field_fix_errors %>%
   coord_cartesian(
     ylim = c(0, NA)
   ) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") +
+  theme_bw()
 
 filename <- file.path(here("testthat"), "reports/daily_field_fix_error_counts.png")
 ggsave(filename, device = "png", width = 20 / 2, height = 18 / 2.5, units = "in", dpi = 300)
