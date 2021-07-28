@@ -161,8 +161,8 @@ error_rate_plot <- error_rates %>%
   coord_cartesian(
     ylim = c(0, NA)
   ) +
-  theme(legend.position = "bottom") +
-  theme_bw()
+  theme_bw() + 
+  theme(legend.position = "bottom")
 
 ## Merge ggplots using patchwork and save ----
 filename <- file.path(here("testthat"), "reports/daily_progress.png")
