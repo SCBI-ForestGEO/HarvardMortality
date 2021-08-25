@@ -442,7 +442,7 @@ if(!is.null(require_field_fix_error_file)) {
     file = file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"), 
     row.names = F
   )
-} else {
+} else if(file.exists(file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"))) {
   file.remove(file.path(here("testthat"), "reports/requires_field_fix/require_field_fix_error_file.csv"))
 }
 
@@ -452,7 +452,7 @@ if(!is.null(will_auto_fix_error_file)) {
     file = file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"), 
     row.names = F
   )
-} else {
+} else if(file.exists(file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"))) {
   file.remove(file.path(here("testthat"), "reports/will_auto_fix/will_auto_fix_error_file.csv"))
 }
 
@@ -462,7 +462,7 @@ if(!is.null(warning_file)) {
     file = file.path(here("testthat"), "reports/warnings/warnings_file.csv"), 
     row.names = F
   )
-} else {
+} else if(file.exists(file.path(here("testthat"), "reports/warnings/warnings_file.csv"))) {
   file.remove(file.path(here("testthat"), "reports/warnings/warnings_file.csv"))
 }
 
