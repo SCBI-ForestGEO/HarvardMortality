@@ -198,7 +198,7 @@ if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_
 
 
 
-# check that newly censused alive trees have no FAD selected; no record of wounded main stem, canker, or rotting trunk; DWR (dead with resprouts) not selected ####
+# check that newly censused alive trees have no FAD selected; no record of wounded main stem, canker, or rotting trunk; Dead with resprouts not selected ####
 error_name <- "status_A_but_unhealthy"
 
 status_column <- rev(grep("Status", names(mort), value = T))[1]
@@ -208,7 +208,7 @@ idx_FAD <- !is.na(mort$FAD)
 idx_wound <- !is.na(mort$'Wounded main stem')
 idx_canker <- !is.na(mort$'Canker; swelling, deformity')
 idx_rot <- !is.na(mort$'Rotting trunk')
-idx_DWR <- !mort$'DWR' %in% "False"
+idx_DWR <- !mort$'Dead with resprout' %in% "False"
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & (idx_FAD | idx_wound | idx_wound | idx_canker | idx_rot | idx_DWR)]
 
@@ -226,7 +226,7 @@ idx_FAD <- !is.na(mort$FAD)
 idx_wound <- !is.na(mort$'Wounded main stem')
 idx_canker <- !is.na(mort$'Canker; swelling, deformity')
 idx_rot <- !is.na(mort$'Rotting trunk')
-idx_DWR <- !mort$'DWR' %in% "False"
+idx_DWR <- !mort$'Dead with resprout' %in% "False"
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[!idx_trees & (idx_FAD | idx_wound | idx_wound | idx_canker | idx_rot | idx_DWR)]
 
@@ -234,13 +234,13 @@ if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_
 
 
 
-# check that status 'AU' does not have 	DWR (dead with resprouts)  selected ####
+# check that status 'AU' does not have dead with resprouts selected ####
 error_name <- "status_AU_but_DWR_selected"
 
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 
 idx_trees <- mort[, status_column] %in% "AU"
-idx_DWR <- !mort$'DWR' %in% "False"
+idx_DWR <- !mort$'Dead with resprout' %in% "False"
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_DWR]
 
@@ -296,14 +296,14 @@ if(length(tag_stem_with_error) > 0) {
 }
 
 
-# check that newly censused 'AU', 'DS' or 'DC with "canker" selected as FAD have selected a level for canker,swelling,deformity ####
+# check that newly censused 'AU', 'DS' or 'DC with "canker" selected as FAD have selected a level for Canker; swelling, deformity ####
 error_name <- "canker_but_no_level"
 
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 
 idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
 idx_canker <- !is.na(mort$FAD) & grepl("K", mort$FAD)
-idx_ckr_level <- !is.na(mort$'canker,swelling,deformity')
+idx_ckr_level <- !is.na(mort$'Canker; swelling, deformity')
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_canker & !idx_ckr_level ]
 
@@ -318,7 +318,7 @@ status_column <- rev(grep("Status", names(mort), value = T))[1]
 
 idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
 idx_canker <- !is.na(mort$FAD) & grepl("K", mort$FAD)
-idx_ckr_level <- !is.na(mort$'canker,swelling,deformity')
+idx_ckr_level <- !is.na(mort$'Canker; swelling, deformity')
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees & !idx_canker) & idx_ckr_level ]
 
@@ -326,14 +326,14 @@ if(length(tag_stem_with_error) > 0) will_auto_fix_error_file <- rbind(will_auto_
 
 
 
-# check that newly censused 'AU', 'DS' or 'DC with "rotting stem" selected as FAD have selected a level for rotting main stem ####
+# check that newly censused 'AU', 'DS' or 'DC with "rotting stem" selected as FAD have selected a level for Rotting trunk ####
 error_name <- "rot_but_no_level"
 
 status_column <- rev(grep("Status", names(mort), value = T))[1]
 
 idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
 idx_rot <- !is.na(mort$FAD) & grepl("R\\>", mort$FAD)
-idx_rot_level <- !is.na(mort$'rotting main stem')
+idx_rot_level <- !is.na(mort$'Rotting trunk')
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[idx_trees & idx_rot & !idx_rot_level ]
 
@@ -348,7 +348,7 @@ status_column <- rev(grep("Status", names(mort), value = T))[1]
 
 idx_trees <- mort[, status_column] %in% c("AU","DS", "DC")
 idx_rot <- !is.na(mort$FAD) & grepl("R\\>", mort$FAD)
-idx_rot_level <- !is.na(mort$'rotting main stem')
+idx_rot_level <- !is.na(mort$'Rotting trunk')
 
 
 tag_stem_with_error <- paste(mort$Tag, mort$StemTag)[(!idx_trees & !idx_rot) & idx_rot_level ]
