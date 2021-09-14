@@ -354,3 +354,6 @@
 "wounded_level_but_wrong_status_or_FAD","KN","665fd3c9-387a-4b0d-8d22-6319d9ab5764","2021-07-29","3418-11",341622,"tsugca",4.40609,0.02655,18.4,"A",1.3,"AU",2,60,50,NA,NA,"B,I,LF",3,NA,NA,"False",NA
 "wounded_level_but_wrong_status_or_FAD","KN","facff485-d8e4-4293-8271-2a3f917103c2","2021-07-29","3420-11",341809,"acerru",1.29894,1.17848,21.7,"A",1.3,"AU",3,100,100,NA,NA,"AN",1,NA,NA,"False","Sapsucker"
 "wounded_level_but_wrong_status_or_FAD","KN","facff485-d8e4-4293-8271-2a3f917103c2","2021-07-29","3420-12",341831,"betual",9.8294,2.6149,10.5,"A",1.3,"AU",1,100,100,NA,NA,"CR",1,NA,NA,"False",NA
+"unhealthy_but_wrong_status","LM","63edddba-fae1-41f3-9f56-84e5eb58cd63","2021-07-08","0202-12",20118,"acerru",2.45742,2.2368,16.7,"A",1.33,"A",3,100,100,15,NA,"K",NA,1,NA,"False",NA
+"unhealthy_but_wrong_status","LM","de75682c-230f-4a6d-be93-cb89f92bd21b","2021-07-08","0203-21",20289,"tsugca",0.4337,9.40176,12,"A",1.3,"A",1,100,80,NA,NA,"LF",NA,NA,NA,"False",NA
+"unhealthy_but_wrong_status","LM","01530ad6-c090-4084-a4f8-bda3258fc209","2021-07-08","0207-11",20504,"tsugca",9.76234,5.62153,32.5,"A",1.3,"A",1,80,65,NA,NA,"I,LF",NA,NA,NA,"False","Dieback"
