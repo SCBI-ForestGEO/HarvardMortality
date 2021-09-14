@@ -1,4 +1,5 @@
 "error_name","SurveyorID","Submission.Id","Orig.collection.date","Quad.Sub.Quad","StemTag","Species","QX","QY","DBH","Status.census.2","HOM","Status.2021","Crown.position","Percentage.of.crown.intact","Percentage.of.crown.living","Lean.angle.if.greater.than.15.degrees","FAD","Wounded.main.stem","Canker..swelling..deformity","Rotting.trunk","Lianas","Dead.with.resprout","Notes.2021"
+<<<<<<< HEAD
 "unhealthy_but_wrong_status","KN","dc1675e2-6c4d-4faa-9302-a403263f82c4","2021-07-10","0104-11","10285","acerru","3.59443","6.243",18.7,"A",1.3,"A","3",98,98,NA,NA,NA,NA,NA,NA,NA,NA
 "unhealthy_but_wrong_status","KN","dc1675e2-6c4d-4faa-9302-a403263f82c4","2021-07-10","0104-11","10287","betupa","4.9161","7.11351",10.4,"A",1.3,"A","3",100,96,18,NA,NA,NA,NA,NA,NA,NA
 "unhealthy_but_wrong_status","KN","dc1675e2-6c4d-4faa-9302-a403263f82c4","2021-07-10","0104-11","10288","betual","4.65536","7.37621",20.5,"A",1.3,"A","3",98,98,NA,NA,NA,NA,NA,NA,NA,NA
@@ -9074,3 +9075,8 @@
 "unhealthy_but_wrong_status","LM","5c68dbad-ab05-48cb-9063-1c30ff640257","2021-07-29","3525-22","352512","acerru","7.3907","2.8113",16.3,"A",1.3,"A","3",100,100,NA,NA,NA,NA,NA,NA,NA,NA
 "unhealthy_but_wrong_status","LM","5c68dbad-ab05-48cb-9063-1c30ff640257","2021-07-29","3525-22","352515","betule","8.8816","4.302",13,"A",1.3,"A","2",100,100,NA,NA,NA,NA,NA,NA,NA,NA
 "unhealthy_but_wrong_status","LM","5c68dbad-ab05-48cb-9063-1c30ff640257","2021-07-29","3525-22","352521","querru","9.9112","0.9811",33.1,"A",1.3,"A","4",100,100,NA,NA,NA,NA,NA,NA,NA,NA
+=======
+"unhealthy_but_wrong_status","LM","63edddba-fae1-41f3-9f56-84e5eb58cd63","2021-07-08","0202-12","20118","acerru","2.45742","2.2368",16.7,"A",1.33,"A","3",100,100,15,"K",NA,"1",NA,NA,"False",NA
+"unhealthy_but_wrong_status","LM","de75682c-230f-4a6d-be93-cb89f92bd21b","2021-07-08","0203-21","20289","tsugca","0.4337","9.40176",12,"A",1.3,"A","1",100,80,NA,"LF",NA,NA,NA,NA,"False",NA
+"unhealthy_but_wrong_status","LM","01530ad6-c090-4084-a4f8-bda3258fc209","2021-07-08","0207-11","20504","tsugca","9.76234","5.62153",32.5,"A",1.3,"A","1",80,65,NA,"I,LF",NA,NA,NA,NA,"False","Dieback"
+>>>>>>> main
