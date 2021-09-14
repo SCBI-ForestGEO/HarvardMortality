@@ -1,5 +1,5 @@
 # Generate reports looking at latest mortality census raw data ####
-## this script is run automatically when there is a push  
+## this script is run automatically when there is a push   
 
 # clear environment ####
 rm(list = ls())
