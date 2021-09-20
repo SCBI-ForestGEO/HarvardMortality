@@ -2249,3 +2249,177 @@
 "status_A_but_unhealthy","LM","63edddba-fae1-41f3-9f56-84e5eb58cd63","2021-07-08","0202-12",20118,"acerru",2.45742,2.2368,16.7,"A",1.33,"A",3,100,100,15,NA,"K",NA,1,NA,"False",NA
 "status_A_but_unhealthy","LM","de75682c-230f-4a6d-be93-cb89f92bd21b","2021-07-08","0203-21",20289,"tsugca",0.4337,9.40176,12,"A",1.3,"A",1,100,80,NA,NA,"LF",NA,NA,NA,"False",NA
 "status_A_but_unhealthy","LM","01530ad6-c090-4084-a4f8-bda3258fc209","2021-07-08","0207-11",20504,"tsugca",9.76234,5.62153,32.5,"A",1.3,"A",1,80,65,NA,NA,"I,LF",NA,NA,NA,"False","Dieback"
+"rot_but_no_level","KN","15a9a242-613f-440d-984e-08f8a575b6d0","2021-07-10","0105-12",10419,"tsugca",4.00853,9.71885,42.4,"A",1.3,"AU",3,90,85,NA,NA,"CR,OT",NA,NA,NA,"False","Tree 420 almost completely overtopping with large branch contacting stem"
+"rot_but_no_level","KN","f4a19eb0-fbf7-4437-838c-a392ae3878bb","2021-07-11","0109-22",10591,"tsugca",5.0158,8.1542,36.1,"A",1.3,"AU",3,90,90,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","f4a19eb0-fbf7-4437-838c-a392ae3878bb","2021-07-11","0109-22",10592,"acerru",8.5306,9.4222,35.4,"A",1.3,"AU",3,80,80,NA,NA,"CR,F",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","f4a19eb0-fbf7-4437-838c-a392ae3878bb","2021-07-11","0109-22",10593,"tsugca",9.1096,7.6028,32,"A",1.3,"AU",3,40,25,NA,NA,"CR",NA,NA,NA,"False",NA
+"canker_but_no_level","LM","21fdb709-c92b-47b8-a9f6-8b61388362fd","2021-07-10","0221-11",21710,"betual",8.47779,3.5747,21.8,"A",1.3,"AU",2,100,100,NA,NA,"K,W",1,NA,NA,"False",NA
+"rot_but_no_level","AK","f39e5f07-9c3f-424a-8f37-b321b39ff59c","2021-07-10","0225-21",22829,"acerru",5.582,4.82503,19.8,"A",1.3,"AU",4,100,100,NA,NA,"R",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","6d6e2282-2af4-4dd5-9b33-e92640c9f471","2021-07-08","0303-12",30248,"tsugca",2.33958,5.1916,10.6,"A",1.3,"AU",1,85,78,NA,NA,"I,CR,OT",NA,NA,NA,"False","Branches crush by other tree"
+"canker_but_no_level","NM","20b52a47-0313-4e5a-91f9-47ca19ced5ab","2021-07-10","0311-22",31080,"tsugca",3.8354,2.9184,13.1,"A",1.3,"AU",1,90,75,NA,NA,"I,K,OT",NA,NA,NA,"False","HWA nearby"
+"rot_but_no_level","DJ","c101d58d-bcf0-4509-979e-53147da02417","2021-07-08","0406-11",40620,"acerru",8.16613,6.15291,10.3,"A",1.3,"DS",1,0,0,NA,NA,"CR,B",3,NA,NA,"False",NA
+"canker_but_no_level","DJ","79d3fef2-b585-4416-b6c3-148d01e84b03","2021-07-10","0418-12",41568,"fagugr",9.70854,6.9059,NA,"D",1.5,"DC",1,NA,NA,NA,NA,"K",NA,NA,NA,"False","Beech bark disease"
+"rot_but_no_level","DJ","806e7492-76cb-481e-af7d-98090fafd254","2021-07-10","0420-11",41802,"querru",7.11724,8.48324,12.3,"A",1.3,"AU",1,45,23,81,NA,"CR,UP",NA,NA,NA,"False",NA
+"rot_but_no_level","DJ","806e7492-76cb-481e-af7d-98090fafd254","2021-07-10","0420-22",41923,"querru",7.1558,5.0585,22.1,"A",1.3,"DS",3,15,0,NA,NA,"U,B,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","DJ","971e30d1-3fe7-495a-becf-929e861c7da4","2021-07-10","0421-12",42051,"tsugca",5.2116,4.5759,13.3,"A",1.3,"AU",1,64,41,57,NA,"CR,UP,I",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","66b1558a-f708-4178-8ad0-a89dc2b86840","2021-07-08","0503-21",50348,"tsugca",4.7492,8.5786,10,"A",1.3,"AU",1,86,25,NA,NA,"CR,U",NA,NA,NA,"False","2 querru limbs fell on tree"
+"rot_but_no_level","RB","dff65a34-aaae-4e5b-a113-9cf20767463c","2021-07-08","0504-21",50433,"tsugca",2.615,7.94738,23.6,"A",1.3,"AU",1,60,40,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","dff65a34-aaae-4e5b-a113-9cf20767463c","2021-07-08","0504-22",50426,"betual",9.3789,1.2044,15.1,"A",1.3,"AU",2,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"canker_but_no_level","RB","0b790ffe-49f4-42c7-9b88-7b128e282577","2021-07-10","0512-22",50983,"acerru",3.8978,7.6274,29.3,"A",1.78,"AU",2,98,95,NA,NA,"R,K",NA,NA,2,"False",NA
+"rot_but_no_level","RB","58fa831b-365a-4a6a-86ac-455701a0c7f6","2021-07-10","0513-21",51096,"tsugca",2.2702,2.44175,14.2,"A",1.3,"DS",1,0,0,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","d4cd8a11-ca1b-4906-a30c-1cb556993389","2021-07-11","0515-21",51365,"tsugca",8.7582,3.76056,11.7,"A",1.3,"AU",2,80,13,NA,NA,"I,B,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","d564dac1-f056-46d4-a481-118bad5a1f2b","2021-07-13","0524-11",52274,"tsugca",9.40502,3.62989,19.3,"A",1.3,"AU",1,50,10,NA,NA,"I,DF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","JS","72b111ea-7363-43d9-a933-d0fe4cd490a6","2021-07-08","0601-11",60013,"querru",8.8068,6.24569,27.4,"A",1.3,"AU",3,90,90,NA,NA,"W,CR",2,NA,NA,"False",NA
+"rot_but_no_level","JS","72b111ea-7363-43d9-a933-d0fe4cd490a6","2021-07-08","0601-12",60027,"pinure",4.47303,5.153,33.7,"A",1.3,"AU",4,95,10,NA,NA,"W,R",1,NA,NA,"False",NA
+"rot_but_no_level","JS","72b111ea-7363-43d9-a933-d0fe4cd490a6","2021-07-08","0601-12",60041,"piceab",6.95282,6.7581,12.2,"A",1.3,"DS",1,30,0,NA,NA,"B,CR,OT",NA,NA,NA,"False",NA
+"rot_but_no_level","JS","72b111ea-7363-43d9-a933-d0fe4cd490a6","2021-07-08","0601-21",60089,"querru",7.0635,7.8043,21,"A",1.3,"AU",2,100,100,NA,NA,"W,R",1,NA,NA,"False",NA
+"rot_but_no_level","JS","d14ae59f-8ab2-43bc-aa0c-c5c73f59fb1b","2021-07-08","0602-11",60111,"acerru",7.89824,9.44783,16,"A",1.3,"AU",2,100,100,NA,NA,"R,W",2,NA,NA,"False",NA
+"rot_but_no_level","JS","d14ae59f-8ab2-43bc-aa0c-c5c73f59fb1b","2021-07-08","0602-11",60118,"acerru",4.24273,2.80674,18.5,"A",1.3,"AU",3,95,95,NA,NA,"CR",NA,NA,NA,"False","Crown leans SE"
+"rot_but_no_level","JS","5527d8db-cdcb-4531-975c-4403375c0c30","2021-07-10","0604-11",60285,"tsugca",4.40105,6.93677,NA,"D",1.3,"DS",1,0,0,NA,NA,"B,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","JS","5527d8db-cdcb-4531-975c-4403375c0c30","2021-07-10","0604-11",60286,"tsugca",6.53784,8.91081,16.7,"A",1.3,"AU",1,50,35,NA,NA,"CR,I,B",NA,NA,NA,"False","topped by fallen tree"
+"rot_but_no_level","JS","5527d8db-cdcb-4531-975c-4403375c0c30","2021-07-10","0604-12",60307,"querru",2.18441,7.1504,38.6,"A",1.3,"AU",4,100,100,NA,NA,"W,R",2,NA,NA,"False",NA
+"rot_but_no_level","JS","5527d8db-cdcb-4531-975c-4403375c0c30","2021-07-10","0604-12",60322,"acerru",2.19302,1.8855,26.7,"A",1.3,"AU",3,90,90,NA,NA,"W,R",2,NA,NA,"False",NA
+"rot_but_no_level","JS","c0fe9bb6-e1e9-46b3-beca-91ae85952338","2021-07-10","0605-12",60437,"acerru",2.52189,6.1382,NA,"D",1.3,"DS",1,0,0,NA,NA,"CR",NA,NA,NA,"False",NA
+"canker_but_no_level","DJ","cd38cbd1-f3ec-47fc-8cfa-316e14be63be","2021-07-13","0625-22",62196,"tsugca",3.7899,9.3997,16,"A",1.3,"DS",1,80,0,NA,NA,"I,LF,K",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","6ca26fb4-35c9-47f5-9447-86d23a328b02","2021-07-13","0705-12",70415,"tsugca",8.36709,9.2814,20.3,"A",1.3,"AU",2,100,50,NA,NA,"CR,I,LF",2,NA,NA,"False",NA
+"canker_but_no_level","DJ","a9833cef-342a-42e8-912e-e741179a1454","2021-07-14","0818-11",81294,"betule",7.67203,0.29088,24,"A",1.3,"AU",3,100,100,NA,NA,"K",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","8f043dc3-6ad6-485b-b226-2ac33dcb77c4","2021-07-15","0910-12",90750,"tsugca",7.56866,9.784,16.3,"A",1.3,"DS",3,60,0,NA,NA,"CR,B",2,NA,NA,"False",NA
+"rot_but_no_level","NM","f92ab52e-a70f-493f-a37b-17f917ef3a92","2021-07-14","0911-21",90849,"betupa",8.7728,4.08259,24.5,"A",1.3,"DC",2,NA,NA,NA,NA,"CR,UP",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","f92ab52e-a70f-493f-a37b-17f917ef3a92","2021-07-14","0911-21",90850,"acerru",4.7888,3.27701,19.5,"A",1.3,"DC",3,NA,NA,NA,NA,"CR,UP",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","f92ab52e-a70f-493f-a37b-17f917ef3a92","2021-07-14","0911-21",90851,"tsugca",3.3004,1.77863,31.5,"A",1.3,"DC",2,NA,NA,NA,NA,"CR,UP",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","b5c7f49e-25fc-4193-b900-715ebc189d76","2021-07-14","0918-21",91254,"tsugca",5.883,3.1787,15.2,"A",1.3,"DS",2,95,0,NA,NA,"I,DF,R,F,OT",NA,NA,NA,"False",NA
+"canker_but_no_level","RB","afce1eea-29bb-45b8-9ad5-1c655fe8602c","2021-07-15","1009-21",100912,"acerru",1.1832,5.01577,23.2,"A",1.3,"AU",3,99,95,NA,NA,"K",NA,NA,NA,"False","Tag Being swallowed"
+"rot_but_no_level","RB","903f01c7-1f65-40fa-ba8c-e67d1589e23b","2021-07-15","1010-22",100950,"tsugca",2.8294,3.2929,13,"A",1.3,"AU",1,90,20,NA,NA,"I,DF,LF,CR",NA,NA,NA,"False",NA
+"canker_but_no_level","RB","6acff4e0-de30-4b9d-b63f-851b57fb1b4c","2021-07-15","1012-11",101047,"querru",0.8904,0.77315,39.7,"A",1.3,"AU",3,90,85,NA,NA,"F,K",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","7f1f2c46-e42f-449a-9f4e-77040e38710e","2021-07-14","1021-11",101605,"querru",8.24086,5.04062,65.8,"A",1.3,"AU",4,98,94,NA,NA,"R,K",1,1,NA,"False",NA
+"rot_but_no_level","KN","64929afc-a9ea-4bf9-ab4d-b075aef93413","2021-07-15","1110-12",110761,"betule",7.35711,3.4705,27.2,"A",1.3,"AU",3,100,100,NA,NA,"CR,W",1,NA,NA,"False",NA
+"rot_but_no_level","KN","64929afc-a9ea-4bf9-ab4d-b075aef93413","2021-07-15","1110-12",110762,"betule",7.0311,3.4724,23.2,"A",1.3,"AU",4,100,100,NA,NA,"CR,W",1,NA,NA,"False",NA
+"rot_but_no_level","LM","2b5936d3-1f47-4c88-9517-2d866015594b","2021-07-15","1117-21",111276,"tsugca",6.4267,2.94872,28.2,"A",1.3,"AU",2,100,81,NA,NA,"R,I,AN",NA,NA,NA,"False",NA
+"canker_but_no_level","LM","a1db2cf0-85b4-4bdc-a679-b17cdae19b3a","2021-07-15","1119-12",111359,"acerru",3.99332,9.0979,11.1,"A",1.2,"AU",2,100,100,NA,NA,"K",NA,NA,NA,"False",NA
+"canker_but_no_level","KN","747bd8c2-3f8f-4d64-9b8d-18ef99a3b9d0","2021-07-16","1121-11",111476,"acerru",2.89625,9.07867,12.2,"A",1.3,"AU",2,100,100,NA,NA,"R,K",1,NA,1,"False",NA
+"rot_but_no_level","KN","1bf6ce0d-cf4a-43e6-a171-26caf7149c2a","2021-07-16","1123-12",111766,"acerru",8.86,7.2884,17.6,"A",1.3,"AU",2,0,0,NA,NA,"B,R,W",3,NA,NA,"False","No crown, a few branches with foliage"
+"rot_but_no_level","DJ","3f1b9b01-eca4-44b8-9621-809103834c67","2021-07-15","1209-22",120588,"acerru",5.4747,5.62,12.3,"A",1.3,"DS",1,0,0,NA,NA,"CR,B",3,NA,NA,"False",NA
+"canker_but_no_level","LM","e090a37f-fc50-48a5-9fc0-2754a770d444","2021-07-16","1302-11",130066,"querru",8.06487,5.97725,38.1,"A",1.3,"AU",4,96,94,NA,NA,"K",NA,NA,NA,"False",NA
+"canker_but_no_level","LM","fde7c609-83fc-4857-8007-79009cbc5820","2021-07-16","1303-21",130163,"querru",2.0127,4.89207,30.1,"A",1.3,"AU",3,100,100,NA,NA,"K",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","0143011f-6e0b-4f69-8b9b-8a767f2a5f5d","2021-07-16","1304-22",130210,"querru",5.8563,9.3289,17.5,"A",1.3,"DC",1,NA,NA,NA,NA,"U,R,UP,F",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","0a28a2b5-a544-4436-a585-b46db6b2501c","2021-07-16","1305-21",130292,"acerru",2.1476,5.5101,17.3,"A",1.3,"AU",3,90,45,NA,NA,"R,W,F,LF",2,NA,NA,"False","Canopy dieback plus rot"
+"rot_but_no_level","LM","0a28a2b5-a544-4436-a585-b46db6b2501c","2021-07-16","1305-21",130300,"betupa",9.7323,2.16115,30.5,"A",1.3,"DS",3,20,0,NA,NA,"R,DF,U,F",NA,NA,NA,"False",NA
+"canker_but_no_level","LM","0a28a2b5-a544-4436-a585-b46db6b2501c","2021-07-16","1305-22",130284,"betule",4.0905,8.8861,13.3,"A",1.8,"AU",3,100,100,NA,NA,"K",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","c411f8cd-6688-4cb3-81f3-9655d5a6ade7","2021-07-16","1306-22",130350,"acerru",7.6312,7.7677,15.6,"A",1.3,"DS",1,5,0,NA,NA,"U,B,R",NA,NA,NA,"False",NA
+"canker_but_no_level","LM","401e22b7-2e5e-4a95-b923-f50c20ba2fa7","2021-07-16","1308-12",130500,"acerru",6.01116,8.539,13.7,"A",1.3,"AU",2,100,100,NA,NA,"LF,K",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","401e22b7-2e5e-4a95-b923-f50c20ba2fa7","2021-07-16","1308-21",130540,"acerru",1.0059,6.65959,10.3,"A",1.3,"AU",2,90,80,NA,NA,"B,R,LF",NA,NA,NA,"False","Rotting stem above"
+"rot_but_no_level","LM","efdef3e0-2a97-407e-9a36-2fd822eda641","2021-07-16","1309-21",130623,"querru",5.701,9.49523,23.6,"A",1.3,"DS",2,20,0,NA,NA,"DF,U,F,R",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","a41a21af-7631-4282-af4f-afe6b2d4fbf1","2021-07-19","1313-11",130844,"tsugca",7.5561,1.52919,26.3,"A",1.3,"AU",1,100,80,NA,NA,"I,LF,R",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","a41a21af-7631-4282-af4f-afe6b2d4fbf1","2021-07-19","1313-12",130858,"acerru",6.1774,0.8802,21.9,"A",1.3,"AU",3,95,95,NA,NA,"CR",NA,NA,NA,"False","130862 leaning"
+"rot_but_no_level","NM","195614d3-5f39-49df-b4a4-26c1340d3e09","2021-07-19","1318-22",131190,"fagugr",0.9771,9.0929,34.5,"A",1.3,"AU",2,91,80,NA,NA,"F,R,W,LF",1,NA,NA,"False",NA
+"rot_but_no_level","KN","773f4497-b228-4c38-8033-69c67914970c","2021-07-19","1320-22",131356,"tsugca",2.9758,2.6159,18.7,"A",1.3,"AU",1,100,60,NA,NA,"I,LF,CR",NA,NA,NA,"False","131353 leaning on part of the crown"
+"rot_but_no_level","NM","9c215fe7-f1d6-48b2-8846-22cab79171e8","2021-07-16","1402-22",140128,"tsugca",9.0327,8.4424,16.2,"A",1.3,"AU",1,100,30,NA,NA,"I,LF,OT,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","7e609717-210b-4c2d-9829-5721117f9aa8","2021-07-16","1405-22",140404,"tsugca",6.3165,0.99,11.2,"A",1.3,"AU",1,90,45,25,NA,"I,LF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","f181d80e-66a5-451a-accc-55fb1be51c94","2021-07-19","1413-11",141044,"tsugca",4.59071,8.05762,12.4,"A",1.3,"AU",1,100,30,37,NA,"I,LF,CR",1,NA,NA,"False",NA
+"rot_but_no_level","RB","4eb19fc9-41d2-4a05-89f4-bfb7a0fcd024","2021-07-19","1419-11",141458,"tsugca",4.9859,1.71135,13,"A",1.3,"AU",1,98,79,NA,NA,"I,DF,LF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","44290873-65cf-4372-b19c-b1306b0e99b8","2021-07-19","1421-22",141756,"acerru",5.6421,3.7728,11.6,"A",1.3,"AU",1,70,20,NA,NA,"U,CR,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","b7472c03-587a-49ee-82bb-5d398c9746ff","2021-07-19","1423-12",141912,"betule",4.0395,5.8087,14.7,"A",1.3,"AU",2,100,100,NA,NA,"CR,W",2,NA,NA,"False",NA
+"rot_but_no_level","KN","b7472c03-587a-49ee-82bb-5d398c9746ff","2021-07-19","1423-12",141915,"acerru",3.69651,6.5439,12.7,"A",1.3,"AU",1,100,100,19,NA,"CR,W",2,NA,NA,"False",NA
+"rot_but_no_level","KN","fc0f84b1-5c75-44bc-af47-7682746724e8","2021-07-20","1503-12",150233,"tsugca",3.51352,3.7505,31.4,"A",1.3,"AU",1,100,80,NA,NA,"CR,I,LF",NA,NA,NA,"False","Leaned on by 150231"
+"rot_but_no_level","NM","0e2805df-3ee7-4f18-99e0-71de5ee5820a","2021-07-20","1504-21",150444,"acerru",1.6413,7.93101,16.2,"A",1.3,"AU",2,92,84,NA,NA,"B,R",NA,NA,NA,"False",NA
+"canker_but_no_level","NM","6f3b6f66-14ea-4694-a1a5-ee944905cc38","2021-07-21","1519-22",151773,"betual",2.1733,8.7815,13.2,"A",1.3,"DS",1,6,0,NA,NA,"DF,F,K",NA,NA,NA,"False",NA
+"canker_but_no_level","NM","379bb662-4661-4edc-857a-eaba5bc341e2","2021-07-21","1520-11",151855,"betual",9.82009,6.89814,21.9,"A",1.28,"AU",1,100,100,NA,NA,"F,K",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","57923360-1436-4e3a-ab30-1bff27923151","2021-07-20","1602-21",160459,"betupa",6.4037,6.65825,11.6,"A",1.3,"DS",2,25,0,NA,NA,"R,DF",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","8103e3a3-14a1-4dbc-86d4-53287e1d5996","2021-07-20","1603-12",160592,"querve",8.14447,9.3523,10.5,"A",1.3,"DS",1,80,0,NA,NA,"DF,R,U,OT",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","bc03891d-c527-483a-a11d-7681ce189cdd","2021-07-20","1610-22",161359,"querru",0.5422,0.3441,22.4,"A",1.3,"DS",2,0,0,NA,NA,"R,U,B,F",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","591960ee-e036-4072-9d32-f0cfeae3c723","2021-07-21","1706-12",171085,"tsugca",5.65684,9.6077,10.5,"A",1.35,"AU",1,85,85,NA,NA,"R,I",2,NA,NA,"False",NA
+"rot_but_no_level","NM","a8c74b07-3e24-4bb4-9b6c-d74559fad8b7","2021-07-21","1716-12",171844,"tsugca",2.56372,2.257,16.5,"A",1.3,"AU",1,70,15,NA,NA,"CR,I",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","f58a93f8-e122-4e47-bd89-bf8b13264bd5","2021-07-21","1723-12",172206,"querru",6.21659,5.9756,36.2,"A",1.3,"AU",4,70,70,23,NA,"B,R,W,F",1,NA,NA,"False",NA
+"rot_but_no_level","LM","05613140-7ac1-4cf5-b6c1-61b5dc32a248","2021-07-21","1725-22",172367,"betual",3.803,5.6775,24.9,"A",1.3,"DS",1,0,0,NA,NA,"B,R",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","f1a19e88-a943-4b6e-b2ca-427aaaa38c5f","2021-07-22","1805-22",180619,"fagugr",8.9862,2.9085,12.8,"A",1.3,"AU",1,25,2,NA,NA,"R,B,F",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","279f7a08-390d-45be-8dff-6c402dbcbbda","2021-07-21","1822-12",181623,"betual",9.71747,7.0798,28.2,"A",1.3,"AU",2,25,5,NA,NA,"B,R,U",NA,NA,NA,"False","Barely alive"
+"rot_but_no_level","LM","d34f0f82-1441-4d77-a0b3-71bf34eab074","2021-07-21","1823-22",181777,"acerru",8.3547,8.2527,29.1,"A",1.3,"AU",3,100,100,NA,NA,"CR,K",NA,1,NA,"False","Stressed-epicormic shoots"
+"rot_but_no_level","KN","a085a371-d148-43f8-a891-8ce93c8194bb","2021-07-22","1905-12",190354,"querru",5.03594,4.4127,25,"A",1.3,"AU",2,100,95,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","a085a371-d148-43f8-a891-8ce93c8194bb","2021-07-22","1905-12",190355,"fagugr",4.80356,4.6279,10.5,"A",1.3,"DS",1,100,0,NA,NA,"F,CR,DF",NA,NA,NA,"False","BBD"
+"rot_but_no_level","KN","7732da97-c9fb-4483-aaaf-5764c816bdc2","2021-07-22","1909-12",190589,"tsugca",2.13198,0.6069,27.4,"A",1.3,"AU",2,90,88,NA,NA,"CR,I,LF",NA,NA,NA,"False","190586 leaning into"
+"rot_but_no_level","KN","f3b540fe-5ed5-4f31-b45b-bb2d33f1cf49","2021-07-23","2005-11",200282,"acerru",5.00695,1.65629,14.5,"A",1.34,"DS",1,10,0,NA,NA,"DF,R",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","659036ea-6632-48ee-9380-921115a6634c","2021-07-23","2008-22",200496,"acerru",4.7597,6.3098,35.2,"A",1.3,"AU",2,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","d2eebb14-9c51-4180-bfff-24c3354474f5","2021-07-23","2012-11",200750,"acerru",2.41038,3.46025,19.8,"A",1.3,"AU",1,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","d2eebb14-9c51-4180-bfff-24c3354474f5","2021-07-23","2012-11",200751,"acerru",1.16016,6.68177,23.8,"A",1.3,"AU",1,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","d2eebb14-9c51-4180-bfff-24c3354474f5","2021-07-23","2012-11",200754,"acerru",1.46839,7.22092,17.2,"A",1.3,"AU",1,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","d2eebb14-9c51-4180-bfff-24c3354474f5","2021-07-23","2012-12",200799,"querru",3.77976,0.3888,30.3,"A",1.3,"AU",3,100,100,NA,NA,"CR",NA,NA,NA,"False","No tag"
+"rot_but_no_level","LM","f5430da4-6ddf-4e61-a851-d155b90778d8","2021-07-21","2023-22",201191,"acerru",1.4443,1.3859,12.6,"A",1.3,"AU",2,90,67,65,NA,"CR,LF",NA,NA,NA,"False","Mechanically unstable unstable, epicormic shoots, and canopy dieback—this tree is dying"
+"canker_but_no_level","RB","dfc6d0f5-0dcf-41d3-a43e-cea3df6941af","2021-07-23","2110-12",210598,"querru",9.31373,9.5966,39.5,"A",1.3,"AU",3,100,100,NA,NA,"K",1,NA,NA,"False",NA
+"rot_but_no_level","KN","5cad342d-47af-4367-a803-d02f74fd737b","2021-07-23","2113-11",211096,"acerru",9.7729,3.0174,15.3,"A",1.3,"AU",1,100,100,31,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","b9ff0b14-8a92-45d8-9fc8-e34af0feb211","2021-07-23","2203-11",220123,"acerru",9.18965,5.81852,25.9,"A",1.3,"AU",2,100,100,NA,NA,"CR",1,NA,NA,"False",NA
+"rot_but_no_level","KN","65bf9bfe-cb91-4c0a-b5a6-934b0d5fdd01","2021-07-23","2205-12",220279,"acerru",8.94272,0.0612,11.9,"A",1.3,"DS",1,90,0,NA,NA,"DF,R",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","7bd5ef4e-4de9-41d7-9d3a-d7e5fab9fe12","2021-07-24","2210-21",220651,"betual",1.4516,7.6326,17.3,"A",1.3,"AU",1,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","3082ca5f-d679-4e0f-8101-f9b6e288c2b2","2021-07-24","2212-21",220842,"acerru",3.1272,2.92282,16.5,"A",1.3,"AU",2,100,100,NA,NA,"R",1,NA,NA,"False",NA
+"rot_but_no_level","LM","308be934-d79e-4f6b-89a1-21c7007b0fe8","2021-07-22","2222-21",226766,"betual",4.0028,3.95009,12.1,"A",1.3,"AU",3,90,90,NA,NA,"B,R",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","5ab160ae-e296-44ce-ad10-f9d475269838","2021-07-24","2303-11",230108,"acerru",2.11896,5.09544,20.3,"A",1.3,"AU",1,90,4,NA,NA,"DF,R,F",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","3e451e50-54f3-49e6-b4b5-0088a4fa7966","2021-07-24","2308-11",230550,"querru",0.76623,1.38727,24.6,"A",1.3,"DS",2,100,0,NA,NA,"R,DF",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","8935c4d7-87ea-48de-91c5-e5a26d189638","2021-07-24","2407-22",240624,"acerru",1.6923,4.3182,34.5,"A",1.3,"AU",3,100,100,NA,NA,"W,CR",1,NA,NA,"False",NA
+"rot_but_no_level","KN","8935c4d7-87ea-48de-91c5-e5a26d189638","2021-07-24","2407-22",240625,"acerru",1.7372,4.8002,28.9,"A",1.3,"DC",NA,NA,NA,NA,NA,"CR,B",3,NA,NA,"False",NA
+"rot_but_no_level","KN","8935c4d7-87ea-48de-91c5-e5a26d189638","2021-07-24","2407-22",240626,"acerru",2.1516,4.5726,34.5,"A",1.3,"DC",NA,NA,NA,NA,NA,"CR,B",3,NA,NA,"False",NA
+"rot_but_no_level","KN","8935c4d7-87ea-48de-91c5-e5a26d189638","2021-07-24","2407-22",240627,"acerru",2.0399,4.1728,36.4,"A",1.3,"AU",2,10,10,NA,NA,"B,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","8935c4d7-87ea-48de-91c5-e5a26d189638","2021-07-24","2407-22",240628,"tsugca",3.7008,4.6569,10.1,"A",1.3,"DC",1,NA,NA,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","4b78a26c-7792-4047-a35b-d4d9697fe73f","2021-07-22","2419-12",241079,"castde",1.86571,8.5558,10.6,"A",1.3,"DS",1,90,0,NA,NA,"F,R,DF",NA,NA,NA,"True","Blight"
+"rot_but_no_level","LM","d317c678-83d7-4416-9ee6-b3bbb950cfdb","2021-07-22","2421-11",241387,"querru",8.79315,1.68395,21.6,"A",1.3,"DS",2,40,0,NA,NA,"U,R,I",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","d317c678-83d7-4416-9ee6-b3bbb950cfdb","2021-07-22","2421-21",241500,"querru",9.3766,2.13779,45.5,"A",1.3,"AU",4,92,75,NA,NA,"R,W,F",1,NA,NA,"False","Canopy dieback"
+"rot_but_no_level","LM","5711718a-86dd-4403-8313-1ada80854ef5","2021-07-22","2424-22",241834,"betule",3.9975,3.6814,23.6,"A",1.3,"AU",3,100,100,NA,NA,"W,R,F",2,NA,NA,"False",NA
+"canker_but_no_level","LM","6b932dd5-2384-40a1-b83b-a91daf465b1e","2021-07-24","2501-22",250040,"acerru",4.1447,9.3983,10.3,"A",1.3,"DS",2,90,0,NA,NA,"R,DF,K,F",NA,NA,3,"False",NA
+"rot_but_no_level","KN","c38c429d-db85-4221-93fc-894e8c17b5e5","2021-07-24","2505-21",250510,"acerru",1.8165,9.79638,13.8,"A",1.3,"DS",1,0,0,NA,NA,"B,R",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","3413dc6d-8796-4cd8-a241-5565127ef27b","2021-07-22","2618-12",261049,"tsugca",1.96162,3.3699,11.6,"A",1.3,"AU",2,95,90,75,NA,"I,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","23d4663f-7e0e-45f7-9193-97d5ed586172","2021-07-22","2622-22",261472,"pinust",2.7945,4.3452,20.4,"A",1.3,"AU",2,90,80,NA,NA,"W,R,AN,OT",1,NA,NA,"False","Canopy dieback"
+"rot_but_no_level","LM","1eaba8de-85c3-4153-80c8-c63345fb871f","2021-07-23","2624-12",261632,"tsugca",9.0302,4.9886,15.7,"A",1.3,"DC",1,NA,NA,NA,NA,"UP,CR,I,DF",NA,NA,NA,"False","30% crown intact"
+"rot_but_no_level","LM","cd0e3ffb-d5b6-41fe-b630-f1b5ed3ed7dd","2021-07-23","2625-21",261754,"tsugca",1.5089,5.2,14.4,"A",1.3,"AU",1,95,85,NA,NA,"CR,I,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","DJ","8740bbfb-5cbd-4ed0-8abb-fafee73c2ff7","2021-07-23","2722-11",271844,"acerru",2.83933,6.99135,29.5,"A",1.3,"AU",3,100,100,29,NA,"R",NA,2,NA,"False",NA
+"rot_but_no_level","LM","f0d4df1a-bfa4-45bd-aa83-aa728225fdce","2021-07-24","2807-22",280679,"acerru",8.6897,9.2101,23.1,"A",1.3,"AU",2,15,15,NA,NA,"B,R,F",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","33cce19a-689e-4805-badb-e5882fc20538","2021-07-23","2818-12",281386,"fagugr",0.90967,0.7657,29.8,"A",1.3,"AU",3,45,33,NA,NA,"R,B,F",NA,NA,NA,"False","Beech bark disease and very recent broken stem"
+"rot_but_no_level","LM","33cce19a-689e-4805-badb-e5882fc20538","2021-07-23","2818-12",281411,"fagugr",5.00202,4.8941,32.8,"A",1.3,"AU",2,2,2,NA,NA,"B,R,F",NA,NA,NA,"False","Beech bark disease"
+"rot_but_no_level","LM","40d080fe-5426-4ff4-8eed-a6a6acbb8a3b","2021-07-23","2822-22",281853,"acerru",0.517,1.926,10,"A",1.3,"DS",2,65,0,NA,NA,"R,DF,F,U",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","714e0ccf-81b2-4386-8d2d-8c6e38a44ab9","2021-07-23","2825-12",282341,"betual",9.15031,2.1819,31,"A",1.3,"AU",2,100,100,NA,NA,"B,R,F",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","714e0ccf-81b2-4386-8d2d-8c6e38a44ab9","2021-07-23","2825-22",282352,"tsugca",8.0479,4.1847,23.2,"A",1.3,"AU",1,100,75,NA,NA,"I,LF,R",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","714e0ccf-81b2-4386-8d2d-8c6e38a44ab9","2021-07-23","2825-22",282353,"tsugca",8.3202,4.203,13,"A",1.3,"DS",1,85,0,NA,NA,"R,I,DF,F",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","714e0ccf-81b2-4386-8d2d-8c6e38a44ab9","2021-07-23","2825-22",282354,"tsugca",8.9724,4.1653,20.4,"A",1.3,"AU",1,90,60,NA,NA,"I,LF,R",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","7369f463-564d-42eb-8449-868d07d36aac","2021-07-26","2902-21",290183,"acerru",3.3286,4.54742,11.5,"A",1.3,"AU",1,50,25,NA,NA,"LF,R",NA,NA,NA,"False","Heavy canopy dieback"
+"rot_but_no_level","LM","a228a80f-2b72-4d03-a901-96f3b1ac0cf3","2021-07-26","2905-11",290419,"querru",2.8401,7.83751,39,"A",1.4,"AU",3,100,100,NA,NA,"W,R,F",1,NA,NA,"False",NA
+"rot_but_no_level","LM","8441a09e-2aaa-409c-a5f5-6e771efaa511","2021-07-26","2906-21",290687,"acerru",5.5754,3.88198,11.9,"A",1.3,"AU",2,90,90,NA,NA,"B,R,W,F",1,NA,NA,"False",NA
+"rot_but_no_level","LM","8441a09e-2aaa-409c-a5f5-6e771efaa511","2021-07-26","2906-22",290643,"querru",2.6957,8.0841,28,"A",1.3,"DC",1,NA,NA,NA,NA,"CR",NA,NA,NA,"False","Crushed by many trees or human chainsaw"
+"rot_but_no_level","LM","8441a09e-2aaa-409c-a5f5-6e771efaa511","2021-07-26","2906-22",290662,"acerru",3.0001,2.6569,11.7,"A",1.3,"AU",3,2,2,NA,NA,"B,CR",NA,NA,NA,"False","Barely alive"
+"rot_but_no_level","LM","21d33da9-45d3-4ed6-8ad9-201e2e2b4c52","2021-07-26","2908-22",290886,"tsugca",0.4988,2.028,12.1,"A",1.28,"AU",1,100,95,46,NA,"I,LF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","348bd246-aa3e-48e7-85fe-c28c7ddd8269","2021-07-26","2913-22",291343,"tsugca",4.2575,9.512,81.4,"A",1.3,"AU",4,93,87,NA,NA,"I,R,W",1,NA,NA,"False","Nesting birds in bole"
+"rot_but_no_level","LM","2592d8d7-bd6f-47d7-a5b0-497b6975eb7c","2021-07-26","2915-12",291437,"acerru",5.34898,6.6904,13,"A",1.45,"AU",2,50,45,NA,NA,"B,R",NA,NA,NA,"False","Broken stem and rotting above"
+"rot_but_no_level","LM","b89d5288-54cb-4520-98cd-b14287bdb4ad","2021-07-27","2916-12",291547,"acerru",2.69059,7.6598,11.8,"A",1.3,"AU",2,100,100,NA,NA,"CR",NA,NA,NA,"False","Mechanically unstable"
+"rot_but_no_level","LM","79ffebee-d036-4948-86bd-dd226d7d53da","2021-07-27","2918-21",291768,"acerru",3.4386,9.81224,12.8,"A",1.3,"DS",2,0,0,NA,NA,"B,R",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","96fe7f0d-bf2c-441b-90e8-c3211c2376b9","2021-07-27","2919-21",291840,"tsugca",2.4018,9.66511,22.8,"A",1.3,"AU",2,95,87,NA,NA,"I,LF,R",NA,NA,NA,"False","Also rotting below"
+"rot_but_no_level","LM","553fadca-6baa-4a32-adc9-9407ae41f1d0","2021-07-27","2923-11",292510,"acerru",5.87128,0.77517,10.2,"A",1.39,"DS",2,85,0,NA,NA,"R,W,DF",1,NA,NA,"False","99% sure totally dead"
+"rot_but_no_level","LM","808abeaf-1783-45ae-8f03-938e13345edb","2021-07-27","2924-12",292717,"betual",9.75699,7.8741,11.3,"A",1.3,"DS",1,50,0,21,NA,"U,DF,R,F",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","3ddd8013-d787-43fe-a774-987909c8a565","2021-07-26","3005-21",300541,"pinust",7.9487,6.037,20.2,"A",1.3,"DC",1,NA,NA,NA,NA,"R",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","dc0b601e-c017-4e91-a971-84e1f913d4e9","2021-07-26","3012-12",301235,"tsugca",2.34603,1.5523,19.8,"A",1.3,"AU",1,37,5,NA,NA,"R,I,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","d60c468c-fcbb-42f5-9475-12977e9a977d","2021-07-27","3020-21",302090,"acerru",1.097,1.842,17,"A",1.3,"AU",2,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","853e6704-2bbf-4c9d-80cd-7f5275a43900","2021-07-27","3021-11",302161,"betupa",4.97246,1.73465,25.8,"A",1.3,"AU",2,100,100,NA,NA,"R,B",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","cd83019f-d8fa-457e-8513-c2ab81a88034","2021-07-28","3022-11",302342,"tsugca",9.551,8.88236,11,"A",1.3,"AU",1,100,96,37,NA,"I,LF,UP,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","RB","18adfea8-a446-4453-b399-7514563e42f2","2021-07-28","3024-11",302750,"tsugca",7.30571,5.60607,11.8,"A",1.3,"DS",2,94,0,NA,NA,"I,DF,CR,UP",NA,NA,NA,"False",NA
+"rot_but_no_level","NM","4f9d0b8a-b5fb-497f-a7a3-2ec01894ae3a","2021-07-27","3125-22",313145,"acerru",4.7323,9.8335,21.1,"A",1.3,"AU",2,100,100,NA,NA,"R,W",2,NA,NA,"False",NA
+"rot_but_no_level","KN","df3b6bcf-6ac8-4104-addc-3db0f779e7c0","2021-07-26","3209-12",321070,"acerru",1.19694,7.9616,28.6,"A",1.3,"DS",3,60,0,NA,NA,"DF,R,F",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","4133c7c7-14d9-47a4-9c5e-078b504d9dee","2021-07-26","3210-21",321298,"querru",5.6955,3.16537,26.3,"A",1.3,"AU",3,100,100,NA,NA,"CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","613c3991-cfdd-4a11-9453-2d94ba2b3e0e","2021-07-26","3211-22",321401,"tsugca",7.8465,3.2075,27,"A",1.3,"AU",1,60,50,NA,NA,"CR,W,I,LF",2,NA,NA,"False",NA
+"rot_but_no_level","KN","613c3991-cfdd-4a11-9453-2d94ba2b3e0e","2021-07-26","3211-22",321404,"tsugca",4.8043,4.5717,13.6,"A",1.3,"DS",1,60,0,NA,NA,"I,DF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","d3669153-c5c2-429d-9649-f94ebedef6bd","2021-07-26","3214-22",321657,"tsugca",2.5004,9.0945,20.3,"A",1.3,"AU",1,80,30,NA,NA,"CR,I,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","38086600-a70e-4a26-9dd5-27395e5c72bf","2021-07-26","3216-21",321840,"tsugca",5.0207,0.34412,30.4,"A",1.3,"AU",3,80,70,NA,NA,"I,LF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","30b5a8c6-9dea-406e-9cac-c8b3e3dff850","2021-07-27","3219-22",322086,"tsugca",9.4138,9.0475,13.2,"A",1.3,"AU",1,90,82,NA,NA,"CR,I,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","cbf243ff-e9ce-4f77-9b58-46ec7e66a36e","2021-07-27","3224-12",322864,"tsugca",9.0466,4.0535,11.3,"A",1.3,"AU",1,100,92,31,NA,"CR,I,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","DJ","88687ed7-349d-4769-a2ec-62aebd3da30f","2021-07-26","3314-12",331559,"tsugca",6.37124,2.6394,10.4,"A",1.3,"AU",1,62,41,67,NA,"I,LF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","DJ","88687ed7-349d-4769-a2ec-62aebd3da30f","2021-07-26","3314-12",331562,"tsugca",3.82894,1.4996,16.9,"A",1.3,"DS",1,61,0,73,NA,"I,DF,CR",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","cc345d6b-5782-4593-9e7d-913c41dfb329","2021-07-28","3403-21",340301,"fagugr",9.0756,8.05007,22.8,"A",1.3,"AU",1,100,100,NA,NA,"CR",1,NA,NA,"False","340299 leaning against"
+"rot_but_no_level","KN","afe48bcc-3d62-4518-bc26-3a6da20b1565","2021-07-28","3410-11",340977,"querru",7.85019,5.08359,25.2,"A",1.3,"AU",1,2,2,NA,NA,"B,CR",3,NA,NA,"False",NA
+"rot_but_no_level","KN","afe48bcc-3d62-4518-bc26-3a6da20b1565","2021-07-28","3410-22",341004,"tsugca",0.2892,0.7903,31.2,"A",1.3,"AU",2,80,76,NA,NA,"CR,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","KN","c6cd93c5-803e-4159-9cc9-dc316a2ddd20","2021-07-28","3411-11",341045,"tsugca",4.16242,9.30669,59.7,"A",1.3,"AU",1,90,88,NA,NA,"CR,I,LF",1,NA,NA,"False",NA
+"rot_but_no_level","KN","facff485-d8e4-4293-8271-2a3f917103c2","2021-07-29","3420-12",341831,"betual",9.8294,2.6149,10.5,"A",1.3,"AU",1,100,100,NA,NA,"CR",1,NA,NA,"False",NA
+"rot_but_no_level","DJ","0b9d3ea0-db47-4bbc-95fe-2283331d37fa","2021-07-27","3425-11",342497,"acerru",9.44295,4.45213,24.2,"A",1.3,"AU",3,100,100,NA,NA,"R,W",2,2,NA,"False",NA
+"rot_but_no_level","LM","843bb228-fab4-4dbc-807b-027d1d31967f","2021-07-28","3503-21",350375,"querru",1.4309,4.63327,38.8,"A",1.3,"AU",3,98,78,NA,NA,"LF,W,R,F",1,NA,NA,"False","Canopy dieback and fungus/wound"
+"rot_but_no_level","LM","5a911d71-190c-43f7-82e3-dea02d599cfe","2021-07-28","3508-12",350790,"acerru",8.91836,8.9473,27.7,"A",1.3,"AU",2,9,0,NA,NA,"U,R,B,F",NA,NA,NA,"False","Barely alive via a few epicormic shoots"
+"rot_but_no_level","LM","e71e9d05-a2da-4dc1-b88e-ebb5e1354dc0","2021-07-28","3509-21",350910,"tsugca",8.9277,6.77561,11.3,"A",1.3,"AU",1,100,90,NA,NA,"I,CR,LF",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","7b88b52f-c41c-4650-9658-d6af34d55645","2021-07-28","3510-22",350965,"acerru",3.3017,7.3934,19.9,"A",1.3,"DS",3,85,0,NA,NA,"R,DF,U,F",NA,NA,NA,"False",NA
+"rot_but_no_level","LM","574466c3-a65f-4423-8489-fa54c0d501a2","2021-07-28","3514-12",351303,"betual",8.97011,4.717,24.9,"A",1.3,"AU",3,100,75,NA,NA,"LF,U,R",NA,NA,NA,"False","Dead primary branch rotting"
+"rot_but_no_level","LM","574466c3-a65f-4423-8489-fa54c0d501a2","2021-07-28","3514-21",351339,"fagugr",8.8855,9.68317,21.6,"A",1.23,"DS",1,0,0,NA,NA,"F,R,B",NA,NA,NA,"False","BBD"
+"rot_but_no_level","LM","bf6b55fb-0f65-481d-9c8f-df89e8135c75","2021-07-28","3516-21",351516,"betual",1.2328,0.9122,15.2,"A",1.3,"AU",2,90,90,NA,NA,"R",NA,NA,NA,"False","Rotting above and heavy epicormic branching—tree is stressed"
+"rot_but_no_level","LM","29a5544c-860d-4189-9429-a04eaa227b96","2021-07-29","3518-22",351664,"tsugca",7.7388,8.1097,11.5,"A",1.3,"AU",1,90,15,NA,NA,"I,LF,CR",NA,NA,NA,"False","Almost dead"
+"rot_but_no_level","RB","a21f5bb9-a509-4345-922c-8d6fe0f1b0a4","2021-07-29","3521-12",351990,"querru",8.9203,0.2515,16.3,"A",1.3,"AU",2,100,100,NA,NA,"CR",NA,NA,NA,"False","Tree is starting to swallow another tree"
+"rot_but_no_level","LM","5c68dbad-ab05-48cb-9063-1c30ff640257","2021-07-29","3525-22",352509,"acerru",6.6379,5.8013,12.8,"A",1.3,"DS",2,45,0,NA,NA,"U,DF,R,F",NA,NA,NA,"False",NA
