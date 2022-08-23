@@ -83,7 +83,7 @@ quadrats$checks <- ifelse(quadrats$quadrats %in% quadrats_with_errors, 'error',
 filename <- file.path(here("testthat"), "reports/map_of_error_and_warnings.png")
 
 #assign color palette
-clrs <- c( "aquamarine1", "coral2", "grey50","ivory1", "gold")
+clrs <- c( "aquamarine1", "ivory1", "gold")
 
 # dragon flare
 img <- readPNG(source = "./data/redeft_2.png")
@@ -115,9 +115,11 @@ quadrat_info <- read_xlsx(latest_FFFs, sheet = "Root", .name_repair = "minimal" 
     quadrat_stem_count = as.numeric(quadrat_stem_count),
     date_time = ymd(date_time)
   )
+misser <- c('a04c2cd9-8121-43b2-a0b5-aab27f9de8d4', '3307', '2021-07-26', 'DJ', 30)
 
+quadrat_info <- rbind(quadrat_info, misser)
 
-q2 <- base::merge(quadrats, quadrat_info, by = 'quad')
+q2<- base::merge(quadrats, quadrat_info, by = 'quad')
 q2$personnel <- ifelse(q2$checks=='incomplete', NA,
                        ifelse(q2$checks == 'swamp', "swamp", q2$personnel))
 
@@ -140,3 +142,11 @@ cr.ani <- cr + transition_manual(date_time, cumulative = TRUE)+
 
 cr.ani <- animate(cr.ani,duration = 20, end_pause = 5)
 anim_save(filename = "Crew_cumulative_quadrats_animated.gif", animation = cr.ani, path = "./testthat/reports/")
+
+
+ggplot(q2, aes(gx-10, gy-10, fill = as.numeric(quadrat_stem_count)))+
+  geom_tile(color='grey80')+
+  scale_fill_viridis_c(direction = -1)+
+  labs(x="", y="", fill='stems') +
+  coord_fixed()
+str(quadrats)
