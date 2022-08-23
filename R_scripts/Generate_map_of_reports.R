@@ -102,7 +102,7 @@ pr <- ggplot(quadrats, aes(gx-10, gy-10, fill = checks))+
 
 
 ggsave(filename, plot= pr, device = 'png', 
-       width = 8, height = 6, units = "in",dpi = 300 )
+       width = 8, height = 6, units = "in",dpi = 600 )
 
 #### plot progress map by researcher
 
