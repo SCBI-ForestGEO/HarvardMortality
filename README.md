@@ -1,5 +1,7 @@
 # Harvard Tree Mortality 
-  
+
+[![DOI](https://zenodo.org/badge/383525380.svg)](https://zenodo.org/badge/latestdoi/383525380)
+
 *This repo was copied from [SCBI-ForestGEO/SCBImortality](https://github.com/SCBI-ForestGEO/SCBImortality) and modified for use at Harvard Forest.*
 
 ## Current Census Dashboard
