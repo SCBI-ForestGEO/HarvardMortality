@@ -43,8 +43,6 @@ mort <- mort[!is.na(mort$Quad), ] # fix empty lines
 mort <- mort[, unique(names(mort))]
 
 # Convert character vectors to numeric 
-mort[, "DBH"] <- as.numeric(mort[, "DBH"])
-mort[, "HOM"] <- as.numeric(mort[, "HOM"])
 mort[, 'Percentage of crown intact'] <- as.numeric(mort[, 'Percentage of crown intact'])
 mort[, 'Percentage of crown living'] <- as.numeric(mort[, 'Percentage of crown living'])
 
@@ -482,21 +480,4 @@ for(f in all_reports) {
   
 }
 
-
-
-# TODO: Need quadrats
-# # generate a file with summary for each quadrat ####
-# quadrat_censused_missing_stems <- read.csv(file.path(here("testthat"), "reports/requires_field_fix/quadrat_censused_missing_stems.csv"))
-# quadrat_censused_duplicated_stems <- read.csv(file.path(here("testthat"), "reports/will_auto_fix/quadrat_censused_duplicated_stems.csv"))
-# 
-# quad_with_any_issue <- sort(unique(c(require_field_fix_error_file$Quad, will_auto_fix_error_file$Quad, warning_file$Quad, quadrat_censused_duplicated_stems$quadrat, quadrat_censused_missing_stems$Quad)))
-# 
-# quad_summary <- data.frame(Quad = quad_with_any_issue, 
-#                            n_tag_error_field_fix = c(table(require_field_fix_error_file$Quad))[as.character(quad_with_any_issue)], 
-#                            n_tag_error_auto_fix = c(table(will_auto_fix_error_file$Quad))[as.character(quad_with_any_issue)],
-#                            n_tag_warnings = c(table(warning_file$Quad))[as.character(quad_with_any_issue)],
-#                            n_missing_tags = c(table(quadrat_censused_missing_stems$quadrat))[as.character(quad_with_any_issue)],
-#                            n_duplicated_tags = c(table(quadrat_censused_duplicated_stems$Quad))[as.character(quad_with_any_issue)])
-# 
-# write.csv(quad_summary[order(quad_summary$n_tag_error_field_fix, decreasing = T), ], file.path(here("testthat"), "reports/quadrat_n_errors_summary.csv"), row.names = F)
 
